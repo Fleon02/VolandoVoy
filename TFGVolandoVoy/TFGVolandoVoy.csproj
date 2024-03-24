@@ -70,9 +70,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="paco.cs">
-	    <DependentUpon>%(Filename)</DependentUpon>
-	  </Compile>
+	  <Folder Include="Vista\" />
 	</ItemGroup>
 
 </Project>
