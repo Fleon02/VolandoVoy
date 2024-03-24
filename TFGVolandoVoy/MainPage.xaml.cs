@@ -82,7 +82,7 @@ namespace TFGVolandoVoy
                     if (response != null)
                     {
                         // Construir manualmente la URL de la imagen cargada
-                        string imageUrl = $"{ConexionSupabase.SUPABASE_URL}/storage/v1/object/public/imagenes_prueba/{fileName}";
+                        string imageUrl = $"{ConexionSupabase.SUPABASE_URL}/storage/v1/object/public/imagenes_Prueba/{fileName}";
                         return imageUrl;
                     }
                     else
