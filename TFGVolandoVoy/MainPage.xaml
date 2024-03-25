@@ -26,6 +26,18 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
+            <Button
+                x:Name="ProvinciaBtn"
+                Text="Insertar Provincia" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnProvinviaClicked"
+                HorizontalOptions="Fill" />
+            <Button
+                x:Name="MostrarBtn"
+                Text="Mostrar Provincia" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="MostrarClicked"
+                HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

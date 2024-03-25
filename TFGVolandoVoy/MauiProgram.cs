@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Supabase;
+using TFGVolandoVoy.Modelo;
 
 namespace TFGVolandoVoy
 {
@@ -17,10 +18,9 @@ namespace TFGVolandoVoy
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-            // Configurar Supabase
-            // Configurar Supabase
-            var url = "https://clfynwobrskueprtvnmg.supabase.co";
-            var key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNsZnlud29icnNrdWVwcnR2bm1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTExMjI4OTYsImV4cCI6MjAyNjY5ODg5Nn0.yil-jPNh7m6uk9veYRnnAB2Cjt51lTyCbu18oiluk98";
+
+            var url = ConexionSupabase.SUPABASE_URL;
+            var key = ConexionSupabase.SUPABASE_KEY;
 
             var options = new SupabaseOptions
             {
@@ -28,8 +28,7 @@ namespace TFGVolandoVoy
                 AutoConnectRealtime = true,
                 //SessionHandler = new SupabaseSessionHandler()
             };
-            var supabase = new Supabase.Client(url, key, options);
-            builder.Services.AddSingleton(supabase);
+            builder.Services.AddSingleton(provider => new Supabase.Client(url, key, options));
 
 #if DEBUG
             builder.Logging.AddDebug();
