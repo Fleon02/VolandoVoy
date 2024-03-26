@@ -4,12 +4,25 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:TFGVolandoVoy"
-    Shell.FlyoutBehavior="Disabled"
+    Shell.ForegroundColor="Black"
+    Shell.FlyoutBehavior="Flyout"
     Title="TFGVolandoVoy">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        ContentTemplate="{DataTemplate local:InicioSesion}"
+        Route="InicioSesion" 
+        FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"/>
 
+    <ShellContent
+        Title="Provincia"
+        ContentTemplate="{DataTemplate local:ProvinciaVnt}"
+        Route="ProvinviaVnt" 
+        Shell.FlyoutBehavior="Flyout"/>
+    <ShellContent
+        Title="Localidad"
+        ContentTemplate="{DataTemplate local:LocalidadVnt}"
+        Route="LocalidadVnt" 
+        Shell.FlyoutBehavior="Flyout"/>
 </Shell>

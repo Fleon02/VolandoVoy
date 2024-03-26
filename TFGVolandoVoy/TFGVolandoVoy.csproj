@@ -70,7 +70,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Vista\" />
+	  <MauiXaml Update="Vista\InicioSesion.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vista\LocalidadVtn.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vista\ProvinciaVnt.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
