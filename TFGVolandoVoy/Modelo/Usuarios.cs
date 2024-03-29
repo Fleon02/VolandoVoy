@@ -4,11 +4,6 @@ using Postgrest.Models;
 [Table("usuarios")]
 public class Usuario : BaseModel
 {
-    public enum RolUsuario
-    {
-        admin,
-        usuario
-    }
 
     [PrimaryKey("idusuario")]
     public long IdUsuario { get; set; }
@@ -23,7 +18,7 @@ public class Usuario : BaseModel
     public string? EmailUsuario { get; set; }
 
     [Column("rol")]
-    public RolUsuario Rol { get; set; }
+    public string? Rol { get; set; }
 
     [Column("fecha_alta")]
     public DateTime? FechaAlta { get; set; }

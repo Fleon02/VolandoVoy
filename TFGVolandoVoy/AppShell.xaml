@@ -18,11 +18,15 @@
     <ShellContent
         Title="Provincia"
         ContentTemplate="{DataTemplate local:ProvinciaVnt}"
-        Route="ProvinviaVnt" 
+        Route="ProvinciaVnt" 
         Shell.FlyoutBehavior="Flyout"/>
     <ShellContent
         Title="Localidad"
         ContentTemplate="{DataTemplate local:LocalidadVnt}"
         Route="LocalidadVnt" 
         Shell.FlyoutBehavior="Flyout"/>
+
+    <FlyoutItem Title="Cerrar Sesión" Route="CerrarSesion" FlyoutDisplayOptions="AsSingleItem">
+        <ShellContent ContentTemplate="{DataTemplate local:InicioSesion}" Shell.FlyoutBehavior="Disabled" Title="Home"/>
+    </FlyoutItem>
 </Shell>

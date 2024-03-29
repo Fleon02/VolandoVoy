@@ -22,6 +22,18 @@ namespace TFGVolandoVoy
         {
         }
 
+        // Método que se llama cada vez que la página se muestra en pantalla
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            // Reiniciar la página
+            Logo.Source = "logo.png";
+
+            NombreLocalidad.Text = "Localidad : ";
+            NombreProvincia.Text = "Provincia : ";
+        }
+
         // Resto del código de la clase
         private int count = 0;
 
