@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using TFGVolandoVoy.Modelo;
+using TFGVolandoVoy.Vista;
 
 namespace TFGVolandoVoy
 {
@@ -25,6 +26,19 @@ namespace TFGVolandoVoy
         // Resto del código de la clase
         private int count = 0;
 
+
+        private void MostrarPass(object sender, EventArgs e)
+        {
+            PasswordEntry.IsPassword = !PasswordEntry.IsPassword;
+            if (PasswordEntry.IsPassword == true)
+            {
+                imagenBoton.Source = "visible.png";
+            }else
+            {
+                imagenBoton.Source = "invisible.png";
+            }
+        }
+
         private async void OnCounterClicked(object sender, EventArgs e)
         {
             // Define el correo electrónico y la contraseña para el registro
@@ -36,7 +50,7 @@ namespace TFGVolandoVoy
                 // Registra al usuario utilizando el correo electrónico y la contraseña predefinidos
                 //var response = await _supabaseClient.Auth.SignUp(email, password);
 
-                await Shell.Current.GoToAsync("//ProvinviaVnt");
+                await Shell.Current.GoToAsync("//ProvinciaVnt");
             }
             catch (Exception ex)
             {
@@ -44,6 +58,13 @@ namespace TFGVolandoVoy
                 await DisplayAlert("Error", $"Error al registrar al usuario: {ex.Message}", "Aceptar");
             }
         }
+
+        private void OnRegistroTapped(object sender, EventArgs e)
+        {
+            // Aquí navegas a la ventana de registro
+            Navigation.PushAsync(new Registro());
+        }
+
 
     }
 }

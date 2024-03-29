@@ -59,6 +59,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\AppIcon\logo_app.png" />
+	  <None Remove="Resources\Images\invisible.png" />
 	  <None Remove="Resources\Splash\splash_vl.png" />
 	</ItemGroup>
 
@@ -77,6 +78,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Vista\ProvinciaVnt.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vista\Registro.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
