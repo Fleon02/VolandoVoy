@@ -4,9 +4,21 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:TFGVolandoVoy"
-    Shell.ForegroundColor="Black"
     Shell.FlyoutBehavior="Flyout"
     Title="TFGVolandoVoy">
+
+    <Shell.FlyoutHeader>
+        <Grid BackgroundColor="DarkOrange">
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Image Source="{Binding UserImage}" HeightRequest="60" WidthRequest="60" HorizontalOptions="Start" VerticalOptions="Center"/>
+                <Label Text="{Binding Username}" FontSize="20" HorizontalOptions="Start" VerticalOptions="Center"/>
+            </StackLayout>
+        </Grid>
+    </Shell.FlyoutHeader>
+
+
+
+
 
     <ShellContent
         Title="Home"

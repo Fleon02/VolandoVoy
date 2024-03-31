@@ -1,4 +1,5 @@
-﻿using Microsoft.Maui.Controls;
+﻿using Microsoft.Maui.ApplicationModel;
+using Microsoft.Maui.Controls;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace TFGVolandoVoy
         {
             _supabaseClient = supabaseClient;
             InitializeComponent();
+            MostrarPass();
         }
 
         // Constructor sin parámetros
@@ -27,30 +29,85 @@ namespace TFGVolandoVoy
         private int count = 0;
 
 
-        private void MostrarPass(object sender, EventArgs e)
+        private void MostrarPassBoton(object sender, EventArgs e)
         {
             PasswordEntry.IsPassword = !PasswordEntry.IsPassword;
+            MostrarPass();
+        }
+
+        private void MostrarPass()
+        {
+            var temaActual = App.Current.RequestedTheme;
+
+            
             if (PasswordEntry.IsPassword == true)
             {
-                imagenBoton.Source = "visible.png";
-            }else
+                // Establecer la imagen según el tema
+                if (temaActual != AppTheme.Dark)
+                {
+                    imagenBoton.Source = "visibledark.png";
+                }
+                else
+                {
+                    imagenBoton.Source = "visible.png";
+                }
+            }
+            else
             {
-                imagenBoton.Source = "invisible.png";
+                // Establecer la imagen según el tema
+                if (temaActual != AppTheme.Dark)
+                {
+                    imagenBoton.Source = "invisibledark.png";
+                }
+                else
+                {
+                    imagenBoton.Source = "invisible.png";
+                }
             }
         }
 
         private async void OnCounterClicked(object sender, EventArgs e)
         {
             // Define el correo electrónico y la contraseña para el registro
-            string email = "zxxwaspxxz@gmail.com";
-            string password = "contraseña123";
+            string email = userEntry.Text;
+            string password = PasswordEntry.Text;  
 
             try
             {
-                // Registra al usuario utilizando el correo electrónico y la contraseña predefinidos
-                //var response = await _supabaseClient.Auth.SignUp(email, password);
+                if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(password))
+                {
+                    var usuariosConEmail = await _supabaseClient.From<Usuario>().Get();
+                    var usuarioExistente = usuariosConEmail.Models.FirstOrDefault(u => u.EmailUsuario == email);
 
-                await Shell.Current.GoToAsync("//ProvinciaVnt");
+                    if (usuarioExistente == null)
+                    {
+                        await DisplayAlert("Error", "El usuario no existe", "Aceptar");
+                        return;
+                    }
+
+                    var beepUsuario = await _supabaseClient.From<Beep>().Get();
+                    var beep = beepUsuario.Models.FirstOrDefault(u => u.IdUsuario == usuarioExistente.IdUsuario);
+
+                    string salt = beep.Salt;
+
+                    String contrasenaHasheada = PasswordEncoder.EncodePassword(password, salt);
+
+                    if (beep.HashContrasena.Equals(contrasenaHasheada)){
+                        await Shell.Current.GoToAsync("//ProvinciaVnt");
+                        AppShell.CurrentUser.Username = usuarioExistente.NombreUsuario;
+                        AppShell.CurrentUser.UserImage = usuarioExistente.ImagenUsuario;
+                    }
+                    else
+                    {
+                        await DisplayAlert("Error", "La contraseña es incorrecta", "Aceptar");
+                    }
+                }
+                else
+                {
+                    await DisplayAlert("Error", "Por favor complete todos los campos obligatorios.", "Aceptar");
+                }
+
+
             }
             catch (Exception ex)
             {
