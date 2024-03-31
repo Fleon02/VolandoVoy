@@ -4,6 +4,8 @@ namespace TFGVolandoVoy
 {
     public partial class AppShell : Shell
     {
+        public static UsuarioModel CurrentUser { get; set; } = new UsuarioModel();
+
         public AppShell()
         {
             InitializeComponent();
@@ -12,6 +14,7 @@ namespace TFGVolandoVoy
             Routing.RegisterRoute("ProvinciaVnt", typeof(ProvinciaVnt));
             Routing.RegisterRoute("LocalidadVnt", typeof(LocalidadVnt));
             Routing.RegisterRoute("CerrarSesion", typeof(InicioSesion));
+            BindingContext = CurrentUser;
 
             GoToAsync("InicioSesion");
         }

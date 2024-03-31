@@ -11,6 +11,7 @@ public partial class Registro : ContentPage
     {
         _supabaseClient = supabaseClient;
         InitializeComponent();
+        Shell.SetFlyoutBehavior(this, FlyoutBehavior.Disabled);
     }
 
     // Constructor sin parámetros
@@ -27,9 +28,23 @@ public partial class Registro : ContentPage
             var email = CampoEmail.Text;
             var contrasena = PasswordEntry.Text;
             var imagen = imagenElegida;
-
-            if (!string.IsNullOrEmpty(nombre) && !string.IsNullOrEmpty(apellidos) && !string.IsNullOrEmpty(imagen) && !string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(contrasena))
+            if (imagen == null)
             {
+                imagen = "https://clfynwobrskueprtvnmg.supabase.co/storage/v1/object/public/perfilesIMG/user-48.png";
+            }
+
+            if (!string.IsNullOrEmpty(nombre) && !string.IsNullOrEmpty(apellidos) && !string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(contrasena))
+            {
+                var usuariosConEmail = await _supabaseClient.From<Usuario>().Get();
+                var usuarioExistente = usuariosConEmail.Models.FirstOrDefault(u => u.EmailUsuario == email);
+
+                if (usuarioExistente != null)
+                {
+                    await DisplayAlert("Error", "El correo electrónico ya está registrado. Por favor, utilice otro.", "Aceptar");
+                    return;
+                }
+
+
                 Usuario u = new Usuario
                 {
                     NombreUsuario = nombre,
@@ -149,17 +164,25 @@ public partial class Registro : ContentPage
             {
                 usuario.Rol = "usuario";
             }
+            String salt = PasswordEncoder.GenerateSalt();
+            String contrasenaHasheada = PasswordEncoder.EncodePassword(contrasena, salt);
 
             Beep b = new Beep
             {
                 IdUsuario = usuario.IdUsuario,
-                HashContrasena = contrasena,
-                Salt = "1234"
+                HashContrasena = contrasenaHasheada,
+                Salt = salt
             };
 
             await _supabaseClient.From<Usuario>().Insert(usuario);
             await _supabaseClient.From<Beep>().Insert(b);
             await DisplayAlert("Éxito", "Usuario insertado correctamente.", "Aceptar");
+            CampoNombre.Text = "";
+            CampoApellidos.Text = "";
+            CampoEmail.Text = "";
+            PasswordEntry.Text = "";
+            RepetirPasswordEntry.Text = "";
+
         }
         catch (Exception ex)
         {

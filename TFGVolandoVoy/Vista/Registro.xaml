@@ -29,9 +29,9 @@
                 <ImageButton Source="visible.png" Clicked="MostrarRepePass" WidthRequest="40" HeightRequest="40" x:Name="imagenRepeBoton"/>
             </StackLayout>
 
-            <Label Text="Imagen de Perfil:" />
+            <Label Text="Imagen de Perfil:" HorizontalOptions="FillAndExpand"/>
             <StackLayout Orientation="Horizontal" Spacing="10">
-                <Entry Placeholder="Seleccione una imagen" IsReadOnly="True" HorizontalOptions="FillAndExpand"/>
+                <Entry Placeholder="Si no se sube , obtendrás una por defecto" IsReadOnly="True" HorizontalOptions="FillAndExpand"/>
                 <ImageButton Source="select_image.png" Clicked="Imagen" WidthRequest="40" HeightRequest="40"/>
             </StackLayout>
 
