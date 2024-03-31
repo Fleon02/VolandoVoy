@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:TFGVolandoVoy"
     Shell.FlyoutBehavior="Flyout"
+    Shell.ForegroundColor="{AppThemeBinding Light=Black, Dark=White}"
     Title="TFGVolandoVoy">
 
     <Shell.FlyoutHeader>
@@ -15,11 +16,6 @@
             </StackLayout>
         </Grid>
     </Shell.FlyoutHeader>
-
-
-
-
-
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:InicioSesion}"
