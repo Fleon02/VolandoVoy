@@ -21,51 +21,49 @@ public partial class Registro : ContentPage
 
     private async void OnRegistrarClicked(object sender, EventArgs e)
     {
-        if (PasswordEntry.Text.Equals(RepetirPasswordEntry.Text))
+        var nombre = CampoNombre.Text;
+        var apellidos = CampoApellidos.Text;
+        var email = CampoEmail.Text;
+        var contrasena = PasswordEntry.Text;
+        var imagen = imagenElegida;
+        if (imagen == null)
         {
-            var nombre = CampoNombre.Text;
-            var apellidos = CampoApellidos.Text;
-            var email = CampoEmail.Text;
-            var contrasena = PasswordEntry.Text;
-            var imagen = imagenElegida;
-            if (imagen == null)
+            imagen = "https://clfynwobrskueprtvnmg.supabase.co/storage/v1/object/public/perfilesIMG/user-48.png";
+        }
+
+        if (!string.IsNullOrEmpty(nombre) && !string.IsNullOrEmpty(apellidos) && !string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(contrasena))
+        {
+            var usuariosConEmail = await _supabaseClient.From<Usuario>().Get();
+            var usuarioExistente = usuariosConEmail.Models.FirstOrDefault(u => u.EmailUsuario == email);
+
+            if (usuarioExistente != null)
             {
-                imagen = "https://clfynwobrskueprtvnmg.supabase.co/storage/v1/object/public/perfilesIMG/user-48.png";
+                await DisplayAlert("Error", "El correo electrónico ya está registrado. Por favor, utilice otro.", "Aceptar");
+                return;
             }
 
-            if (!string.IsNullOrEmpty(nombre) && !string.IsNullOrEmpty(apellidos) && !string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(contrasena))
+
+            Usuario u = new Usuario
             {
-                var usuariosConEmail = await _supabaseClient.From<Usuario>().Get();
-                var usuarioExistente = usuariosConEmail.Models.FirstOrDefault(u => u.EmailUsuario == email);
+                NombreUsuario = nombre,
+                ApellidosUsuario = apellidos,
+                EmailUsuario = email,
+                ImagenUsuario = imagen,
+                FechaAlta = DateTime.Now
+            };
 
-                if (usuarioExistente != null)
-                {
-                    await DisplayAlert("Error", "El correo electrónico ya está registrado. Por favor, utilice otro.", "Aceptar");
-                    return;
-                }
-
-
-                Usuario u = new Usuario
-                {
-                    NombreUsuario = nombre,
-                    ApellidosUsuario = apellidos,
-                    EmailUsuario = email,
-                    ImagenUsuario = imagen,
-                    FechaAlta = DateTime.Now
-                };
-
-                await InsertUsuario(u, contrasena);
-            }
-            else
+            if (!PasswordEntry.Text.Equals(RepetirPasswordEntry.Text))
             {
-                await DisplayAlert("Error", "Por favor complete todos los campos obligatorios.", "Aceptar");
+                await DisplayAlert("Error", "Las Contraseñas no coinciden", "Aceptar");
+                return;
             }
+
+            await InsertUsuario(u, contrasena);
         }
         else
         {
-            await DisplayAlert("Error", "Las contraseñas no coinciden.", "Aceptar");
-        }
-        
+            await DisplayAlert("Error", "Por favor complete todos los campos obligatorios.", "Aceptar");
+        }        
     }
 
     private void MostrarPass(object sender, EventArgs e)
