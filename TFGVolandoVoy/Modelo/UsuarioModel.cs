@@ -17,8 +17,8 @@ public class UsuarioModel : INotifyPropertyChanged
         }
     }
 
-    private ImageSource _userImage;
-    public ImageSource UserImage
+    private string _userImage;
+    public string UserImage
     {
         get { return _userImage; }
         set

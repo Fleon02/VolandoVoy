@@ -22,7 +22,13 @@
         Route="InicioSesion" 
         FlyoutItemIsVisible="False"
         Shell.FlyoutBehavior="Disabled"/>
-
+    
+    <ShellContent
+        Title="Inicio"
+        ContentTemplate="{DataTemplate local:VntPrincipal}"
+        Route="VntPrincipal" 
+        Shell.FlyoutBehavior="Flyout"/>
+    
     <ShellContent
         Title="Provincia"
         ContentTemplate="{DataTemplate local:ProvinciaVnt}"

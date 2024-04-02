@@ -93,7 +93,7 @@ namespace TFGVolandoVoy
                     String contrasenaHasheada = PasswordEncoder.EncodePassword(password, salt);
 
                     if (beep.HashContrasena.Equals(contrasenaHasheada)){
-                        await Shell.Current.GoToAsync("//ProvinciaVnt");
+                        await Shell.Current.GoToAsync("//VntPrincipal");
                         AppShell.CurrentUser.Username = usuarioExistente.NombreUsuario;
                         AppShell.CurrentUser.UserImage = usuarioExistente.ImagenUsuario;
                     }

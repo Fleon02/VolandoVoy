@@ -17,6 +17,9 @@
     <MauiXaml Update="Vista\LocalidadVtn.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Vista\VntPrincipal.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Vista\ProvinciaVnt.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
