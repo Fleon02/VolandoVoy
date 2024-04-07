@@ -272,5 +272,10 @@ namespace TFGVolandoVoy
             }
         }
 
+        private void OnClicLabelTapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ProvinciaVnt());
+        }
+
     }
 }

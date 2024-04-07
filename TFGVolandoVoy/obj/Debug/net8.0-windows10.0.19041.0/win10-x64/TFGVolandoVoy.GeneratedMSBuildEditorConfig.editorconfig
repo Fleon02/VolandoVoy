@@ -59,3 +59,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.Registro.xaml
 build_metadata.AdditionalFiles.TargetPath = Vista\Registro.xaml
 build_metadata.AdditionalFiles.RelativePath = Vista\Registro.xaml
+
+[C:/Users/soraf/Documents/GitHub/VolandoVoy/TFGVolandoVoy/Vista/VntPrincipal.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.VntPrincipal.xaml
+build_metadata.AdditionalFiles.TargetPath = Vista\VntPrincipal.xaml
+build_metadata.AdditionalFiles.RelativePath = Vista\VntPrincipal.xaml

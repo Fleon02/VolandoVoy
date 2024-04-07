@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TFGVolandoVoy.VntPrincipal">
+
+    <StackLayout Margin="20">
+
+        <Image Source="logo.png" 
+               HeightRequest="185"
+               Aspect="AspectFit"/>
+        
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Image HeightRequest="60" WidthRequest="60" HorizontalOptions="Start" VerticalOptions="Center" x:Name="Imagen"/>
+            <Label Text="" FontSize="24" HorizontalOptions="Start" VerticalOptions="Center" x:Name="Texto"/>
+        </StackLayout>
+
+
+        <Label 
+            Text=""
+            FontSize="25"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            x:Name="Mensaje"/>
+    </StackLayout>
+</ContentPage>

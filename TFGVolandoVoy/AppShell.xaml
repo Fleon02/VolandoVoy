@@ -24,10 +24,19 @@
         Shell.FlyoutBehavior="Disabled"/>
 
     <ShellContent
+        Title="Inicio"
+        ContentTemplate="{DataTemplate local:VntPrincipal}"
+        Route="VntPrincipal" 
+        Shell.FlyoutBehavior="Flyout"/>
+    <!--
+    <ShellContent
         Title="Provincia"
         ContentTemplate="{DataTemplate local:ProvinciaVnt}"
         Route="ProvinciaVnt" 
-        Shell.FlyoutBehavior="Flyout"/>
+        Shell.FlyoutBehavior="Flyout">
+    </ShellContent>
+    -->
+
     <ShellContent
         Title="Localidad"
         ContentTemplate="{DataTemplate local:LocalidadVnt}"

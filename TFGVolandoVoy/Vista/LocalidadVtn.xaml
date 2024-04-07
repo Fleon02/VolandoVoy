@@ -43,6 +43,20 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="MostrarLocalidades"
                 HorizontalOptions="Fill" />
+
+            <Label
+                Text="Crear Provincia"
+                FontSize="16"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                TextColor="Blue"
+                x:Name="ClicLabel">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnClicLabelTapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
