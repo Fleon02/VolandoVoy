@@ -15,6 +15,7 @@ namespace TFGVolandoVoy
         {
             _supabaseClient = supabaseClient;
             InitializeComponent();
+            Shell.SetFlyoutBehavior(this, FlyoutBehavior.Disabled);
         }
 
         // Constructor sin parámetros
