@@ -1,7 +1,4 @@
-using Microsoft.Maui.Controls;
-using System;
-using System.IO;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 using TFGVolandoVoy.Modelo;
 
 namespace TFGVolandoVoy
@@ -32,18 +29,28 @@ namespace TFGVolandoVoy
 
             NombreLocalidad.Text = "Localidad : ";
             NombreProvincia.Text = "Provincia : ";
+            CargarLocalidades();
         }
-
-        // Resto del código de la clase
+        // Método para cargar la lista de localidades
+        private async void CargarLocalidades()
+        {
+            try
+            {
+                // Obtener la lista de localidades desde la base de datos
+                var localidades = await _supabaseClient.From<Localidad>().Get();
+                // Establecer la lista de localidades como la fuente de datos del ListView
+                LocalidadesListView.ItemsSource = new ObservableCollection<Localidad>(localidades.Models);
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", $"Error al cargar las localidades: {ex.Message}", "Aceptar");
+            }
+        }
         private int count = 0;
-
-
-
         private async void OnLocalidadClicked(object sender, EventArgs e)
         {
             // Inicializar la variable provincia fuera del bloque try-catch
             Provincia provincia = null;
-
             try
             {
                 // Obtener la lista de provincias
@@ -176,25 +183,20 @@ namespace TFGVolandoVoy
                 {
                     // Obtener la localidad desde la base de datos usando el ID proporcionado
                     var localidad = await GetLocalidadById(localidadId);
-
                     if (localidad != null)
                     {
                         // Obtener la provincia asociada a la localidad
                         var provincia = await GetProvinciaById(localidad.IdProvincia.ToString());
-
                         if (provincia != null)
                         {
                             Logo.Source = localidad.ImagenLocalidad;
                             // Construir el mensaje de alerta con los nombres de la localidad y la provincia
                             var message = $"Nombre de la Localidad: {localidad.NombreLocalidad}\n" +
                                           $"Provincia: {provincia.NombreProvincia}";
-
                             // Mostrar el mensaje de alerta
                             await DisplayAlert("Detalle de la Localidad y Provincia", message, "Aceptar");
                             NombreLocalidad.Text = $"Nombre Localidad: {localidad.NombreLocalidad}";
                             NombreProvincia.Text = $"Provincia: {provincia.NombreProvincia}";
-
-
                         }
                         else
                         {
@@ -275,6 +277,13 @@ namespace TFGVolandoVoy
         private void OnClicLabelTapped(object sender, EventArgs e)
         {
             Navigation.PushAsync(new ProvinciaVnt());
+        }
+
+        private void DetallesL(object sender, EventArgs e)
+        {
+            var label = (Label)sender;
+            var labelText = label.Text;
+            Navigation.PushAsync(new DetallesLocalidadVtn(labelText));
         }
 
     }
