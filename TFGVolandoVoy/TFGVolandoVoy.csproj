@@ -74,6 +74,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Vista\DetallesLocalidadVtn.xaml.cs">
+	    <DependentUpon>DetallesLocalidadVtn.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Vista\VntPrincipal.xaml.cs">
 	    <DependentUpon>VntPrincipal.xaml</DependentUpon>
 	  </Compile>
@@ -81,6 +84,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Vista\InicioSesion.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vista\DetallesLocalidadVtn.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Vista\LocalidadVtn.xaml">
