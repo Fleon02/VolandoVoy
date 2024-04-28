@@ -27,8 +27,8 @@ namespace TFGVolandoVoy
             // Reiniciar la página
             Logo.Source = "logo.png";
 
-            NombreLocalidad.Text = "Localidad : ";
-            NombreProvincia.Text = "Provincia : ";
+            //NombreLocalidad.Text = "Localidad : ";
+            //NombreProvincia.Text = "Provincia : ";
             CargarLocalidades();
         }
         // Método para cargar la lista de localidades
@@ -195,8 +195,8 @@ namespace TFGVolandoVoy
                                           $"Provincia: {provincia.NombreProvincia}";
                             // Mostrar el mensaje de alerta
                             await DisplayAlert("Detalle de la Localidad y Provincia", message, "Aceptar");
-                            NombreLocalidad.Text = $"Nombre Localidad: {localidad.NombreLocalidad}";
-                            NombreProvincia.Text = $"Provincia: {provincia.NombreProvincia}";
+                            //NombreLocalidad.Text = $"Nombre Localidad: {localidad.NombreLocalidad}";
+                            //NombreProvincia.Text = $"Provincia: {provincia.NombreProvincia}";
                         }
                         else
                         {
