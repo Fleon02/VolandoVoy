@@ -12,7 +12,7 @@
                 Aspect="AspectFit"
                 x:Name="Logo"
                 SemanticProperties.Description="dot net bot in a race car number eight" />
-            <Label
+            <!--<Label
                 Text="Hola"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
@@ -53,28 +53,30 @@
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnClicLabelTapped"/>
                 </Label.GestureRecognizers>
-            </Label>
+            </Label>-->
             <ListView
                 x:Name="LocalidadesListView"
                 Margin="0,20,0,0"
-                RowHeight="55">
+                RowHeight="75">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Horizontal" Padding="20,0" Margin="0,5">
-                                <Image
+                            <Frame CornerRadius="10" BorderColor="Red" Padding="5">
+                                <StackLayout Orientation="Horizontal" Padding="20,0" Margin="0,5">
+                                    <Image
                                     Source="{Binding ImagenLocalidad}"
                                     HorizontalOptions="StartAndExpand"
                                     Margin="0,0,20,0"
                                     Aspect="AspectFit">
-                                </Image>
-                                <Label Text="{Binding NombreLocalidad}" VerticalOptions="Center">
-                                    <Label.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="DetallesL"/>
-                                    </Label.GestureRecognizers>
-                                </Label>
-                                <Button Text="Retos" HorizontalOptions="EndAndExpand" />
-                            </StackLayout>
+                                    </Image>
+                                    <Label Text="{Binding NombreLocalidad}" VerticalOptions="Center">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="DetallesL"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                    <Button Text="Retos" HorizontalOptions="EndAndExpand" />
+                                </StackLayout>
+                            </Frame>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

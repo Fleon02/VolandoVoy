@@ -11,29 +11,27 @@
                     SemanticProperties.HeadingLevel="Level2"
                     HorizontalOptions="CenterAndExpand" />
             </StackLayout>
-            <StackLayout Orientation="Horizontal" Padding="20,0" Margin="0,5">
-                <Image
+            <Image
                     Source="logo.png"
                     HeightRequest="250"
                     Aspect="AspectFit"
                     x:Name="ImgLoc"
                     HorizontalOptions="CenterAndExpand" />
-                <VerticalStackLayout Spacing="25" HorizontalOptions="CenterAndExpand">
-                    <Label
+            <VerticalStackLayout Spacing="25" HorizontalOptions="CenterAndExpand">
+                <Label
                         x:Name="NombreProvincia"
                         Text="Provincia : "
                         SemanticProperties.HeadingLevel="Level2" />
-                    <Label
+                <Label
                         x:Name="ComunidadAutonoma"
                         Text="Comunidad Autonoma : "
                         SemanticProperties.HeadingLevel="Level2" />
-                    <Image
+                <Image
                         Source="logo.png"
                         HeightRequest="125"
                         Aspect="AspectFit"
                         x:Name="ComAu" />
-                </VerticalStackLayout>
-            </StackLayout>
+            </VerticalStackLayout>
             <StackLayout Orientation="Horizontal" Padding="20,0" Margin="0,5">
                 <Button Text="Comentarios" HorizontalOptions="CenterAndExpand" />
                 <Button Text="Retos" HorizontalOptions="CenterAndExpand" />
