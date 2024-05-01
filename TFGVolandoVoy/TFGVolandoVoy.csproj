@@ -58,12 +58,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="Resources\Images\retos.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\retos.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Resources\AppIcon\logo_app.png" />
 	  <None Remove="Resources\Images\invisible.png" />
 	  <None Remove="Resources\Images\invisibledark.png" />
+	  <None Remove="Resources\Images\retos.png" />
 	  <None Remove="Resources\Images\visible.png" />
 	  <None Remove="Resources\Images\visibledark.png" />
 	  <None Remove="Resources\Splash\splash_vl.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Resources\Images\retos.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -105,6 +118,12 @@
 	  <MauiXaml Update="Vista\Registro.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Vista\Retos.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </None>
 	</ItemGroup>
 
 </Project>

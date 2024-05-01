@@ -3,7 +3,7 @@
   <PropertyGroup>
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
     <ActiveDebugFramework>net8.0-android</ActiveDebugFramework>
-    <ActiveDebugProfile>Medium Phone API 34 (Android 14.0 - API 34)</ActiveDebugProfile>
+    <ActiveDebugProfile>Android Emulator</ActiveDebugProfile>
     <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
     <DefaultDevice>Medium_Phone_API_34</DefaultDevice>
   </PropertyGroup>
@@ -51,6 +51,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Update="Resources\Styles\Styles.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Vista\Retos.xaml">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

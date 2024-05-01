@@ -286,5 +286,20 @@ namespace TFGVolandoVoy
             Navigation.PushAsync(new DetallesLocalidadVtn(labelText));
         }
 
+        private async void OnRetosClicked(object sender, EventArgs e)
+        {
+            // Obtener la localidad asociada al botón de Retos
+            var localidad = (sender as Button)?.BindingContext as Localidad;
+
+            if (localidad != null)
+            {
+                // Navegar a la página Retos y pasar el idLocalidad como parámetro
+                await Navigation.PushAsync(new TFGVolandoVoy.Vista.Retos(localidad.IdLocalidad));
+            }
+            else
+            {
+                await DisplayAlert("Error", "No se pudo obtener la localidad asociada.", "Aceptar");
+            }
+        }
     }
 }

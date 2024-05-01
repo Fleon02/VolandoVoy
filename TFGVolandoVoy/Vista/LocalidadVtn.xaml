@@ -74,7 +74,7 @@
                                             <TapGestureRecognizer Tapped="DetallesL"/>
                                         </Label.GestureRecognizers>
                                     </Label>
-                                    <Button Text="Retos" HorizontalOptions="EndAndExpand" />
+                                    <Button Text="Retos" HorizontalOptions="EndAndExpand" Clicked="OnRetosClicked"/>
                                 </StackLayout>
                             </Frame>
                         </ViewCell>
