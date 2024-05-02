@@ -70,22 +70,6 @@
               "target": "Package",
               "version": "[3.0.2, )"
             },
-            "Mapbox.Mapcontrol.Forms": {
-              "target": "Package",
-              "version": "[1.0.0, )"
-            },
-            "MapboxCommon.iOS": {
-              "target": "Package",
-              "version": "[24.2.0, )"
-            },
-            "MapboxCoreMaps.iOS": {
-              "target": "Package",
-              "version": "[11.2.0, )"
-            },
-            "MapboxMaps.iOS": {
-              "target": "Package",
-              "version": "[11.2.0, )"
-            },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -161,22 +145,6 @@
               "target": "Package",
               "version": "[3.0.2, )"
             },
-            "Mapbox.Mapcontrol.Forms": {
-              "target": "Package",
-              "version": "[1.0.0, )"
-            },
-            "MapboxCommon.iOS": {
-              "target": "Package",
-              "version": "[24.2.0, )"
-            },
-            "MapboxCoreMaps.iOS": {
-              "target": "Package",
-              "version": "[11.2.0, )"
-            },
-            "MapboxMaps.iOS": {
-              "target": "Package",
-              "version": "[11.2.0, )"
-            },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -247,30 +215,6 @@
             "DocumentFormat.OpenXml": {
               "target": "Package",
               "version": "[3.0.2, )"
-            },
-            "Mapbox.Mapcontrol.Forms": {
-              "target": "Package",
-              "version": "[1.0.0, )"
-            },
-            "Mapbox.Mapcontrol.iOS": {
-              "target": "Package",
-              "version": "[1.0.0, )"
-            },
-            "Mapbox.iOS.SDK": {
-              "target": "Package",
-              "version": "[4.10.0, )"
-            },
-            "MapboxCommon.iOS": {
-              "target": "Package",
-              "version": "[24.2.0, )"
-            },
-            "MapboxCoreMaps.iOS": {
-              "target": "Package",
-              "version": "[11.2.0, )"
-            },
-            "MapboxMaps.iOS": {
-              "target": "Package",
-              "version": "[11.2.0, )"
             },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
@@ -355,22 +299,6 @@
             "DocumentFormat.OpenXml": {
               "target": "Package",
               "version": "[3.0.2, )"
-            },
-            "Mapbox.Mapcontrol.Forms": {
-              "target": "Package",
-              "version": "[1.0.0, )"
-            },
-            "MapboxCommon.iOS": {
-              "target": "Package",
-              "version": "[24.2.0, )"
-            },
-            "MapboxCoreMaps.iOS": {
-              "target": "Package",
-              "version": "[11.2.0, )"
-            },
-            "MapboxMaps.iOS": {
-              "target": "Package",
-              "version": "[11.2.0, )"
             },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Yjqs/ndeXpgQSJy7vvUh2f9CPntNVOynDl1zc9njIfh01cz449BT/uPyqvhuzF4H4/5HEEr1cYpeM7ZfPXIMLA==",
+  "dgSpecHash": "nm0yLe1QjpPks/U41KXvosARibx1b88AUJnUVU2wHiq1pQ9Ws201ncU0rFxeN2y/kS8zVSorpy1fN7TIt0u1pw==",
   "success": true,
   "projectFilePath": "C:\\Users\\guapi\\OneDrive\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj",
   "expectedPackageFiles": [
@@ -9,12 +9,6 @@
     "C:\\Users\\guapi\\.nuget\\packages\\functions-csharp\\1.3.2\\functions-csharp.1.3.2.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\gotrue-csharp\\4.2.7\\gotrue-csharp.4.2.7.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\mapbox.ios.sdk\\4.10.0\\mapbox.ios.sdk.4.10.0.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\mapbox.mapcontrol.forms\\1.0.0\\mapbox.mapcontrol.forms.1.0.0.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\mapbox.mapcontrol.ios\\1.0.0\\mapbox.mapcontrol.ios.1.0.0.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\mapboxcommon.ios\\24.2.0\\mapboxcommon.ios.24.2.0.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\mapboxcoremaps.ios\\11.2.0\\mapboxcoremaps.ios.11.2.0.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\mapboxmaps.ios\\11.2.0\\mapboxmaps.ios.11.2.0.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\microsoft.extensions.configuration.binder\\8.0.0\\microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",
@@ -90,28 +84,11 @@
     "C:\\Users\\guapi\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\system.threading.channels\\5.0.0\\system.threading.channels.5.0.0.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\turf.ios\\2.8.0\\turf.ios.2.8.0.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\websocket.client\\4.6.1\\websocket.client.4.6.1.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.glide\\4.15.1.2\\xamarin.android.glide.4.15.1.2.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.glide.annotations\\4.15.1.2\\xamarin.android.glide.annotations.4.15.1.2.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.glide.disklrucache\\4.15.1.2\\xamarin.android.glide.disklrucache.4.15.1.2.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.glide.gifdecoder\\4.15.1.2\\xamarin.android.glide.gifdecoder.4.15.1.2.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.support.animated.vector.drawable\\25.4.0.2\\xamarin.android.support.animated.vector.drawable.25.4.0.2.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.support.annotations\\25.4.0.2\\xamarin.android.support.annotations.25.4.0.2.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.support.compat\\25.4.0.2\\xamarin.android.support.compat.25.4.0.2.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.support.core.ui\\25.4.0.2\\xamarin.android.support.core.ui.25.4.0.2.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.support.core.utils\\25.4.0.2\\xamarin.android.support.core.utils.25.4.0.2.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.support.design\\25.4.0.2\\xamarin.android.support.design.25.4.0.2.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.support.fragment\\25.4.0.2\\xamarin.android.support.fragment.25.4.0.2.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.support.media.compat\\25.4.0.2\\xamarin.android.support.media.compat.25.4.0.2.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.support.transition\\25.4.0.2\\xamarin.android.support.transition.25.4.0.2.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.support.v4\\25.4.0.2\\xamarin.android.support.v4.25.4.0.2.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.support.v7.appcompat\\25.4.0.2\\xamarin.android.support.v7.appcompat.25.4.0.2.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.support.v7.cardview\\25.4.0.2\\xamarin.android.support.v7.cardview.25.4.0.2.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.support.v7.mediarouter\\25.4.0.2\\xamarin.android.support.v7.mediarouter.25.4.0.2.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.support.v7.palette\\25.4.0.2\\xamarin.android.support.v7.palette.25.4.0.2.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.support.v7.recyclerview\\25.4.0.2\\xamarin.android.support.v7.recyclerview.25.4.0.2.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\xamarin.android.support.vector.drawable\\25.4.0.2\\xamarin.android.support.vector.drawable.25.4.0.2.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.androidx.activity\\1.7.2.1\\xamarin.androidx.activity.1.7.2.1.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.androidx.activity.ktx\\1.7.2.1\\xamarin.androidx.activity.ktx.1.7.2.1.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.androidx.annotation\\1.6.0.4\\xamarin.androidx.annotation.1.6.0.4.nupkg.sha512",
@@ -180,7 +157,6 @@
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.androidx.window\\1.1.0.1\\xamarin.androidx.window.1.1.0.1.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.androidx.window.extensions.core.core\\1.0.0.1\\xamarin.androidx.window.extensions.core.core.1.0.0.1.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.build.download\\0.11.4\\xamarin.build.download.0.11.4.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\xamarin.forms\\3.1.0.697729\\xamarin.forms.3.1.0.697729.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.google.android.material\\1.9.0.2\\xamarin.google.android.material.1.9.0.2.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.google.code.findbugs.jsr305\\3.0.2.9\\xamarin.google.code.findbugs.jsr305.3.0.2.9.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.google.crypto.tink.android\\1.10.0\\xamarin.google.crypto.tink.android.1.10.0.nupkg.sha512",
@@ -197,7 +173,6 @@
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.kotlin.stdlib.jdk8\\1.9.0.1\\xamarin.kotlin.stdlib.jdk8.1.9.0.1.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.kotlinx.coroutines.android\\1.7.2.1\\xamarin.kotlinx.coroutines.android.1.7.2.1.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.kotlinx.coroutines.core.jvm\\1.7.2.1\\xamarin.kotlinx.coroutines.core.jvm.1.7.2.1.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\xamarin.plugin.imageedit\\0.1.0\\xamarin.plugin.imageedit.0.1.0.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.swift4\\4.0.0\\xamarin.swift4.4.0.0.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.swift4.avfoundation\\4.1.0\\xamarin.swift4.avfoundation.4.1.0.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.swift4.core\\4.1.0\\xamarin.swift4.core.4.1.0.nupkg.sha512",
@@ -232,36 +207,6 @@
       "libraryId": "Microsoft.Maps.MapControl.WPF",
       "targetGraphs": [
         "net8.0-android34.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"Xamarin.Plugin.ImageEdit 0.1.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0-ios17.2\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "libraryId": "Xamarin.Plugin.ImageEdit",
-      "targetGraphs": [
-        "net8.0-ios17.2"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"Mapbox.iOS.SDK 4.10.0\" se restauró con \"Xamarin.iOS,Version=v1.0, .NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0-maccatalyst17.2\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "libraryId": "Mapbox.iOS.SDK",
-      "targetGraphs": [
-        "net8.0-maccatalyst17.2"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"Mapbox.Mapcontrol.iOS 1.0.0\" se restauró con \"Xamarin.iOS,Version=v1.0, .NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0-maccatalyst17.2\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "libraryId": "Mapbox.Mapcontrol.iOS",
-      "targetGraphs": [
-        "net8.0-maccatalyst17.2"
       ]
     },
     {
