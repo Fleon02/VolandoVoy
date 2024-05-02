@@ -61,7 +61,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame CornerRadius="10" BorderColor="Red" Padding="5">
+                            <Frame CornerRadius="10" BorderColor="Red" Padding="5" BackgroundColor="{AppThemeBinding Light=#A79FA1, Dark=#FF000000}">
                                 <StackLayout Orientation="Horizontal" Padding="20,0" Margin="0,5">
                                     <Image
                                     Source="{Binding ImagenLocalidad}"
@@ -69,11 +69,13 @@
                                     Margin="0,0,20,0"
                                     Aspect="AspectFit">
                                     </Image>
-                                    <Label Text="{Binding NombreLocalidad}" VerticalOptions="Center">
+                                    <Frame CornerRadius="10" BorderColor="Red" Padding="5" BackgroundColor="{AppThemeBinding Light=#A79FA1, Dark=#FF000000}">
+                                    <Label Text="{Binding NombreLocalidad}" VerticalOptions="Center" BackgroundColor="Red">
                                         <Label.GestureRecognizers>
                                             <TapGestureRecognizer Tapped="DetallesL"/>
                                         </Label.GestureRecognizers>
                                     </Label>
+                                    </Frame>
                                     <Button Text="Retos" HorizontalOptions="EndAndExpand" />
                                 </StackLayout>
                             </Frame>

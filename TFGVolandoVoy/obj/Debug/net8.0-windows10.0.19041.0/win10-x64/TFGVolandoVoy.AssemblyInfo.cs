@@ -18,7 +18,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TFGVolandoVoy")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+eb8e8dfded8736fbd708a756519f779669931ecd")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+4b1759cd7f2a2631912865ff2a8d50095b521132")]
+>>>>>>> main
 [assembly: System.Reflection.AssemblyProductAttribute("TFGVolandoVoy")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TFGVolandoVoy")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

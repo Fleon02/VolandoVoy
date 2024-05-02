@@ -66321,24 +66321,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\guapi\\.nuget\\packages\\": {},
+    "C:\\Users\\soraf\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\guapi\\OneDrive\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj",
+      "projectUniqueName": "C:\\Users\\soraf\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj",
       "projectName": "TFGVolandoVoy",
-      "projectPath": "C:\\Users\\guapi\\OneDrive\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj",
-      "packagesPath": "C:\\Users\\guapi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\guapi\\OneDrive\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\obj\\",
+      "projectPath": "C:\\Users\\soraf\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj",
+      "packagesPath": "C:\\Users\\soraf\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\soraf\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\guapi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\soraf\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
