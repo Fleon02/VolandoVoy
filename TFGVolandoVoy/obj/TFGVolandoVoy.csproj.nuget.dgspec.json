@@ -70,6 +70,26 @@
               "target": "Package",
               "version": "[3.0.2, )"
             },
+            "Mapbox.Mapcontrol.Forms": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "MapboxCommon.iOS": {
+              "target": "Package",
+              "version": "[24.2.0, )"
+            },
+            "MapboxCoreMaps.iOS": {
+              "target": "Package",
+              "version": "[11.2.0, )"
+            },
+            "MapboxMaps.iOS": {
+              "target": "Package",
+              "version": "[11.2.0, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -90,6 +110,10 @@
               "target": "Package",
               "version": "[8.0.21, )"
             },
+            "Microsoft.Maui.Essentials": {
+              "target": "Package",
+              "version": "[8.0.21, )"
+            },
             "Microsoft.Maui.Maps": {
               "target": "Package",
               "version": "[8.0.21, )"
@@ -99,6 +123,10 @@
               "target": "Package",
               "version": "[8.0.4, )",
               "autoReferenced": true
+            },
+            "Naxam.Mapbox.Droid": {
+              "target": "Package",
+              "version": "[9.2.0, )"
             },
             "supabase-csharp": {
               "target": "Package",
@@ -133,6 +161,26 @@
               "target": "Package",
               "version": "[3.0.2, )"
             },
+            "Mapbox.Mapcontrol.Forms": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "MapboxCommon.iOS": {
+              "target": "Package",
+              "version": "[24.2.0, )"
+            },
+            "MapboxCoreMaps.iOS": {
+              "target": "Package",
+              "version": "[11.2.0, )"
+            },
+            "MapboxMaps.iOS": {
+              "target": "Package",
+              "version": "[11.2.0, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -150,6 +198,10 @@
               "version": "[8.0.21, )"
             },
             "Microsoft.Maui.Controls.Maps": {
+              "target": "Package",
+              "version": "[8.0.21, )"
+            },
+            "Microsoft.Maui.Essentials": {
               "target": "Package",
               "version": "[8.0.21, )"
             },
@@ -196,6 +248,34 @@
               "target": "Package",
               "version": "[3.0.2, )"
             },
+            "Mapbox.Mapcontrol.Forms": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Mapbox.Mapcontrol.iOS": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Mapbox.iOS.SDK": {
+              "target": "Package",
+              "version": "[4.10.0, )"
+            },
+            "MapboxCommon.iOS": {
+              "target": "Package",
+              "version": "[24.2.0, )"
+            },
+            "MapboxCoreMaps.iOS": {
+              "target": "Package",
+              "version": "[11.2.0, )"
+            },
+            "MapboxMaps.iOS": {
+              "target": "Package",
+              "version": "[11.2.0, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -216,6 +296,10 @@
               "target": "Package",
               "version": "[8.0.21, )"
             },
+            "Microsoft.Maui.Essentials": {
+              "target": "Package",
+              "version": "[8.0.21, )"
+            },
             "Microsoft.Maui.Maps": {
               "target": "Package",
               "version": "[8.0.21, )"
@@ -225,6 +309,18 @@
               "target": "Package",
               "version": "[8.0.4, )",
               "autoReferenced": true
+            },
+            "Naxam.Mapbox.iOS": {
+              "target": "Package",
+              "version": "[5.4.0, )"
+            },
+            "Naxam.MapboxNavigation.iOS": {
+              "target": "Package",
+              "version": "[0.16.0, )"
+            },
+            "Softeq.Mapbox.iOS": {
+              "target": "Package",
+              "version": "[6.2.1, )"
             },
             "supabase-csharp": {
               "target": "Package",
@@ -260,6 +356,26 @@
               "target": "Package",
               "version": "[3.0.2, )"
             },
+            "Mapbox.Mapcontrol.Forms": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "MapboxCommon.iOS": {
+              "target": "Package",
+              "version": "[24.2.0, )"
+            },
+            "MapboxCoreMaps.iOS": {
+              "target": "Package",
+              "version": "[11.2.0, )"
+            },
+            "MapboxMaps.iOS": {
+              "target": "Package",
+              "version": "[11.2.0, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -277,6 +393,10 @@
               "version": "[8.0.21, )"
             },
             "Microsoft.Maui.Controls.Maps": {
+              "target": "Package",
+              "version": "[8.0.21, )"
+            },
+            "Microsoft.Maui.Essentials": {
               "target": "Package",
               "version": "[8.0.21, )"
             },
