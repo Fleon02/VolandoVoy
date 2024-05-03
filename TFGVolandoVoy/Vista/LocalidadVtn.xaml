@@ -70,17 +70,18 @@
                                     Aspect="AspectFit">
                                     </Image>
                                     <Frame CornerRadius="10" BorderColor="Red" Padding="5" BackgroundColor="{AppThemeBinding Light=#A79FA1, Dark=#FF000000}">
-                                    <Label Text="{Binding NombreLocalidad}" VerticalOptions="Center" BackgroundColor="Red">
+                                        <Label Text="{Binding NombreLocalidad}" VerticalOptions="Center" BackgroundColor="Red">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="DetallesL"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                        
+                                    </Frame>
+                                    <Label Text="Retos" VerticalOptions="Center" BackgroundColor="Aqua">
                                         <Label.GestureRecognizers>
-                                            <TapGestureRecognizer Tapped="DetallesL"/>
+                                            <TapGestureRecognizer Tapped="OnRetosClicked"/>
                                         </Label.GestureRecognizers>
                                     </Label>
-<<<<<<< HEAD
-                                    <Button Text="Retos" HorizontalOptions="EndAndExpand" Clicked="OnRetosClicked"/>
-=======
-                                    </Frame>
-                                    <Button Text="Retos" HorizontalOptions="EndAndExpand" />
->>>>>>> main
                                 </StackLayout>
                             </Frame>
                         </ViewCell>

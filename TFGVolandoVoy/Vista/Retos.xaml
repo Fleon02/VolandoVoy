@@ -15,7 +15,7 @@
                    WidthRequest="100"
                    Aspect="AspectFit"
                    x:Name="retos_titulo"/>
-            <ListView>
+            <!--<ListView>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -28,7 +28,7 @@
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-            </ListView>            
+            </ListView>-->            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

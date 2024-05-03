@@ -8,105 +8,64 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TFGVolandoVoy
-<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\Usuario\OneDrive\Documentos\GitHub\VolandoVoy\TFGVolandoVoy\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
 [C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/App.xaml]
-=======
-build_property.ProjectDir = C:\Users\soraf\Documents\GitHub\VolandoVoy\TFGVolandoVoy\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
-
-[C:/Users/soraf/Documents/GitHub/VolandoVoy/TFGVolandoVoy/App.xaml]
->>>>>>> main
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-<<<<<<< HEAD
 [C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/AppShell.xaml]
-=======
-[C:/Users/soraf/Documents/GitHub/VolandoVoy/TFGVolandoVoy/AppShell.xaml]
->>>>>>> main
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-<<<<<<< HEAD
 [C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/Resources/Styles/Colors.xaml]
-=======
-[C:/Users/soraf/Documents/GitHub/VolandoVoy/TFGVolandoVoy/Resources/Styles/Colors.xaml]
->>>>>>> main
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-<<<<<<< HEAD
 [C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/Resources/Styles/Styles.xaml]
-=======
-[C:/Users/soraf/Documents/GitHub/VolandoVoy/TFGVolandoVoy/Resources/Styles/Styles.xaml]
->>>>>>> main
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-<<<<<<< HEAD
 [C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/Vista/DetallesLocalidadVtn.xaml]
-=======
-[C:/Users/soraf/Documents/GitHub/VolandoVoy/TFGVolandoVoy/Vista/DetallesLocalidadVtn.xaml]
->>>>>>> main
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.DetallesLocalidadVtn.xaml
 build_metadata.AdditionalFiles.TargetPath = Vista\DetallesLocalidadVtn.xaml
 build_metadata.AdditionalFiles.RelativePath = Vista\DetallesLocalidadVtn.xaml
 
-<<<<<<< HEAD
 [C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/Vista/InicioSesion.xaml]
-=======
-[C:/Users/soraf/Documents/GitHub/VolandoVoy/TFGVolandoVoy/Vista/InicioSesion.xaml]
->>>>>>> main
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.InicioSesion.xaml
 build_metadata.AdditionalFiles.TargetPath = Vista\InicioSesion.xaml
 build_metadata.AdditionalFiles.RelativePath = Vista\InicioSesion.xaml
 
-<<<<<<< HEAD
 [C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/Vista/LocalidadVtn.xaml]
-=======
-[C:/Users/soraf/Documents/GitHub/VolandoVoy/TFGVolandoVoy/Vista/LocalidadVtn.xaml]
->>>>>>> main
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.LocalidadVtn.xaml
 build_metadata.AdditionalFiles.TargetPath = Vista\LocalidadVtn.xaml
 build_metadata.AdditionalFiles.RelativePath = Vista\LocalidadVtn.xaml
 
-<<<<<<< HEAD
 [C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/Vista/ProvinciaVnt.xaml]
-=======
-[C:/Users/soraf/Documents/GitHub/VolandoVoy/TFGVolandoVoy/Vista/ProvinciaVnt.xaml]
->>>>>>> main
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.ProvinciaVnt.xaml
 build_metadata.AdditionalFiles.TargetPath = Vista\ProvinciaVnt.xaml
 build_metadata.AdditionalFiles.RelativePath = Vista\ProvinciaVnt.xaml
 
-<<<<<<< HEAD
 [C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/Vista/Registro.xaml]
-=======
-[C:/Users/soraf/Documents/GitHub/VolandoVoy/TFGVolandoVoy/Vista/Registro.xaml]
->>>>>>> main
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.Registro.xaml
 build_metadata.AdditionalFiles.TargetPath = Vista\Registro.xaml
 build_metadata.AdditionalFiles.RelativePath = Vista\Registro.xaml
 
-<<<<<<< HEAD
 [C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/Vista/Retos.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.Retos.xaml
@@ -114,9 +73,6 @@ build_metadata.AdditionalFiles.TargetPath = Vista\Retos.xaml
 build_metadata.AdditionalFiles.RelativePath = Vista\Retos.xaml
 
 [C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/Vista/VntPrincipal.xaml]
-=======
-[C:/Users/soraf/Documents/GitHub/VolandoVoy/TFGVolandoVoy/Vista/VntPrincipal.xaml]
->>>>>>> main
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.VntPrincipal.xaml
 build_metadata.AdditionalFiles.TargetPath = Vista\VntPrincipal.xaml

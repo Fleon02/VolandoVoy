@@ -288,13 +288,14 @@ namespace TFGVolandoVoy
 
         private async void OnRetosClicked(object sender, EventArgs e)
         {
+            await Navigation.PushAsync(new Vista.Retos());
             // Obtener la localidad asociada al botón de Retos
             var localidad = (sender as Button)?.BindingContext as Localidad;
 
             if (localidad != null)
             {
                 // Navegar a la página Retos y pasar el idLocalidad como parámetro
-                await Navigation.PushAsync(new TFGVolandoVoy.Vista.Retos(localidad.IdLocalidad));
+                await Navigation.PushAsync(new Vista.Retos());
             }
             else
             {
