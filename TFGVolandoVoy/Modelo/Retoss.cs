@@ -2,7 +2,7 @@
 using Postgrest.Models;
 
 [Table("retos")]
-public class Retos : BaseModel
+public class Retoss : BaseModel
 {
     [PrimaryKey("idreto")]
     public long IdReto { get; set; }

@@ -66,11 +66,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.Regist
 build_metadata.AdditionalFiles.TargetPath = Vista\Registro.xaml
 build_metadata.AdditionalFiles.RelativePath = Vista\Registro.xaml
 
-[C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/Vista/Retos.xaml]
+[C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/Vista/RetosVnt_.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.Retos.xaml
-build_metadata.AdditionalFiles.TargetPath = Vista\Retos.xaml
-build_metadata.AdditionalFiles.RelativePath = Vista\Retos.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.RetosVnt_.xaml
+build_metadata.AdditionalFiles.TargetPath = Vista\RetosVnt_.xaml
+build_metadata.AdditionalFiles.RelativePath = Vista\RetosVnt_.xaml
 
 [C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/Vista/VntPrincipal.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

@@ -299,7 +299,7 @@ namespace TFGVolandoVoy
             }
             else
             {
-                await DisplayAlert("Error", "No se pudo obtener la localidad asociada.", "Aceptar");
+               
             }
         }
     }

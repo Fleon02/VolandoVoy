@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TFGVolandoVoy.Vista.Retos"
+             Title="RetosVnt">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="Retos de:Localidad(Pendiente)"
+                   FontSize="Large"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+            <Image Source="retoss.png" 
+                    HeightRequest="185"
+                    Aspect="AspectFit"/>
+            <ListView x:Name="ListaRetos" Margin="0,0,20,0" RowHeight="50">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="20,0" Margin="0,5" VerticalOptions="StartAndExpand" HeightRequest="50">
+                                <Frame CornerRadius="10"  Padding="5" BackgroundColor="{AppThemeBinding Light=#A79FA1, Dark=#FF000000}">
+                                    <Label Text="{Binding IdLocalidad}" VerticalOptions="Center">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="DetallesJ"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </Frame>
+                                
+                                    <Label Text="{Binding DescripcionReto}" VerticalOptions="Center" BackgroundColor="{AppThemeBinding Light=#A79FA1, Dark=#FF000000}" LineBreakMode="WordWrap" HeightRequest="150">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="DetallesJ"/>
+                                    </Label.GestureRecognizers>
+                                  </Label>  
+                                
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
