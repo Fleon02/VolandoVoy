@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Contraseña</title>
+</head>
+<body>
+    <h1>Cambiar Contraseña</h1>
+    <form id="passwordForm">
+        <label for="newPassword">Nueva Contraseña:</label>
+        <input type="password" id="newPassword" name="newPassword" required>
+        <br>
+        <input type="submit" value="Cambiar Contraseña" onclick="cambiarContrasena()">
+    </form>
+
+    <script>
+        function cambiarContrasena() {
+            var newPassword = document.getElementById("newPassword").value;
+            alert('Trabajando en ello...');
+
+            // Aquí puedes agregar el código para enviar la solicitud a tu aplicación en C#
+            // para cambiar la contraseña en la base de datos
+        }
+    </script>
+</body>
+</html>
