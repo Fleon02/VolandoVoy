@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Contraseña</title>
+</head>
+<body>
+    <h1>Cambiar Contraseña</h1>
+    <form id="passwordForm">
+        <label for="newPassword">Nueva Contraseña:</label>
+        <input type="password" id="newPassword" name="newPassword" required>
+        <br>
+        <input type="submit" value="Cambiar Contraseña">
+    </form>
+
+    <script>
+        document.getElementById("passwordForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evitar que el formulario se envíe automáticamente
+
+            var newPassword = document.getElementById("newPassword").value;
+
+            // Enviar la nueva contraseña a tu aplicación en C# para que se actualice en la base de datos
+            // Puedes usar Fetch API, Axios u otras bibliotecas para enviar la solicitud HTTP POST
+            // Ejemplo con Fetch API:
+            fetch('https://tu-aplicacion-csharp.com/cambiar-contrasena', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ newPassword: newPassword })
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Contraseña cambiada correctamente');
+                } else {
+                    alert('Error al cambiar la contraseña');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error al cambiar la contraseña');
+            });
+        });
+    </script>
+</body>
+</html>
