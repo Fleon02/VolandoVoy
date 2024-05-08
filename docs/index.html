@@ -6,7 +6,7 @@
     <title>Cambiar Contraseña</title>
 </head>
 <body>
-    <h1>Cambiar Contraseña para <span id="username"></span></h1>
+    <h1>Cambiar Contraseña</h1>
     <form id="passwordForm">
         <label for="newPassword">Nueva Contraseña:</label>
         <input type="password" id="newPassword" name="newPassword" required>
@@ -29,9 +29,18 @@
             return urlParams.get(nombreParametro);
         }
 
-        // Obtener el nombre de usuario de la URL y mostrarlo en el encabezado
-        var username = obtenerParametroUrl('usuario');
-        document.getElementById("username").textContent = username;
+        // Obtener el nombre de usuario de la URL
+        var urlParams = new URLSearchParams(window.location.hash.substring(1));
+        var username = urlParams.get('usuario');
+
+        // Si el nombre de usuario no está definido, redirigir a la página principal
+        if (!username) {
+            window.location.href = 'https://fleon02.github.io/VolandoVoy/';
+        }
+
+        // Reemplazar la URL actual sin el nombre de usuario en la barra de direcciones
+        history.replaceState(null, null, window.location.href.split('#')[0]);
     </script>
 </body>
 </html>
+
