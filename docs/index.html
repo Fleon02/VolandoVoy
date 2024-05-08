@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Contraseña</title>
+</head>
+<body>
+    <h1>Cambiar Contraseña para <span id="username"></span></h1>
+    <form id="passwordForm">
+        <label for="newPassword">Nueva Contraseña:</label>
+        <input type="password" id="newPassword" name="newPassword" required>
+        <br>
+        <input type="submit" value="Cambiar Contraseña" onclick="cambiarContrasena()">
+    </form>
+
+    <script>
+        function cambiarContrasena() {
+            var newPassword = document.getElementById("newPassword").value;
+            var username = obtenerParametroUrl('usuario');
+            alert('Cambiando contraseña para el usuario: ' + username);
+
+            // Aquí puedes agregar el código para enviar la solicitud a tu aplicación en C#
+            // para cambiar la contraseña en la base de datos
+        }
+
+        function obtenerParametroUrl(nombreParametro) {
+            var urlParams = new URLSearchParams(window.location.hash.substring(1));
+            return urlParams.get(nombreParametro);
+        }
+
+        // Obtener el nombre de usuario de la URL y mostrarlo en el encabezado
+        var username = obtenerParametroUrl('usuario');
+        document.getElementById("username").textContent = username;
+    </script>
+</body>
+</html>
+
+
