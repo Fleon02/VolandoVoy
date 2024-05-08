@@ -54,4 +54,9 @@ public partial class Retos : ContentPage
     {
 
     }
+
+    private void Completar_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
