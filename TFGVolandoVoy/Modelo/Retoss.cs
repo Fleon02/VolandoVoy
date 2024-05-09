@@ -2,7 +2,7 @@
 using Postgrest.Models;
 
 [Table("retos")]
-public class Retoss : BaseModel
+public class Reto : BaseModel
 {
     [PrimaryKey("idreto")]
     public long IdReto { get; set; }
@@ -15,4 +15,7 @@ public class Retoss : BaseModel
 
     [Column("superado")]
     public bool Superado { get; set; }
+
+    [Column("imagenRetoCompletado")]
+    public string? ImagenCompletado { get; set; }
 }

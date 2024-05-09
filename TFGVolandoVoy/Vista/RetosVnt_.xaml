@@ -20,13 +20,12 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Padding="20,5" Margin="0,5">                               
-                            <Label Text="{Binding IdLocalidad}" VerticalOptions="Center"/>
+                            <Label Text="{Binding localidad}" VerticalOptions="Center"/>
                             <Frame CornerRadius="10" Padding="5" BackgroundColor="{AppThemeBinding Light=#A79FA1, Dark=#FF000000}">
                                 <Label Text="{Binding DescripcionReto}" LineBreakMode="WordWrap"/>
                             </Frame>
                             <Button x:Name="Completar"
-                                    Text="Completado"
-                                    Clicked="Completar_Clicked"/>
+                                    Text="Completado"/>
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

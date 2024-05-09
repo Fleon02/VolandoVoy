@@ -79,7 +79,7 @@
                                     </Frame>
                                     <Label Text="Retos" VerticalOptions="Center" BackgroundColor="Aqua">
                                         <Label.GestureRecognizers>
-                                            <TapGestureRecognizer Tapped="OnRetosClicked"/>
+                                            <TapGestureRecognizer Tapped="OnRetosTapped"/>
                                         </Label.GestureRecognizers>
                                     </Label>
                                 </StackLayout>
