@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "zfxe2gV+xYfA1qBXdgouXsXX4GVObJqx/2TRmZHyoZt+UYtAXFP4bqd3rTy8l38Wu2grdpXb7HSFC405AG8BBA==",
+  "dgSpecHash": "i+DpITpumfZX8yZZcZs7yFDyYn4Zn1HojFj2fYLeDej0aWD145p7BMEmU6LJkv2MLnT1URQlAirFYHmgSvAvKw==",
   "success": true,
   "projectFilePath": "C:\\Users\\soraf\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\soraf\\.nuget\\packages\\communitytoolkit.maui.maps\\2.0.2\\communitytoolkit.maui.maps.2.0.2.nupkg.sha512",
     "C:\\Users\\soraf\\.nuget\\packages\\documentformat.openxml\\3.0.2\\documentformat.openxml.3.0.2.nupkg.sha512",
     "C:\\Users\\soraf\\.nuget\\packages\\documentformat.openxml.framework\\3.0.2\\documentformat.openxml.framework.3.0.2.nupkg.sha512",
     "C:\\Users\\soraf\\.nuget\\packages\\functions-csharp\\1.3.2\\functions-csharp.1.3.2.nupkg.sha512",
