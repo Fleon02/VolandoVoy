@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\soraf\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj": {}
+    "C:\\Users\\guapi\\OneDrive\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\soraf\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj": {
+    "C:\\Users\\guapi\\OneDrive\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\soraf\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj",
+        "projectUniqueName": "C:\\Users\\guapi\\OneDrive\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj",
         "projectName": "TFGVolandoVoy",
-        "projectPath": "C:\\Users\\soraf\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj",
-        "packagesPath": "C:\\Users\\soraf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\soraf\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\obj\\",
+        "projectPath": "C:\\Users\\guapi\\OneDrive\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj",
+        "packagesPath": "C:\\Users\\guapi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\guapi\\OneDrive\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\soraf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\guapi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -70,6 +70,18 @@
               "target": "Package",
               "version": "[3.0.2, )"
             },
+            "Effort.EF6": {
+              "target": "Package",
+              "version": "[2.2.17, )"
+            },
+            "Mapbox.Mapcontrol.Forms": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -112,6 +124,14 @@
               "target": "Package",
               "version": "[9.2.0, )"
             },
+            "Uno.UI": {
+              "target": "Package",
+              "version": "[5.2.108, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.8.1, )"
+            },
             "supabase-csharp": {
               "target": "Package",
               "version": "[0.16.2, )"
@@ -144,6 +164,18 @@
             "DocumentFormat.OpenXml": {
               "target": "Package",
               "version": "[3.0.2, )"
+            },
+            "Effort.EF6": {
+              "target": "Package",
+              "version": "[2.2.17, )"
+            },
+            "Mapbox.Mapcontrol.Forms": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
             },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
@@ -183,6 +215,14 @@
               "version": "[8.0.4, )",
               "autoReferenced": true
             },
+            "Uno.UI": {
+              "target": "Package",
+              "version": "[5.2.108, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.8.1, )"
+            },
             "supabase-csharp": {
               "target": "Package",
               "version": "[0.16.2, )"
@@ -215,6 +255,18 @@
             "DocumentFormat.OpenXml": {
               "target": "Package",
               "version": "[3.0.2, )"
+            },
+            "Effort.EF6": {
+              "target": "Package",
+              "version": "[2.2.17, )"
+            },
+            "Mapbox.Mapcontrol.Forms": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
             },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
@@ -266,6 +318,14 @@
               "target": "Package",
               "version": "[6.2.1, )"
             },
+            "Uno.UI": {
+              "target": "Package",
+              "version": "[5.2.108, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.8.1, )"
+            },
             "supabase-csharp": {
               "target": "Package",
               "version": "[0.16.2, )"
@@ -300,6 +360,18 @@
               "target": "Package",
               "version": "[3.0.2, )"
             },
+            "Effort.EF6": {
+              "target": "Package",
+              "version": "[2.2.17, )"
+            },
+            "Mapbox.Mapcontrol.Forms": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -331,6 +403,14 @@
             "Microsoft.Maui.Maps": {
               "target": "Package",
               "version": "[8.0.21, )"
+            },
+            "Uno.UI": {
+              "target": "Package",
+              "version": "[5.2.108, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.8.1, )"
             },
             "supabase-csharp": {
               "target": "Package",
