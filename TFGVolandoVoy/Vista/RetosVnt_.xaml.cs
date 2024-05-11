@@ -21,10 +21,6 @@ public partial class Retos : ContentPage
         ListaRetos = new CollectionView();
         InitializeComponent();
     }
-
-    
-
-
     
 
     protected override void OnAppearing()
@@ -60,6 +56,8 @@ public partial class Retos : ContentPage
         }
     }
 
-
     
+
+
+
 }

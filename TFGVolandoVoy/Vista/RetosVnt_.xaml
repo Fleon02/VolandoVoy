@@ -19,8 +19,8 @@
                             Margin="20,0">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Padding="20,5" Margin="0,5">                               
-                            <Label Text="{Binding localidad}" VerticalOptions="Center"/>
+                        <StackLayout Padding="20,5" Margin="0,5">
+                            <Label Text="{Binding localidad}" VerticalOptions="Center" Margin="0,0,0,10"/>
                             <Frame CornerRadius="10" Padding="5" BackgroundColor="{AppThemeBinding Light=#A79FA1, Dark=#FF000000}">
                                 <Label Text="{Binding DescripcionReto}" LineBreakMode="WordWrap"/>
                             </Frame>
