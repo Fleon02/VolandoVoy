@@ -2,6 +2,24 @@
   "version": 3,
   "targets": {
     "net8.0-android34.0": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -2671,6 +2689,24 @@
       }
     },
     "net8.0-android34.0/android-arm": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -5340,6 +5376,24 @@
       }
     },
     "net8.0-android34.0/android-arm64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -8009,6 +8063,24 @@
       }
     },
     "net8.0-android34.0/android-x64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -10678,6 +10750,24 @@
       }
     },
     "net8.0-android34.0/android-x86": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -13347,6 +13437,24 @@
       }
     },
     "net8.0-android34.0/iossimulator-x64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -16016,6 +16124,24 @@
       }
     },
     "net8.0-android34.0/maccatalyst-x64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -18685,6 +18811,24 @@
       }
     },
     "net8.0-android34.0/win10-x64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -21354,6 +21498,24 @@
       }
     },
     "net8.0-ios17.2": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-ios17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -22139,6 +22301,24 @@
       }
     },
     "net8.0-ios17.2/android-arm": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-ios17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -22924,6 +23104,24 @@
       }
     },
     "net8.0-ios17.2/android-arm64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-ios17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -23709,6 +23907,24 @@
       }
     },
     "net8.0-ios17.2/android-x64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-ios17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -24494,6 +24710,24 @@
       }
     },
     "net8.0-ios17.2/android-x86": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-ios17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -25279,6 +25513,24 @@
       }
     },
     "net8.0-ios17.2/iossimulator-x64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-ios17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -26064,6 +26316,24 @@
       }
     },
     "net8.0-ios17.2/maccatalyst-x64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-ios17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -26849,6 +27119,24 @@
       }
     },
     "net8.0-ios17.2/win10-x64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-ios17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -27634,6 +27922,24 @@
       }
     },
     "net8.0-maccatalyst17.2": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -28419,6 +28725,24 @@
       }
     },
     "net8.0-maccatalyst17.2/android-arm": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -29204,6 +29528,24 @@
       }
     },
     "net8.0-maccatalyst17.2/android-arm64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -29989,6 +30331,24 @@
       }
     },
     "net8.0-maccatalyst17.2/android-x64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -30774,6 +31134,24 @@
       }
     },
     "net8.0-maccatalyst17.2/android-x86": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -31559,6 +31937,24 @@
       }
     },
     "net8.0-maccatalyst17.2/iossimulator-x64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -32344,6 +32740,24 @@
       }
     },
     "net8.0-maccatalyst17.2/maccatalyst-x64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -33129,6 +33543,24 @@
       }
     },
     "net8.0-maccatalyst17.2/win10-x64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.2/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -33914,6 +34346,24 @@
       }
     },
     "net8.0-windows10.0.19041": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -34857,6 +35307,24 @@
       }
     },
     "net8.0-windows10.0.19041/android-arm": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -35760,6 +36228,24 @@
       }
     },
     "net8.0-windows10.0.19041/android-arm64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -36663,6 +37149,24 @@
       }
     },
     "net8.0-windows10.0.19041/android-x64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -37566,6 +38070,24 @@
       }
     },
     "net8.0-windows10.0.19041/android-x86": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -38469,6 +38991,24 @@
       }
     },
     "net8.0-windows10.0.19041/iossimulator-x64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -39372,6 +39912,24 @@
       }
     },
     "net8.0-windows10.0.19041/maccatalyst-x64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -40275,6 +40833,24 @@
       }
     },
     "net8.0-windows10.0.19041/win10-x64": {
+      "CommunityToolkit.Maui.Maps/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.14",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.14",
+          "Microsoft.Maui.Controls.Maps": "8.0.14"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Maps.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DocumentFormat.OpenXml/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -41185,6 +41761,31 @@
     }
   },
   "libraries": {
+    "CommunityToolkit.Maui.Maps/2.0.2": {
+      "sha512": "TnAbxVO/x1I0LLwriZV4tFUAxKNviGhOQag/qcd/48Nfxs+BZYRD9mp4JbVEwSUVCoJ0U7ILNG0l3edpidP4Xw==",
+      "type": "package",
+      "path": "communitytoolkit.maui.maps/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ReadMe.txt",
+        "communitytoolkit.maui.maps.2.0.2.nupkg.sha512",
+        "communitytoolkit.maui.maps.nuspec",
+        "icon.png",
+        "lib/net8.0-android34.0/CommunityToolkit.Maui.Maps.dll",
+        "lib/net8.0-android34.0/CommunityToolkit.Maui.Maps.xml",
+        "lib/net8.0-ios17.2/CommunityToolkit.Maui.Maps.dll",
+        "lib/net8.0-ios17.2/CommunityToolkit.Maui.Maps.xml",
+        "lib/net8.0-maccatalyst17.2/CommunityToolkit.Maui.Maps.dll",
+        "lib/net8.0-maccatalyst17.2/CommunityToolkit.Maui.Maps.xml",
+        "lib/net8.0-tizen8.0/CommunityToolkit.Maui.Maps.dll",
+        "lib/net8.0-tizen8.0/CommunityToolkit.Maui.Maps.xml",
+        "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Maps.dll",
+        "lib/net8.0-windows10.0.19041/CommunityToolkit.Maui.Maps.xml",
+        "lib/net8.0/CommunityToolkit.Maui.Maps.dll",
+        "lib/net8.0/CommunityToolkit.Maui.Maps.xml"
+      ]
+    },
     "DocumentFormat.OpenXml/3.0.2": {
       "sha512": "gqjP/BxKWgwAWwPAN+RpKaMOiidPM07F+mAxiiW184/MnkHnkk12Qo7cRB0wuq4kOZUrUzQ9EUO966hUy/wKBw==",
       "type": "package",
@@ -45983,6 +46584,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-android34.0": [
+      "CommunityToolkit.Maui.Maps >= 2.0.2",
       "DocumentFormat.OpenXml >= 3.0.2",
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
       "Microsoft.Maps.MapControl.WPF >= 1.0.0.3",
@@ -45994,6 +46596,7 @@
       "supabase-csharp >= 0.16.2"
     ],
     "net8.0-ios17.2": [
+      "CommunityToolkit.Maui.Maps >= 2.0.2",
       "DocumentFormat.OpenXml >= 3.0.2",
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
       "Microsoft.Maps.MapControl.WPF >= 1.0.0.3",
@@ -46005,6 +46608,7 @@
       "supabase-csharp >= 0.16.2"
     ],
     "net8.0-maccatalyst17.2": [
+      "CommunityToolkit.Maui.Maps >= 2.0.2",
       "DocumentFormat.OpenXml >= 3.0.2",
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
       "Microsoft.Maps.MapControl.WPF >= 1.0.0.3",
@@ -46016,6 +46620,7 @@
       "supabase-csharp >= 0.16.2"
     ],
     "net8.0-windows10.0.19041": [
+      "CommunityToolkit.Maui.Maps >= 2.0.2",
       "DocumentFormat.OpenXml >= 3.0.2",
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
       "Microsoft.Maps.MapControl.WPF >= 1.0.0.3",
@@ -46092,6 +46697,10 @@
       "net8.0-android34.0": {
         "targetAlias": "net8.0-android",
         "dependencies": {
+          "CommunityToolkit.Maui.Maps": {
+            "target": "Package",
+            "version": "[2.0.2, )"
+          },
           "DocumentFormat.OpenXml": {
             "target": "Package",
             "version": "[3.0.2, )"
@@ -46155,6 +46764,10 @@
       "net8.0-ios17.2": {
         "targetAlias": "net8.0-ios",
         "dependencies": {
+          "CommunityToolkit.Maui.Maps": {
+            "target": "Package",
+            "version": "[2.0.2, )"
+          },
           "DocumentFormat.OpenXml": {
             "target": "Package",
             "version": "[3.0.2, )"
@@ -46218,6 +46831,10 @@
       "net8.0-maccatalyst17.2": {
         "targetAlias": "net8.0-maccatalyst",
         "dependencies": {
+          "CommunityToolkit.Maui.Maps": {
+            "target": "Package",
+            "version": "[2.0.2, )"
+          },
           "DocumentFormat.OpenXml": {
             "target": "Package",
             "version": "[3.0.2, )"
@@ -46282,6 +46899,10 @@
       "net8.0-windows10.0.19041": {
         "targetAlias": "net8.0-windows10.0.19041.0",
         "dependencies": {
+          "CommunityToolkit.Maui.Maps": {
+            "target": "Package",
+            "version": "[2.0.2, )"
+          },
           "DocumentFormat.OpenXml": {
             "target": "Package",
             "version": "[3.0.2, )"

@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+             xmlns:mapping="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+             xmlns:sensors="clr-namespace:Microsoft.Maui.Devices;assembly=Microsoft.Maui.Essentials"
              x:Class="TFGVolandoVoy.VntPrincipal">
-    <ScrollView>
-        <StackLayout Margin="20">
+    
+    <ScrollView VerticalOptions="FillAndExpand">
+        <StackLayout Margin="20" VerticalOptions="FillAndExpand" x:Name="stacklayout">
 
             <Image Source="logo.png" 
                HeightRequest="185"
@@ -46,10 +50,10 @@
                         <Span Text="&#x0a;" />
                         <Span Text="En algunos programas, famosos, ayudarán a Jesús Calleja a conseguir los retos propuestos por el programa." />
 
-
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
+
         </StackLayout>
     </ScrollView>
 
