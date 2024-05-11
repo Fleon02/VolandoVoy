@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "k7eF/veDlui5DsxfqIeNilRpDkdooVqLBv8+C33GNge93p/aio9kefT1ammTVkQi6UPWBSDWG+VNszUcRIWS1Q==",
+  "dgSpecHash": "jTAcorVr2ld/xr4nOVxfG3Hqadg/+4scU/71/dZOQ0RKIDSGY4vWAurGEEMcFttn1Tywe6uAIS/c2YvQH7/yUw==",
   "success": true,
   "projectFilePath": "C:\\Users\\guapi\\OneDrive\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\guapi\\.nuget\\packages\\communitytoolkit.maui.maps\\2.0.2\\communitytoolkit.maui.maps.2.0.2.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\documentformat.openxml\\3.0.2\\documentformat.openxml.3.0.2.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\documentformat.openxml.framework\\3.0.2\\documentformat.openxml.framework.3.0.2.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\effort.ef6\\2.2.17\\effort.ef6.2.2.17.nupkg.sha512",
@@ -304,6 +305,12 @@
     "C:\\Users\\guapi\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.31\\microsoft.windows.sdk.net.ref.10.0.19041.31.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\guapi\\OneDrive\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
     {
       "code": "NU1701",
       "level": "Warning",

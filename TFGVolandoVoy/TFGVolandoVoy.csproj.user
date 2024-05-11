@@ -2,8 +2,13 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
+<<<<<<< HEAD
     <ActiveDebugFramework>net8.0-android</ActiveDebugFramework>
     <ActiveDebugProfile>Android Emulator</ActiveDebugProfile>
+=======
+    <ActiveDebugFramework>net8.0-windows10.0.19041.0</ActiveDebugFramework>
+    <ActiveDebugProfile>Windows Machine</ActiveDebugProfile>
+>>>>>>> main
     <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
     <DefaultDevice>Medium_Phone_API_34</DefaultDevice>
   </PropertyGroup>
