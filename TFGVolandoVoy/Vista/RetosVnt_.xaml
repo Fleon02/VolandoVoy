@@ -5,7 +5,7 @@
 
     <ScrollView>
         <StackLayout VerticalOptions="FillAndExpand">
-            <Label Text="Retos de: Localidad (Pendiente)"
+            <Label Text="{Binding NombreLocalidad}"
                    FontSize="Large"
                    VerticalOptions="Start"
                    HorizontalOptions="Center"/>

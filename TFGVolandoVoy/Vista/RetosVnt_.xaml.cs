@@ -10,6 +10,7 @@ public partial class Retos : ContentPage
 {
     private readonly Supabase.Client _supabaseClient;
     private long localidad;
+    public string nombreLocalidad;
     
 
     public string TextoReto { get; set; }
@@ -17,22 +18,64 @@ public partial class Retos : ContentPage
     public Retos(long idLocalidad, Supabase.Client supabaseClient)
     {        
         this.localidad = idLocalidad;
+        
         _supabaseClient = supabaseClient;
         ListaRetos = new CollectionView();
         InitializeComponent();
+        GetLocalidadById(idLocalidad);
+        CargarRetos(idLocalidad);
+        
     }
     
 
     protected override void OnAppearing()
     {
         base.OnAppearing();        
+        //CargarRetos();
+    }
+    
 
-        //NombreLocalidad.Text = "Localidad : ";
-        //NombreProvincia.Text = "Provincia : ";
-        CargarRetos();
+    private async void GetLocalidadById(long idLocalidad)
+    {
+        try
+        {
+            
+            var localidades = await _supabaseClient.From<Localidad>().Get();
+
+            // Filtrar la lista para encontrar la localidad con el ID específico
+            var localidad = localidades.Models.FirstOrDefault(l => l.IdLocalidad == idLocalidad);
+
+            if (localidad != null)
+            {
+                this.BindingContext = localidad;
+            }
+            else
+            {
+                throw new Exception($"No se encontró ninguna localidad con el ID {idLocalidad}");
+            }
+        }
+        catch (Exception ex)
+        {
+            // Manejar cualquier error que ocurra durante la consulta
+            throw new Exception($"Error al obtener la localidad con ID {idLocalidad}: {ex.Message}");
+        }
     }
 
-    private async void CargarRetos()
+    private async void obtenNombre(long idLocalidad)
+    {
+        try
+        {
+            
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
+
+    
+
+    private async void CargarRetos(long idLocalidad)
     {
         try
         {
@@ -41,8 +84,11 @@ public partial class Retos : ContentPage
 
             if (retos != null)
             {
-                // Verificar si retos es null antes de acceder a su propiedad Models
-                ListaRetos.ItemsSource = new ObservableCollection<Reto>(retos.Models);
+                // Filtrar la lista de retos para obtener solo los que tienen el ID de localidad específico
+                var retosFiltrados = retos.Models.Where(r => r.IdLocalidad == idLocalidad).ToList();
+
+                // Asignar la lista filtrada de retos al ItemSource de tu control ListaRetos
+                ListaRetos.ItemsSource = new ObservableCollection<Reto>(retosFiltrados);
             }
             else
             {
