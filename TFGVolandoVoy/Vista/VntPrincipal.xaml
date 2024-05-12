@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+             xmlns:mapping="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+             xmlns:sensors="clr-namespace:Microsoft.Maui.Devices;assembly=Microsoft.Maui.Essentials"
+             x:Class="TFGVolandoVoy.VntPrincipal">
+    
+    <ScrollView VerticalOptions="FillAndExpand">
+        <StackLayout Margin="20" VerticalOptions="FillAndExpand" x:Name="stacklayout">
+
+            <Image Source="logo.png" 
+               HeightRequest="185"
+               Aspect="AspectFit"/>
+
+            <Label 
+            Text=""
+            FontSize="25"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            x:Name="Mensaje"/>
+
+            <Label 
+            Text="¿Que es Volando Voy?"
+            FontSize="35"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="0,20,0,0"
+            FontFamily="OswaldRegular"/>
+
+            <Label 
+            FontSize="25"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"    
+            x:Name="Descripcion">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="&#x0a;" />
+                        <Span Text="Volando voy, es un formado de aventuras de Jesús Calleja que junto a ciudadanos españoles recorrerá toda la geografía española desde un helicóptero (Robinson R44)."/>
+                        <Span Text="&#x0a;" />
+                        <Span Text="&#x0a;" />
+                        <Span Text="Los habitantes de diferentes regiones españolas serán testigos en primera persona de las vistas más espectaculares de sus localidades que siempre han tenido a su alcance y nunca han podido disfrutar." />
+                        <Span Text="&#x0a;" />
+                        <Span Text="&#x0a;" />
+                        <Span Text="Investigaciones y estudios cartográficos en 3D o desarrollo de nuevas técnicas de salvamento marítimas serán dos de las muchas cosas que Jesús Calleja y su equipo completaran con éxito suponiendo un gran avance para los locales de cada pueblo." />
+                        <Span Text="&#x0a;" />
+                        <Span Text="&#x0a;" />
+                        <Span Text=" Al final de cada entrega, el equipo del programa y todos los vecinos de los pueblos organizarán una fiesta en torno a la vista del documental previamente grabado teniendo así el privilegio de poder disfrutar del programa y compartir las emociones y anécdotas en torno a los vecinos de la localidad. " />
+                        <Span Text="&#x0a;" />
+                        <Span Text="&#x0a;" />
+                        <Span Text="En algunos programas, famosos, ayudarán a Jesús Calleja a conseguir los retos propuestos por el programa." />
+
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

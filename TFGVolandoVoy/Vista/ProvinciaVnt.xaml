@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TFGVolandoVoy.ProvinciaVnt">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="logo.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                x:Name="Logo"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+            <Label
+                Text="Hola"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+            <Label
+                Text="Ventana Provincias"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+            <Button
+                x:Name="ProvinciaBtn"
+                Text="Insertar Provincia" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnProvinviaClicked"
+                HorizontalOptions="Fill" />
+            <Button
+                x:Name="MostrarBtn"
+                Text="Mostrar Provincia" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="MostrarClicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
