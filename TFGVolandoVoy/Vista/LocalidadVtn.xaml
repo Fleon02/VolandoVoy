@@ -61,24 +61,20 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame CornerRadius="10" BorderColor="Red" Padding="5" BackgroundColor="{AppThemeBinding Light=#A79FA1, Dark=#FF000000}">
-                                <StackLayout Orientation="Horizontal" Padding="20,0" Margin="0,5">
-                                    <Image
+                            <StackLayout Orientation="Horizontal" Padding="20,0" Margin="0,5">
+                                <Image
                                     Source="{Binding ImagenLocalidad}"
                                     HorizontalOptions="StartAndExpand"
                                     Margin="0,0,20,0"
                                     Aspect="AspectFit">
-                                    </Image>
-                                    <Frame CornerRadius="10" BorderColor="Red" Padding="5" BackgroundColor="{AppThemeBinding Light=#A79FA1, Dark=#FF000000}">
-                                    <Label Text="{Binding NombreLocalidad}" VerticalOptions="Center" BackgroundColor="Red">
-                                        <Label.GestureRecognizers>
-                                            <TapGestureRecognizer Tapped="DetallesL"/>
-                                        </Label.GestureRecognizers>
-                                    </Label>
-                                    </Frame>
-                                    <Button Text="Retos" HorizontalOptions="EndAndExpand" />
-                                </StackLayout>
-                            </Frame>
+                                </Image>
+                                <Label Text="{Binding NombreLocalidad}" VerticalOptions="Center">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="DetallesL"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Button Text="Retos" HorizontalOptions="EndAndExpand" />
+                            </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
