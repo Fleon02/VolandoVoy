@@ -53,28 +53,47 @@ namespace TFGVolandoVoy
                 HeightRequest = 300,
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
-                IsShowingUser = true,
-                IsScrollEnabled = true,
+                IsShowingUser = false,
+                IsScrollEnabled = false,
+                IsZoomEnabled = false,
+                
                 MapType = MapType.Street
             };
 
+            Pin mediasetPin = new Pin
+            {
+                Label = "Volando Voy - Mediaset", // Nombre del marcador               
+                Location = new Location(40.5124429, -3.6810871)
+            };
+            mapView.Pins.Add(mediasetPin);
+
+            mapView.MoveToRegion(MapSpan.FromCenterAndRadius(new Location(40.5124429, -3.6810871), Distance.FromKilometers(1)));
             stacklayout.Children.Add(mapView);
         }
 
-private void AddMapBing()
-{
-    var mapView = new Microsoft.Maui.Controls.Maps.Map
-    {
-        HeightRequest = 300,
-        VerticalOptions = LayoutOptions.FillAndExpand,
-        HorizontalOptions = LayoutOptions.FillAndExpand,
-    };
+        private void AddMapBing()
+        {
+            var mapView = new Microsoft.Maui.Controls.Maps.Map
+            {
+                HeightRequest = 300,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                IsShowingUser = false,
+                IsScrollEnabled = false,
+                IsZoomEnabled = false,
+            };
+                    Pin mediasetPin = new Pin
+                    {
+                        Label = "Volando Voy - Mediaset", // Nombre del marcador               
+                        Location = new Location(40.5124429, -3.6810871)
+                    };
+                    mapView.Pins.Add(mediasetPin);
 
-            // Configura la ubicación y el nivel de zoom inicial
-            mapView.MoveToRegion(MapSpan.FromCenterAndRadius(new Location(40.4168, -3.7038), Distance.FromKilometers(1)));
+                    // Configura la ubicación y el nivel de zoom inicial
+                    mapView.MoveToRegion(MapSpan.FromCenterAndRadius(new Location(40.5124429, -3.6810871), Distance.FromKilometers(1)));
 
-    stacklayout.Children.Add(mapView);
-}
+            stacklayout.Children.Add(mapView);
+        }
 
 
     }
