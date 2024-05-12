@@ -76,7 +76,11 @@
                                             </Label.GestureRecognizers>
                                         </Label>
                                     </Border>
-                                    <Button Text="Retos" HorizontalOptions="EndAndExpand" />
+                                    <Label Text="Retos" VerticalOptions="Center" BackgroundColor="Red">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
                                 </StackLayout>
                             </Border>
                         </ViewCell>
