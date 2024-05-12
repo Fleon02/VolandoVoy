@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jTAcorVr2ld/xr4nOVxfG3Hqadg/+4scU/71/dZOQ0RKIDSGY4vWAurGEEMcFttn1Tywe6uAIS/c2YvQH7/yUw==",
+  "dgSpecHash": "Pbw07IBIH8n6F+wP1munI8mf+WacezF/VMhYwe7RmI5BRmrAujIp8RQKAP+dMqZov8143RQFo/uFOkb4K9/pHw==",
   "success": true,
   "projectFilePath": "C:\\Users\\guapi\\OneDrive\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj",
   "expectedPackageFiles": [
@@ -301,16 +301,9 @@
     "C:\\Users\\guapi\\.nuget\\packages\\xamarin.swift4.uikit\\4.1.0\\xamarin.swift4.uikit.4.1.0.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\xbindings.awscore.ios\\2.6.8\\xbindings.awscore.ios.2.6.8.nupkg.sha512",
     "C:\\Users\\guapi\\.nuget\\packages\\xbindings.awspolly.ios\\2.6.8\\xbindings.awspolly.ios.2.6.8.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\xbindings.mapboxmobileevents.ios\\0.11.0\\xbindings.mapboxmobileevents.ios.0.11.0.nupkg.sha512",
-    "C:\\Users\\guapi\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.31\\microsoft.windows.sdk.net.ref.10.0.19041.31.nupkg.sha512"
+    "C:\\Users\\guapi\\.nuget\\packages\\xbindings.mapboxmobileevents.ios\\0.11.0\\xbindings.mapboxmobileevents.ios.0.11.0.nupkg.sha512"
   ],
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché C:\\Users\\guapi\\OneDrive\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1701",
       "level": "Warning",

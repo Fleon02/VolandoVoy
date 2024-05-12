@@ -22320,7 +22320,7 @@
         }
       }
     },
-    "net8.0-android34.0/iossimulator-x64": {
+    "net8.0-android34.0/ios-arm64": {
       "CommunityToolkit.Maui.Maps/2.0.2": {
         "type": "package",
         "dependencies": {
@@ -47787,7 +47787,7 @@
         }
       }
     },
-    "net8.0-ios17.2/iossimulator-x64": {
+    "net8.0-ios17.2/ios-arm64": {
       "CommunityToolkit.Maui.Maps/2.0.2": {
         "type": "package",
         "dependencies": {
@@ -68808,7 +68808,7 @@
         }
       }
     },
-    "net8.0-maccatalyst17.2/iossimulator-x64": {
+    "net8.0-maccatalyst17.2/ios-arm64": {
       "CommunityToolkit.Maui.Maps/2.0.2": {
         "type": "package",
         "dependencies": {
@@ -90693,7 +90693,7 @@
         }
       }
     },
-    "net8.0-windows10.0.19041/iossimulator-x64": {
+    "net8.0-windows10.0.19041/ios-arm64": {
       "CommunityToolkit.Maui.Maps/2.0.2": {
         "type": "package",
         "dependencies": {
@@ -109035,12 +109035,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.Windows.SDK.NET.Ref",
-            "version": "[10.0.19041.31, 10.0.19041.31]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -109065,7 +109059,7 @@
       "android-x86": {
         "#import": []
       },
-      "iossimulator-x64": {
+      "ios-arm64": {
         "#import": []
       },
       "maccatalyst-x64": {
@@ -109077,12 +109071,6 @@
     }
   },
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché C:\\Users\\guapi\\OneDrive\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1701",
       "level": "Warning",
