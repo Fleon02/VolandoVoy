@@ -61,12 +61,19 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
+<<<<<<< HEAD
                             <StackLayout Orientation="Horizontal" Padding="20,0" Margin="0,5">
                                 <Image
+=======
+                            <Border Stroke="Blue">
+                                <StackLayout Orientation="Horizontal" Padding="20,0" Margin="0,5" >
+                                    <Image
+>>>>>>> main
                                     Source="{Binding ImagenLocalidad}"
                                     HorizontalOptions="StartAndExpand"
                                     Margin="0,0,20,0"
                                     Aspect="AspectFit">
+<<<<<<< HEAD
                                 </Image>
                                 <Label Text="{Binding NombreLocalidad}" VerticalOptions="Center">
                                     <Label.GestureRecognizers>
@@ -75,6 +82,19 @@
                                 </Label>
                                 <Button Text="Retos" HorizontalOptions="EndAndExpand" />
                             </StackLayout>
+=======
+                                    </Image>
+                                    <Border Stroke="Blue">
+                                        <Label Text="{Binding NombreLocalidad}" VerticalOptions="Center" BackgroundColor="Red">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="DetallesL"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                    </Border>
+                                    <Button Text="Retos" HorizontalOptions="EndAndExpand" />
+                                </StackLayout>
+                            </Border>
+>>>>>>> main
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
