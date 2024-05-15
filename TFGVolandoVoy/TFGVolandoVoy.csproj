@@ -67,6 +67,7 @@
 	  <None Remove="Resources\Fonts\Oswald-SemiBold.ttf" />
 	  <None Remove="Resources\Images\invisible.png" />
 	  <None Remove="Resources\Images\invisibledark.png" />
+	  <None Remove="Resources\Images\retoss.png" />
 	  <None Remove="Resources\Images\visible.png" />
 	  <None Remove="Resources\Images\visibledark.png" />
 	  <None Remove="Resources\Splash\splash_vl.png" />
@@ -87,6 +88,9 @@
 	<ItemGroup>
 	  <Compile Update="Vista\DetallesLocalidadVtn.xaml.cs">
 	    <DependentUpon>DetallesLocalidadVtn.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Vista\RetosVnt_.xaml.cs">
+	    <DependentUpon>RetosVnt_.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Vista\VntPrincipal.xaml.cs">
 	    <DependentUpon>VntPrincipal.xaml</DependentUpon>
@@ -112,6 +116,12 @@
 	  <MauiXaml Update="Vista\Registro.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Vista\Retos.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </None>
 	</ItemGroup>
 
 </Project>

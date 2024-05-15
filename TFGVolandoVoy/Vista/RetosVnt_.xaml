@@ -1,0 +1,35 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TFGVolandoVoy.Vista.Retos"
+             Title="RetosVnt">
+
+    <ScrollView>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <Label Text="{Binding NombreLocalidad}"
+                   FontSize="Large"
+                   VerticalOptions="Start"
+                   HorizontalOptions="StartAndExpand"/>
+            <Image Source="retoss.png" 
+                   HeightRequest="185"
+                   Aspect="AspectFit"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"/>
+            <CollectionView x:Name="ListaRetos"
+                            VerticalOptions="FillAndExpand"
+                            Margin="20,0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="20,5" Margin="0,5">
+                            <Label Text="{Binding localidad}" VerticalOptions="Center" Margin="0,0,0,10"/>
+                            <Frame CornerRadius="10" Padding="5" BackgroundColor="{AppThemeBinding Light=#A79FA1, Dark=#FF000000}">
+                                <Label Text="{Binding DescripcionReto}" LineBreakMode="WordWrap"/>
+                            </Frame>
+                            <Button x:Name="Completar"
+                                    Text="Completado"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
