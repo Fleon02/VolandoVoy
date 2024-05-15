@@ -61,26 +61,31 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Border Stroke="Blue">
+                            <Border Stroke="DarkOrange">
                                 <StackLayout Orientation="Horizontal" Padding="20,0" Margin="0,5" >
-                                    <Image
-                                    Source="{Binding ImagenLocalidad}"
+                                    <Image Source="{Binding ImagenLocalidad}"
                                     HorizontalOptions="StartAndExpand"
                                     Margin="0,0,20,0"
                                     Aspect="AspectFit">
                                     </Image>
-                                    <Border Stroke="Blue">
+                                    <Border Stroke="Blue" BackgroundColor="Blue" Padding="5">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="40,40,40,40" />
+                                        </Border.StrokeShape>
                                         <Label Text="{Binding NombreLocalidad}" VerticalOptions="Center" BackgroundColor="Red">
                                             <Label.GestureRecognizers>
                                                 <TapGestureRecognizer Tapped="DetallesL"/>
                                             </Label.GestureRecognizers>
                                         </Label>
                                     </Border>
+<<<<<<< HEAD
                                     <Label Text="Retos" VerticalOptions="Center" BackgroundColor="Red">
                                         <Label.GestureRecognizers>
                                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                                         </Label.GestureRecognizers>
                                     </Label>
+=======
+>>>>>>> main
                                 </StackLayout>
                             </Border>
                         </ViewCell>

@@ -1,4 +1,8 @@
+using Microsoft.Maui.Controls.Maps;
+using Microsoft.Maui.Maps;
+using System.Collections.ObjectModel;
 using TFGVolandoVoy.Modelo;
+using Map = Microsoft.Maui.Controls.Maps.Map;
 
 namespace TFGVolandoVoy
 {
@@ -20,6 +24,7 @@ namespace TFGVolandoVoy
 
             NombreLocalidad.Text = labelText;
             GetLocalidadByNombreLocalidad(labelText);
+            CargarComentarios(labelText);
         }
 
         // Método que se llama cada vez que la página se muestra en pantalla
@@ -27,6 +32,35 @@ namespace TFGVolandoVoy
         {
             base.OnAppearing();
         }
+        // Método para cargar la lista de Comentarios
+        private async void CargarComentarios(string NombreLocalidad)
+        {
+            try
+            {
+                var localidades = await _supabaseClient.From<Localidad>().Get();
+                var localidad = localidades.Models.FirstOrDefault(p => p.NombreLocalidad == NombreLocalidad);
+                if (localidad != null)
+                {
+                    var Comentarios = await _supabaseClient.From<Comentarios>().Get();
+                    var comentariosLocalidad = Comentarios.Models.Where(l => l.IdLocalidad == localidad.IdLocalidad).ToList();
+                    if (comentariosLocalidad.Any())
+                    {
+                        // Ordenar los comentarios por valoración (de mayor a menor)
+                        var mejoresComentarios = comentariosLocalidad.OrderByDescending(c => c.Valoracion).Take(3).ToList();
+                        ComentariosListView.ItemsSource = new ObservableCollection<Comentarios>(mejoresComentarios);
+                    }
+                }
+                else
+                {
+                    await DisplayAlert("Advertencia", "Localidad no encontrada", "Aceptar");
+                }
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", $"Error al cargar los comentarios: {ex.Message}", "Aceptar");
+            }
+        }
+
         private async Task<Localidad> GetLocalidadByNombreLocalidad(string NombreLocalidad)
         {
             try
@@ -42,6 +76,7 @@ namespace TFGVolandoVoy
                         NombreProvincia.Text = $"Provincia: {provincia.NombreProvincia}";
                         ComunidadAutonoma.Text = $"Comunidad Autonoma: {provincia.ComunidadAutonoma}";
                         ComAu.Source = provincia.ImagenProvincia;
+                        MapaLocalidad(localidad, provincia);
                     }
                     else
                     {
@@ -78,6 +113,32 @@ namespace TFGVolandoVoy
             {
                 throw new Exception($"Error al obtener la provincia con ID {id}: {ex.Message}");
             }
+        }
+
+        private void MapaLocalidad(Localidad localidad, Provincia provincia)
+        {
+            var mapView = new Map
+            {
+                HeightRequest = 200,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                IsShowingUser = false,
+                MapType = MapType.Street
+            };
+            var coordenadas = new Location(localidad.Coordenada1, localidad.Coordenada2);
+            Pin pinmapa = new Pin
+            {
+                Label = localidad.NombreLocalidad + " (" + provincia.NombreProvincia + ")", // Nombre del marcador            
+                Location = coordenadas
+            };
+            mapView.Pins.Add(pinmapa);
+
+            mapView.MoveToRegion(MapSpan.FromCenterAndRadius(coordenadas, Distance.FromKilometers(1)));
+            stacklayout.Children.Add(mapView);
+        }
+        private void MapaLocalidadBing(Localidad localidad, Provincia provincia)
+        {
+            MapaLocalidad(localidad, provincia);
         }
     }
 }

@@ -10,6 +10,12 @@ public class Localidad : BaseModel
     [Column("localidad")]
     public string? NombreLocalidad { get; set; }
 
+    [Column("coordenada1")]
+    public double Coordenada1 { get; set; }
+
+    [Column("coordenada2")]
+    public double Coordenada2 { get; set; }
+
     [Column("imglocalidad")]
     public string? ImagenLocalidad { get; set; }
 
