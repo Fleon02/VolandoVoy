@@ -38,14 +38,17 @@ namespace TFGVolandoVoy
             {
                 // Obtener la lista de localidades desde la base de datos
                 var localidades = await _supabaseClient.From<Localidad>().Get();
+                // Ordenar las localidades por NombreLocalidad
+                var localidadesOrdenadas = localidades.Models.OrderBy(l => l.NombreLocalidad);
                 // Establecer la lista de localidades como la fuente de datos del ListView
-                LocalidadesListView.ItemsSource = new ObservableCollection<Localidad>(localidades.Models);
+                LocalidadesListView.ItemsSource = new ObservableCollection<Localidad>(localidadesOrdenadas);
             }
             catch (Exception ex)
             {
                 await DisplayAlert("Error", $"Error al cargar las localidades: {ex.Message}", "Aceptar");
             }
         }
+
         private int count = 0;
         private async void OnLocalidadClicked(object sender, EventArgs e)
         {
