@@ -21,6 +21,8 @@ namespace TFGVolandoVoy
             _supabaseClient = supabaseClient;
             InitializeComponent();
             MostrarPass();
+            PasswordEntry.Text = "";
+            userEntry.Text = "";
         }
 
         // Constructor sin parámetros
@@ -122,23 +124,26 @@ namespace TFGVolandoVoy
         private void OnRegistroTapped(object sender, EventArgs e)
         {
             // Aquí navegas a la ventana de registro
-            //Navigation.PushAsync(new Registro()); // comentado temp para probar lo de los correos
+            Navigation.PushAsync(new Registro());
+        }
+
+        private void CambiarTapped(object sender, EventArgs e)
+        {
             EnviarCorreoRecuPass();
         }
 
         public async void EnviarCorreoRecuPass()
         {
-            string[] correosElectronicos = {
-            "leonmarcosf@gmail.com",
-            "tfgvolandovoy@gmail.com",
-            "sorafranco2005@gmail.com"
-        }; // ESTO PARA SIMULAR LA BBDD DE SUPABASE
+            //await Navigation.PushAsync(new CambiarPass("email"));
 
             string codigoRecibidoCorreo = "";
             // Obtener el nombre de usuario
             string email = await DisplayPromptAsync("Por favor, introduce tu email:", "Nombre de Usuario");
 
-            if (!correosElectronicos.Any(e => e == email))
+            var usuariosConEmail = await _supabaseClient.From<Usuario>().Get();
+            var usuarioExistente = usuariosConEmail.Models.FirstOrDefault(u => u.EmailUsuario == email);
+
+            if (usuarioExistente == null)
             {
                 await DisplayAlert("Error", "No existe un usuario con ese Correo Registrado", "OK");
                 return;
@@ -166,8 +171,8 @@ namespace TFGVolandoVoy
             // Verificar si se proporcionó un nombre de usuario
             if (!string.IsNullOrEmpty(email))
             {
-                string senderEmail = "leonmarcosf@gmail.com";
-                string senderPassword = "epcs rzlt obsz ffiv";
+                string senderEmail = "tfgvolandovoy@gmail.com";
+                string senderPassword = "efnq mfgn dego nrhg";
 
                 string recipientEmail = email;
                 string subject = "Cambio de Contraseña";
@@ -200,12 +205,11 @@ namespace TFGVolandoVoy
                         {
                             await DisplayAlert("Código Correcto", "Código Correcto", "OK");
 
-                            // LOGICA CAMBIAR CONTRASEÑA EN SUPABASE
+                            await Navigation.PushAsync(new CambiarPass(email));
 
-                            // Enviar correo de confirmación al usuario
-                            smtpClient.Send(senderEmail, recipientEmail, "Cambio de Contraseña", "Tu contraseña ha sido cambiada correctamente.");
-
+                            
                             break; // Salir del bucle si el código es correcto
+                            
                         }
                         else
                         {
@@ -226,8 +230,17 @@ namespace TFGVolandoVoy
                     smtpClient.Dispose();
                 }
             }
-
+        
         }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            // Limpiar los campos de usuario y contraseña
+            PasswordEntry.Text = "";
+            userEntry.Text = "";
+        }
+
 
 
     }
