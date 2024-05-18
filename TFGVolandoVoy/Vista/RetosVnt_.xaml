@@ -5,15 +5,14 @@
 
     <ScrollView>
         <StackLayout VerticalOptions="FillAndExpand">
-            <Label Text="{Binding NombreLocalidad}"
+            <Label Text="{Binding Localidad.NombreLocalidad}"
                    FontSize="Large"
                    VerticalOptions="Start"
                    HorizontalOptions="StartAndExpand"/>
-            <Image Source="retoss.png" 
-                   HeightRequest="185"
-                   Aspect="AspectFit"
-                   VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="Center"/>
+            <Label Text="{Binding TipoDeReto}"
+                   FontSize="Large"
+                   VerticalOptions="Start"
+                   HorizontalOptions="StartAndExpand"/>
             <CollectionView x:Name="ListaRetos"
                             VerticalOptions="FillAndExpand"
                             Margin="20,0">

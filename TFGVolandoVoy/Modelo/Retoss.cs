@@ -18,4 +18,7 @@ public class Reto : BaseModel
 
     [Column("imagenRetoCompletado")]
     public string? ImagenCompletado { get; set; }
+
+    [Column("tipoReto")]
+    public string? TipoDeReto { get; set; }
 }
