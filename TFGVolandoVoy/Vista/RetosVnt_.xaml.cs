@@ -4,106 +4,71 @@ using Supabase.Interfaces;
 using System.Collections.ObjectModel;
 using TFGVolandoVoy.Modelo;
 
-namespace TFGVolandoVoy.Vista;
-
-public partial class Retos : ContentPage
+namespace TFGVolandoVoy.Vista
 {
-    private readonly Supabase.Client _supabaseClient;
-    private long localidad;
-    public string nombreLocalidad;
-    
-
-    public string TextoReto { get; set; }
-
-    public Retos(long idLocalidad, Supabase.Client supabaseClient)
-    {        
-        this.localidad = idLocalidad;
-        
-        _supabaseClient = supabaseClient;
-        ListaRetos = new CollectionView();
-        InitializeComponent();
-        GetLocalidadById(idLocalidad);
-        CargarRetos(idLocalidad);
-        
-    }
-    
-
-    protected override void OnAppearing()
+    public partial class Retos : ContentPage
     {
-        base.OnAppearing();        
-        //CargarRetos();
-    }
-    
+        private long localidad;
+        private RetoViewModel _viewModel;
 
-    private async void GetLocalidadById(long idLocalidad)
-    {
-        try
+        public Retos(long idLocalidad)
         {
-            
-            var localidades = await _supabaseClient.From<Localidad>().Get();
+            this.localidad = idLocalidad;
+            _viewModel = new RetoViewModel();
+            BindingContext = _viewModel;
+            InitializeComponent();
+            GetLocalidadById(idLocalidad);
+            CargarRetos(idLocalidad);
+            Shell.SetFlyoutBehavior(this, FlyoutBehavior.Disabled);
+        }
 
-            // Filtrar la lista para encontrar la localidad con el ID específico
-            var localidad = localidades.Models.FirstOrDefault(l => l.IdLocalidad == idLocalidad);
-
-            if (localidad != null)
+        private async void GetLocalidadById(long idLocalidad)
+        {
+            try
             {
-                this.BindingContext = localidad;
+                Supabase.Client cliente = new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY);
+                var localidades = await cliente.From<Localidad>().Get();
+                var localidad = localidades.Models.FirstOrDefault(l => l.IdLocalidad == idLocalidad);
+
+                if (localidad != null)
+                {
+                    _viewModel.Localidad = localidad;
+                }
+                else
+                {
+                    throw new Exception($"No se encontró ninguna localidad con el ID {idLocalidad}");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                throw new Exception($"No se encontró ninguna localidad con el ID {idLocalidad}");
+                throw new Exception($"Error al obtener la localidad con ID {idLocalidad}: {ex.Message}");
             }
         }
-        catch (Exception ex)
+
+        private async void CargarRetos(long idLocalidad)
         {
-            // Manejar cualquier error que ocurra durante la consulta
-            throw new Exception($"Error al obtener la localidad con ID {idLocalidad}: {ex.Message}");
-        }
-    }
-
-    private async void obtenNombre(long idLocalidad)
-    {
-        try
-        {
-            
-        }
-        catch (Exception ex)
-        {
-
-        }
-    }
-
-    
-
-    private async void CargarRetos(long idLocalidad)
-    {
-        try
-        {
-            // Obtener la lista de retos desde la base de datos
-            var retos = await _supabaseClient.From<Reto>().Get();
-
-            if (retos != null)
+            try
             {
-                // Filtrar la lista de retos para obtener solo los que tienen el ID de localidad específico
-                var retosFiltrados = retos.Models.Where(r => r.IdLocalidad == idLocalidad).ToList();
-
-                // Asignar la lista filtrada de retos al ItemSource de tu control ListaRetos
-                ListaRetos.ItemsSource = new ObservableCollection<Reto>(retosFiltrados);
+                Supabase.Client cliente = new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY);
+                var retos = await cliente.From<Reto>().Get();
+                if (retos != null)
+                {
+                    var retosFiltrados = retos.Models.Where(r => r.IdLocalidad == idLocalidad).ToList();
+                    if (retosFiltrados.Any())
+                    {
+                        _viewModel.TipoDeReto = retosFiltrados.First().TipoDeReto;
+                    }
+                    ListaRetos.ItemsSource = new ObservableCollection<Reto>(retosFiltrados);
+                }
+                else
+                {
+                    await DisplayAlert("Error", "La lista de retos es null", "Aceptar");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                // Manejar el caso en que retos sea null, por ejemplo, mostrar un mensaje de error
-                await DisplayAlert("Error", "La lista de retos es null", "Aceptar");
+                await DisplayAlert("Error", $"Error al cargar los retos: {ex.GetType().FullName}\n{ex.Message}\nStackTrace: {ex.StackTrace}", "Aceptar");
             }
         }
-        catch (Exception ex)
-        {
-            await DisplayAlert("Error", $"Error al cargar los retos: {ex.GetType().FullName}\n{ex.Message}\nStackTrace: {ex.StackTrace}", "Aceptar");
-        }
     }
-
-    
-
-
-
 }

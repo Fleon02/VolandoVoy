@@ -26,6 +26,13 @@ public partial class Registro : ContentPage
         var email = CampoEmail.Text;
         var contrasena = PasswordEntry.Text;
         var imagen = imagenElegida;
+
+        if (!email.Contains("@") || !email.EndsWith(".com")  || !email.EndsWith(".es") || !email.EndsWith(".net"))
+        {
+            await DisplayAlert("Error", "El correo no es válido", "Aceptar");
+            return;
+        }
+
         if (imagen == null)
         {
             imagen = "https://clfynwobrskueprtvnmg.supabase.co/storage/v1/object/public/perfilesIMG/user-48.png";
