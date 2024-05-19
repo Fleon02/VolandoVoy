@@ -2,6 +2,7 @@ using Microsoft.Maui.Controls.Maps;
 using Microsoft.Maui.Maps;
 using System.Collections.ObjectModel;
 using TFGVolandoVoy.Modelo;
+using TFGVolandoVoy.Vista;
 using Map = Microsoft.Maui.Controls.Maps.Map;
 
 namespace TFGVolandoVoy
@@ -65,6 +66,7 @@ namespace TFGVolandoVoy
         {
             try
             {
+                
                 var localidades = await _supabaseClient.From<Localidad>().Get();
                 var localidad = localidades.Models.FirstOrDefault(p => p.NombreLocalidad == NombreLocalidad);
                 if (localidad != null)
@@ -153,7 +155,7 @@ namespace TFGVolandoVoy
             if (localidad != null)
             {
                 // Navegar a la página Retos y pasar el idLocalidad como parámetro
-                await Navigation.PushAsync(new Vista.Retos(localidad.IdLocalidad, _supabaseClient));
+                await Navigation.PushAsync(new Retos(localidad.IdLocalidad));
             }
             else
             {

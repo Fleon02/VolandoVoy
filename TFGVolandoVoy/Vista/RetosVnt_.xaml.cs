@@ -8,26 +8,26 @@ namespace TFGVolandoVoy.Vista
 {
     public partial class Retos : ContentPage
     {
-        private readonly Supabase.Client _supabaseClient;
         private long localidad;
         private RetoViewModel _viewModel;
 
-        public Retos(long idLocalidad, Supabase.Client supabaseClient)
+        public Retos(long idLocalidad)
         {
             this.localidad = idLocalidad;
-            _supabaseClient = supabaseClient;
             _viewModel = new RetoViewModel();
             BindingContext = _viewModel;
             InitializeComponent();
             GetLocalidadById(idLocalidad);
             CargarRetos(idLocalidad);
+            Shell.SetFlyoutBehavior(this, FlyoutBehavior.Disabled);
         }
 
         private async void GetLocalidadById(long idLocalidad)
         {
             try
             {
-                var localidades = await _supabaseClient.From<Localidad>().Get();
+                Supabase.Client cliente = new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY);
+                var localidades = await cliente.From<Localidad>().Get();
                 var localidad = localidades.Models.FirstOrDefault(l => l.IdLocalidad == idLocalidad);
 
                 if (localidad != null)
@@ -49,7 +49,8 @@ namespace TFGVolandoVoy.Vista
         {
             try
             {
-                var retos = await _supabaseClient.From<Reto>().Get();
+                Supabase.Client cliente = new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY);
+                var retos = await cliente.From<Reto>().Get();
                 if (retos != null)
                 {
                     var retosFiltrados = retos.Models.Where(r => r.IdLocalidad == idLocalidad).ToList();
