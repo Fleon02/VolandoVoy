@@ -289,40 +289,6 @@ namespace TFGVolandoVoy
             var labelText = label.Text;
             Navigation.PushAsync(new DetallesLocalidadVtn(labelText));
         }
-        
-
-        
-
-        private async void OnRetosClicked(object sender, EventArgs e)
-        {
-            // Obtener la localidad asociada al Label de "Retos"
-            var localidad = (sender as Button)?.CommandParameter as Localidad;
-
-            if (localidad != null)
-            {
-                // Navegar a la página Retos y pasar el idLocalidad como parámetro
-                await Navigation.PushAsync(new Vista.Retos(localidad.IdLocalidad, _supabaseClient));
-            }
-            else
-            {
-                throw new Exception($"Error al obtener la localidad");
-            }
-        }
-
-        private async void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
-        {
-            // Obtener la localidad asociada al Label de "Retos"
-            var localidad = (sender as Label)?.BindingContext as Localidad;
-
-            if (localidad != null)
-            {
-                // Navegar a la página Retos y pasar el idLocalidad como parámetro
-                await Navigation.PushAsync(new Vista.Retos(localidad.IdLocalidad, _supabaseClient));
-            }
-            else
-            {
-                throw new Exception($"Error al obtener la localidad");
-            }
-        }
+       
     }
 }
