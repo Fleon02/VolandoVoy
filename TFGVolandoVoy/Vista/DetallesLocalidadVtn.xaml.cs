@@ -155,7 +155,7 @@ namespace TFGVolandoVoy
             if (localidad != null)
             {
                 // Navegar a la página Retos y pasar el idLocalidad como parámetro
-                await Navigation.PushAsync(new Retos(localidad.IdLocalidad));
+                await Navigation.PushAsync(new VntRetos(localidad.NombreLocalidad));
             }
             else
             {

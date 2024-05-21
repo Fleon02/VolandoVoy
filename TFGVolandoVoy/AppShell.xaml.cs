@@ -1,4 +1,5 @@
 ﻿using Microsoft.Maui.Controls;
+using TFGVolandoVoy.Vista;
 
 namespace TFGVolandoVoy
 {
@@ -14,6 +15,7 @@ namespace TFGVolandoVoy
             Routing.RegisterRoute("ProvinciaVnt", typeof(ProvinciaVnt));
             Routing.RegisterRoute("LocalidadVnt", typeof(LocalidadVnt));
             Routing.RegisterRoute("CerrarSesion", typeof(InicioSesion));
+            Routing.RegisterRoute("RetosVnt", typeof(RetosVnt));
             BindingContext = CurrentUser;
 
             GoToAsync("InicioSesion");
@@ -33,6 +35,9 @@ namespace TFGVolandoVoy
                     break;
                 case "LocalidadVnt":
                     page = new LocalidadVnt();
+                    break;
+                case "RetosVnt":
+                    page = new RetosVnt();
                     break;
             }
 

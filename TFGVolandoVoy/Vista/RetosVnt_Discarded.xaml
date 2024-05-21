@@ -15,10 +15,10 @@
                    FontSize="Large"
                    VerticalOptions="Start"
                    HorizontalOptions="StartAndExpand"/>-->
-            <CollectionView x:Name="ListaRetos"
+            <ListView x:Name="ListaRetos"
                             VerticalOptions="FillAndExpand"
                             Margin="10,0,0,0">               
-                <CollectionView.ItemTemplate>
+                <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Padding="20,5" Margin="0,5">
                             <Label Text="{Binding TipoDeReto}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Margin="0,0,0,3"/>
@@ -31,8 +31,8 @@
                             <Image Source="{Binding ImagenCompletado}" Aspect="AspectFill" HeightRequest="200" IsVisible="{Binding ImagenCompletado, Converter={StaticResource StringNullOrEmptyToBoolConverter}}"/>
                         </StackLayout>
                     </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ScrollView>
 </ContentPage>

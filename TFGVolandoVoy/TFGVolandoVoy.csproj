@@ -89,8 +89,8 @@
 	  <Compile Update="Vista\DetallesLocalidadVtn.xaml.cs">
 	    <DependentUpon>DetallesLocalidadVtn.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Vista\RetosVnt_.xaml.cs">
-	    <DependentUpon>RetosVnt_.xaml</DependentUpon>
+	  <Compile Update="Vista\RetosVnt_Discarded.xaml.cs">
+	    <DependentUpon>RetosVnt_Discarded.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Vista\VntPrincipal.xaml.cs">
 	    <DependentUpon>VntPrincipal.xaml</DependentUpon>
@@ -108,6 +108,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Vista\LocalidadVtn.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vista\RetosVnt.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Vista\VntPrincipal.xaml">
