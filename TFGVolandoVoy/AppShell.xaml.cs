@@ -15,6 +15,7 @@ namespace TFGVolandoVoy
             Routing.RegisterRoute("ProvinciaVnt", typeof(ProvinciaVnt));
             Routing.RegisterRoute("LocalidadVnt", typeof(LocalidadVnt));
             Routing.RegisterRoute("CerrarSesion", typeof(InicioSesion));
+            Routing.RegisterRoute("RetosVnt", typeof(RetosVnt));
             BindingContext = CurrentUser;
 
             GoToAsync("InicioSesion");

@@ -78,20 +78,14 @@ build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.RetosV
 build_metadata.AdditionalFiles.TargetPath = Vista\RetosVnt.xaml
 build_metadata.AdditionalFiles.RelativePath = Vista\RetosVnt.xaml
 
-[C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/Vista/RetosVnt_.xaml]
+[C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/Vista/RetosVnt_Discarded.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.RetosVnt_.xaml
-build_metadata.AdditionalFiles.TargetPath = Vista\RetosVnt_.xaml
-build_metadata.AdditionalFiles.RelativePath = Vista\RetosVnt_.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.RetosVnt_Discarded.xaml
+build_metadata.AdditionalFiles.TargetPath = Vista\RetosVnt_Discarded.xaml
+build_metadata.AdditionalFiles.RelativePath = Vista\RetosVnt_Discarded.xaml
 
 [C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/Vista/VntPrincipal.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.VntPrincipal.xaml
 build_metadata.AdditionalFiles.TargetPath = Vista\VntPrincipal.xaml
 build_metadata.AdditionalFiles.RelativePath = Vista\VntPrincipal.xaml
-
-[C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/Vista/VntRetos.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.VntRetos.xaml
-build_metadata.AdditionalFiles.TargetPath = Vista\VntRetos.xaml
-build_metadata.AdditionalFiles.RelativePath = Vista\VntRetos.xaml

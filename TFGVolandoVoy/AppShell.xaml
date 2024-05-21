@@ -28,14 +28,16 @@
         ContentTemplate="{DataTemplate local:VntPrincipal}"
         Route="VntPrincipal" 
         Shell.FlyoutBehavior="Flyout"/>
-    <!--
-    <ShellContent
-        Title="Provincia"
-        ContentTemplate="{DataTemplate local:ProvinciaVnt}"
-        Route="ProvinciaVnt" 
-        Shell.FlyoutBehavior="Flyout">
-    </ShellContent>
-    -->
+    
+    <!--El problema del namespace es aquí debajo-->
+    
+    <!--<ShellContent
+        Title="Retos"
+        ContentTemplate="{DataTemplate local:RetosVnt}"
+        Route="RetosVnt" 
+        Shell.FlyoutBehavior="Flyout"/>-->
+    
+    
 
     <ShellContent
         Title="Localidad"

@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TFGVolandoVoy.Vista"
              x:Class="TFGVolandoVoy.Vista.RetosVnt"
              Title="RetosVnt">
-    <VerticalStackLayout>
-        
-    </VerticalStackLayout>
+
+
+    <StackLayout Padding="10">
+        <Picker x:Name="selector_ciudades"
+                Title="Selecciona una ciudad"
+                SelectedIndexChanged="selector_ciudades_SelectedIndexChanged">
+            <Picker.ItemDisplayBinding>
+                <Binding Path="NombreLocalidad"/>
+            </Picker.ItemDisplayBinding>
+        </Picker>
+        <ListView x:Name="lista_de_retos">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding DescripcionReto}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>
