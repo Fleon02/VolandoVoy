@@ -1,4 +1,5 @@
 ﻿using Microsoft.Maui.Controls;
+using TFGVolandoVoy.Vista;
 
 namespace TFGVolandoVoy
 {
@@ -33,6 +34,9 @@ namespace TFGVolandoVoy
                     break;
                 case "LocalidadVnt":
                     page = new LocalidadVnt();
+                    break;
+                case "RetosVnt":
+                    page = new RetosVnt();
                     break;
             }
 
