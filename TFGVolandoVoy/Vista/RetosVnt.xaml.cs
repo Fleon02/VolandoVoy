@@ -1,6 +1,6 @@
 using Supabase.Interfaces;
 
-namespace TFGVolandoVoy.Vista;
+namespace TFGVolandoVoy;
 
 public partial class RetosVnt : ContentPage
 {
