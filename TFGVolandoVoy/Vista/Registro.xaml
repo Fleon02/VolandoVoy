@@ -1,6 +1,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TFGVolandoVoy.Vista.Registro"
+             xmlns:behaviors="clr-namespace:TFGVolandoVoy.Behaviors"
              Title="Registro">
     <ScrollView>
         <VerticalStackLayout Padding="30,0" Spacing="25">
@@ -15,7 +16,11 @@
             <Entry Placeholder="Ingrese sus apellidos" x:Name="CampoApellidos"/>
 
             <Label Text="Email:" />
-            <Entry Placeholder="Ingrese su email" Keyboard="Email" x:Name="CampoEmail"/>
+            <Entry Placeholder="Ingrese su email" Keyboard="Email" x:Name="CampoEmail">
+                <Entry.Behaviors>
+                    <behaviors:EmailValidationBehavior />
+                </Entry.Behaviors>
+            </Entry>   
 
             <Label Text="Contraseña:" />
             <StackLayout Orientation="Horizontal" Spacing="10">

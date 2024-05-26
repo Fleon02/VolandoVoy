@@ -29,13 +29,12 @@
         Route="VntPrincipal" 
         Shell.FlyoutBehavior="Flyout"/>
     
-    <!--El problema del namespace es aquí debajo-->
     
-    <!--<ShellContent
+    <ShellContent
         Title="Retos"
         ContentTemplate="{DataTemplate local:RetosVnt}"
         Route="RetosVnt" 
-        Shell.FlyoutBehavior="Flyout"/>-->
+        Shell.FlyoutBehavior="Flyout"/>
     
     
 
