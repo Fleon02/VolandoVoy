@@ -14,7 +14,7 @@ public partial class RetosVnt : ContentPage
     
     
     
-    //Constructor con par·metros
+    //Constructor con par√°metros
     public RetosVnt(Supabase.Client supabaseClient)
 	{
         _supabaseClient = supabaseClient;
@@ -30,7 +30,7 @@ public partial class RetosVnt : ContentPage
     
     
     
-    //Constructor sin par·metros
+    //Constructor sin par√°metros
     public RetosVnt() : this(new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY)) 
     {
     }

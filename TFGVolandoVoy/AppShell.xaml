@@ -29,7 +29,6 @@
         Route="VntPrincipal" 
         Shell.FlyoutBehavior="Flyout"/>
     
-    <!--El problema del namespace es aquí debajo-->
     
     <ShellContent
         Title="Retos"

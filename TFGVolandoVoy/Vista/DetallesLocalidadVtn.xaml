@@ -28,8 +28,10 @@
                        x:Name="ComunidadAutonoma" Text="Comunidad Autonoma: "
                        SemanticProperties.HeadingLevel="Level2" />
                 <Image HeightRequest="125" Aspect="AspectFit" x:Name="ComAu" />
-                <StackLayout x:Name="stacklayout"></StackLayout> 
-                <Button Text="Retos" HorizontalOptions="CenterAndExpand"/>
+                <StackLayout x:Name="stacklayout"></StackLayout>
+                <Entry x:Name="ComentarioT" Placeholder="Escribe tu Comentario" />
+                <Entry x:Name="ValoracionNum" Keyboard="Numeric" Placeholder="Valoración (1-10)" />
+                <Button Text="Insertar Comentario" HorizontalOptions="CenterAndExpand" Clicked="CrearComentario"/>
                 <ListView
                 x:Name="ComentariosListView"
                 Margin="0,20,0,0"
@@ -50,7 +52,7 @@
                                                 <RoundRectangle CornerRadius="40,40,40,40" />
                                             </Border.StrokeShape>
                                             <Label Text="{Binding Valoracion}" VerticalOptions="Center" BackgroundColor="Red"></Label>
-                                        </Border>                                        
+                                        </Border>
                                     </StackLayout>
                                 </Border>
                             </ViewCell>
