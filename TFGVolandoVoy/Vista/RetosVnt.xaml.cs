@@ -22,10 +22,8 @@ public partial class RetosVnt : ContentPage
         _ = CargarLocalidades();
         Localidades = new ObservableCollection<Localidad>();
         Retos = new ObservableCollection<Reto>();
-
         selector_ciudades.ItemsSource = Localidades;
         lista_de_retos.ItemsSource = Retos;
-
         this.BindingContext = this;
     }
 
