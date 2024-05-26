@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+             xmlns:mapping="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+             xmlns:sensors="clr-namespace:Microsoft.Maui.Devices;assembly=Microsoft.Maui.Essentials"
+             x:Class="TFGVolandoVoy.DetallesLocalidadVtn">
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <StackLayout Orientation="Horizontal" Padding="20,0" Margin="0,5">
+                <Label
+                    x:Name="NombreLocalidad"
+                    Style="{StaticResource SubHeadline}"
+                    FontSize="30"
+                    SemanticProperties.HeadingLevel="Level2"
+                    HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+            <Image Source="logo.png" HeightRequest="150"
+                    Aspect="AspectFit" x:Name="ImgLoc"
+                    HorizontalOptions="CenterAndExpand" />
+            <VerticalStackLayout Spacing="20" HorizontalOptions="CenterAndExpand">
+                <Label HorizontalTextAlignment="Center"
+                       FontSize="18"
+                       x:Name="NombreProvincia" Text="Provincia: "
+                       SemanticProperties.HeadingLevel="Level2" />
+                <Label HorizontalTextAlignment="Center"
+                       FontSize="18"
+                       x:Name="ComunidadAutonoma" Text="Comunidad Autonoma: "
+                       SemanticProperties.HeadingLevel="Level2" />
+                <Image HeightRequest="125" Aspect="AspectFit" x:Name="ComAu" />
+                <StackLayout x:Name="stacklayout"></StackLayout>
+                <Button Text="Retos" HorizontalOptions="CenterAndExpand" Clicked="GoToRetos"/>
+                <Entry x:Name="ComentarioT" Placeholder="Escribe tu Comentario" />
+                <Entry x:Name="ValoracionNum" Keyboard="Numeric" Placeholder="Valoración (1-10)" />
+                <Button Text="Insertar Comentario" HorizontalOptions="CenterAndExpand" Clicked="CrearComentario"/>
+                <ListView
+                x:Name="ComentariosListView"
+                Margin="0,20,0,0"
+                RowHeight="75">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Border Stroke="DarkOrange">
+                                    <StackLayout Orientation="Horizontal" Padding="20,0" Margin="0,5" >
+                                        <Border Stroke="Blue" BackgroundColor="Blue" Padding="5">
+                                            <Border.StrokeShape>
+                                                <RoundRectangle CornerRadius="40,40,40,40" />
+                                            </Border.StrokeShape>
+                                            <Label Text="{Binding Comentario}" VerticalOptions="Center" BackgroundColor="Red"></Label>
+                                        </Border>
+                                        <Border Stroke="Blue" BackgroundColor="Blue" Padding="5">
+                                            <Border.StrokeShape>
+                                                <RoundRectangle CornerRadius="40,40,40,40" />
+                                            </Border.StrokeShape>
+                                            <Label Text="{Binding Valoracion}" VerticalOptions="Center" BackgroundColor="Red"></Label>
+                                        </Border>
+                                    </StackLayout>
+                                </Border>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Text="Ver Más Comentarios" HorizontalOptions="CenterAndExpand" />
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
