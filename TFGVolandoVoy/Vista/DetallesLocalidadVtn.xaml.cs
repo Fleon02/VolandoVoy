@@ -66,7 +66,7 @@ namespace TFGVolandoVoy
         {
             try
             {
-                
+
                 var localidades = await _supabaseClient.From<Localidad>().Get();
                 var localidad = localidades.Models.FirstOrDefault(p => p.NombreLocalidad == NombreLocalidad);
                 if (localidad != null)
@@ -160,6 +160,63 @@ namespace TFGVolandoVoy
             else
             {
                 throw new Exception($"Error al obtener la localidad");
+            }
+        }
+        private async void CrearComentario(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(ComentarioT.Text))
+            {
+                await DisplayAlert("Error", "El comentario no puede estar vacío", "Aceptar");
+                return;
+            }
+            try
+            {
+                var localidades = await _supabaseClient.From<Localidad>().Get();
+                var localidad = localidades.Models.FirstOrDefault(p => p.NombreLocalidad == NombreLocalidad.Text);
+                if (localidad != null)
+                {
+                    var currentUser = AppShell.CurrentUser;
+                    var usuarios = await _supabaseClient.From<Usuario>().Get();
+                    var usuario = usuarios.Models.FirstOrDefault(u => u.NombreUsuario == currentUser.Username);
+                    if (usuario == null)
+                    {
+                        await DisplayAlert("Error", "Usuario no encontrado", "Aceptar");
+                        return;
+                    }
+                    int valoracion;
+                    if (!int.TryParse(ValoracionNum.Text, out valoracion) || valoracion < 1 || valoracion > 10)
+                    {
+                        await DisplayAlert("Error", "La valoración debe ser un número entre 1 y 10", "Aceptar");
+                        return;
+                    }
+                    var nuevoComentario = new Comentarios
+                    {
+                        IdUsuario = usuario.IdUsuario,
+                        IdLocalidad = localidad.IdLocalidad,
+                        Comentario = ComentarioT.Text,
+                        Valoracion = valoracion
+                    };
+                    var resultado = await _supabaseClient.From<Comentarios>().Insert(nuevoComentario);
+                    if (resultado != null)
+                    {
+                        await DisplayAlert("Éxito", "Comentario insertado correctamente", "Aceptar");
+                        ComentarioT.Text = string.Empty; // Limpiar campo de comentario
+                        ValoracionNum.Text = string.Empty; // Restablecer campo de valoración
+                        CargarComentarios(NombreLocalidad.Text); // Recargar comentarios
+                    }
+                    else
+                    {
+                        await DisplayAlert("Error", "Error al insertar el comentario", "Aceptar");
+                    }
+                }
+                else
+                {
+                    await DisplayAlert("Error", "Localidad no encontrada", "Aceptar");
+                }
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", $"Error al insertar el comentario: {ex.Message}", "Aceptar");
             }
         }
     }

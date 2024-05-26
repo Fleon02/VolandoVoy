@@ -1,6 +1,4 @@
-﻿using Microsoft.Maui.Controls;
-
-namespace TFGVolandoVoy
+﻿namespace TFGVolandoVoy
 {
     public partial class AppShell : Shell
     {
