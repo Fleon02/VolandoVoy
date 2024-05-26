@@ -1,15 +1,20 @@
 using Supabase.Interfaces;
+using TFGVolandoVoy.Modelo;
 
-namespace TFGVolandoVoy.Vista;
+namespace TFGVolandoVoy;
 
 public partial class RetosVnt : ContentPage
 {
     private readonly Supabase.Client _supabaseClient;
-
-    public RetosVnt()
+    public RetosVnt(Supabase.Client supabaseClient)
 	{
-		InitializeComponent();
-        CargarLocalidades();
+        _supabaseClient = supabaseClient;
+        InitializeComponent();
+        _ = CargarLocalidades();
+    }
+
+    public RetosVnt() : this(new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY)) 
+    {
     }
 
     private async void selector_ciudades_SelectedIndexChanged(object sender, EventArgs e)
@@ -32,6 +37,18 @@ public partial class RetosVnt : ContentPage
     {
         var response = await _supabaseClient.From<Localidad>().Get();
         var localidades = response.Models;
+
+        if (localidades != null && localidades.Count > 0)
+        {
+            foreach (var localidad in localidades)
+            {
+                Console.WriteLine($"Localidad: {localidad.NombreLocalidad}");
+            }
+        }
+        else
+        {
+            Console.WriteLine("No se encontraron localidades.");
+        }
 
         selector_ciudades.ItemsSource = localidades;
     }

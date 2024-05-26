@@ -1,4 +1,5 @@
 ﻿using Microsoft.Maui.Controls;
+using Supabase.Interfaces;
 using TFGVolandoVoy.Vista;
 
 namespace TFGVolandoVoy
@@ -23,6 +24,7 @@ namespace TFGVolandoVoy
 
         public async Task NavigateToPage(string route)
         {
+
             Page page = null;
 
             switch (route)

@@ -1,4 +1,4 @@
-﻿using TFGVolandoVoy.Converters;
+﻿
 
 namespace TFGVolandoVoy
 {
@@ -8,7 +8,7 @@ namespace TFGVolandoVoy
         {
             InitializeComponent();
 
-            Resources.Add("StringNullOrEmptyToBoolConverter", new StringNullOrEmptyToBoolConverter());
+            
 
             MainPage = new AppShell();
         }
