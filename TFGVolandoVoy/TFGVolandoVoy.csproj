@@ -89,9 +89,6 @@
 	  <Compile Update="Vista\DetallesLocalidadVtn.xaml.cs">
 	    <DependentUpon>DetallesLocalidadVtn.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Vista\RetosVnt_Discarded.xaml.cs">
-	    <DependentUpon>RetosVnt_Discarded.xaml</DependentUpon>
-	  </Compile>
 	  <Compile Update="Vista\VntPrincipal.xaml.cs">
 	    <DependentUpon>VntPrincipal.xaml</DependentUpon>
 	  </Compile>

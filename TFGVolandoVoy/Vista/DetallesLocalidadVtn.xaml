@@ -29,7 +29,6 @@
                        SemanticProperties.HeadingLevel="Level2" />
                 <Image HeightRequest="125" Aspect="AspectFit" x:Name="ComAu" />
                 <StackLayout x:Name="stacklayout"></StackLayout>
-                <Button Text="Retos" HorizontalOptions="CenterAndExpand" Clicked="GoToRetos"/>
                 <Entry x:Name="ComentarioT" Placeholder="Escribe tu Comentario" />
                 <Entry x:Name="ValoracionNum" Keyboard="Numeric" Placeholder="Valoración (1-10)" />
                 <Button Text="Insertar Comentario" HorizontalOptions="CenterAndExpand" Clicked="CrearComentario"/>

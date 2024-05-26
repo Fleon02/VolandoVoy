@@ -69,6 +69,7 @@ namespace TFGVolandoVoy
 
             mapView.MoveToRegion(MapSpan.FromCenterAndRadius(new Location(40.5124429, -3.6810871), Distance.FromKilometers(1)));
             stacklayout.Children.Add(mapView);
+
         }
 
         private void AddMapBing()
@@ -93,6 +94,16 @@ namespace TFGVolandoVoy
                     mapView.MoveToRegion(MapSpan.FromCenterAndRadius(new Location(40.5124429, -3.6810871), Distance.FromKilometers(1)));
 
             stacklayout.Children.Add(mapView);
+
+            Grid g = new Grid
+            {
+                BackgroundColor = Colors.Red
+            };
+            Button b = new Button();
+
+            g.Children.Add(b);
+
+            stacklayout.Children.Add(g);
         }
 
 
