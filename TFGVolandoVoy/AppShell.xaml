@@ -27,6 +27,7 @@
         Title="Inicio"
         ContentTemplate="{DataTemplate local:VntPrincipal}"
         Route="VntPrincipal" 
+        Icon="select_image.png"
         Shell.FlyoutBehavior="Flyout"/>
     
     

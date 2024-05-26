@@ -9,14 +9,14 @@ public partial class RetosVnt : ContentPage
     private readonly Supabase.Client _supabaseClient;
     public ObservableCollection<Localidad> Localidades { get; set; }
     public ObservableCollection<Reto> Retos { get; set; }
-    
-    
-    
-    
-    
+
+
+
+
+
     //Constructor con parámetros
     public RetosVnt(Supabase.Client supabaseClient)
-	{
+    {
         _supabaseClient = supabaseClient;
         InitializeComponent();
         _ = CargarLocalidades();
@@ -27,17 +27,17 @@ public partial class RetosVnt : ContentPage
         this.BindingContext = this;
     }
 
-    
-    
-    
+
+
+
     //Constructor sin parámetros
-    public RetosVnt() : this(new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY)) 
+    public RetosVnt() : this(new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY))
     {
     }
 
-    
-    
-    
+
+
+
     private async void selector_ciudades_SelectedIndexChanged(object sender, EventArgs e)
     {
         var selectedCiudad = selector_ciudades.SelectedItem as Localidad;
@@ -47,9 +47,9 @@ public partial class RetosVnt : ContentPage
         }
     }
 
-    
-    
-    
+
+
+
     private async Task CargarRetos(Localidad localidad)
     {
         var response = await _supabaseClient.From<Reto>().Where(x => x.IdLocalidad == localidad.IdLocalidad).Get();
@@ -70,9 +70,9 @@ public partial class RetosVnt : ContentPage
     }
 
 
-    
-    
-    
+
+
+
     private async Task ActualizarRetos(long idLocalidad)
     {
         var response = await _supabaseClient.From<Reto>().Where(r => r.IdLocalidad == idLocalidad).Get();
@@ -81,9 +81,9 @@ public partial class RetosVnt : ContentPage
         lista_de_retos.ItemsSource = retos;
     }
 
-    
-    
-    
+
+
+
     private async Task CargarLocalidades()
     {
         var response = await _supabaseClient.From<Localidad>().Get();
@@ -105,8 +105,8 @@ public partial class RetosVnt : ContentPage
         selector_ciudades.ItemsSource = localidades;
     }
 
-    
-    
+
+
     protected override async void OnAppearing()
     {
         base.OnAppearing();
