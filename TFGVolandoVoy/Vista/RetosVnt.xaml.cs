@@ -1,4 +1,5 @@
 using Supabase.Interfaces;
+using System.Collections.ObjectModel;
 using TFGVolandoVoy.Modelo;
 
 namespace TFGVolandoVoy;
@@ -6,25 +7,74 @@ namespace TFGVolandoVoy;
 public partial class RetosVnt : ContentPage
 {
     private readonly Supabase.Client _supabaseClient;
+    public ObservableCollection<Localidad> Localidades { get; set; }
+    public ObservableCollection<Reto> Retos { get; set; }
+    
+    
+    
+    
+    
+    //Constructor con parámetros
     public RetosVnt(Supabase.Client supabaseClient)
 	{
         _supabaseClient = supabaseClient;
         InitializeComponent();
         _ = CargarLocalidades();
+        Localidades = new ObservableCollection<Localidad>();
+        Retos = new ObservableCollection<Reto>();
+
+        selector_ciudades.ItemsSource = Localidades;
+        lista_de_retos.ItemsSource = Retos;
+
+        this.BindingContext = this;
     }
 
+    
+    
+    
+    //Constructor sin parámetros
     public RetosVnt() : this(new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY)) 
     {
     }
 
+    
+    
+    
     private async void selector_ciudades_SelectedIndexChanged(object sender, EventArgs e)
     {
-        if (selector_ciudades.SelectedItem is Localidad selectedLocalidad)
+        var selectedCiudad = selector_ciudades.SelectedItem as Localidad;
+        if (selectedCiudad != null)
         {
-            await ActualizarRetos(selectedLocalidad.IdLocalidad);
+            await CargarRetos(selectedCiudad);
         }
     }
 
+    
+    
+    
+    private async Task CargarRetos(Localidad localidad)
+    {
+        var response = await _supabaseClient.From<Reto>().Where(x => x.IdLocalidad == localidad.IdLocalidad).Get();
+        var retos = response.Models;
+
+        if (retos != null && retos.Count > 0)
+        {
+            Retos.Clear();
+            foreach (var reto in retos)
+            {
+                Retos.Add(reto);
+            }
+        }
+        else
+        {
+            Console.WriteLine("No se encontraron retos para la localidad seleccionada.");
+        }
+    }
+
+
+    
+    
+    
     private async Task ActualizarRetos(long idLocalidad)
     {
         var response = await _supabaseClient.From<Reto>().Where(r => r.IdLocalidad == idLocalidad).Get();
@@ -33,6 +83,9 @@ public partial class RetosVnt : ContentPage
         lista_de_retos.ItemsSource = retos;
     }
 
+    
+    
+    
     private async Task CargarLocalidades()
     {
         var response = await _supabaseClient.From<Localidad>().Get();
@@ -40,9 +93,10 @@ public partial class RetosVnt : ContentPage
 
         if (localidades != null && localidades.Count > 0)
         {
+            Localidades.Clear();
             foreach (var localidad in localidades)
             {
-                Console.WriteLine($"Localidad: {localidad.NombreLocalidad}");
+                Localidades.Add(localidad);
             }
         }
         else
@@ -51,6 +105,14 @@ public partial class RetosVnt : ContentPage
         }
 
         selector_ciudades.ItemsSource = localidades;
+    }
+
+    
+    
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        await CargarLocalidades();
     }
 
 }
