@@ -142,26 +142,6 @@ namespace TFGVolandoVoy
         {
             MapaLocalidad(localidad, provincia);
         }
-
-        private async void GoToRetos(object sender, EventArgs e)
-        {
-
-            var nombre = NombreLocalidad.Text;
-            var localidades = await _supabaseClient.From<Localidad>().Get();
-            var localidad = localidades.Models.FirstOrDefault(p => p.NombreLocalidad == nombre);
-            // Obtener la localidad asociada al boton de "Retos"
-            //var localidad = (sender as Button)?.BindingContext as Localidad;
-
-            if (localidad != null)
-            {
-                // Navegar a la página Retos y pasar el idLocalidad como parámetro
-                await Navigation.PushAsync(new Retos(localidad.IdLocalidad));
-            }
-            else
-            {
-                throw new Exception($"Error al obtener la localidad");
-            }
-        }
         private async void CrearComentario(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(ComentarioT.Text))
