@@ -1,6 +1,7 @@
 using Supabase.Interfaces;
 using System.Collections.ObjectModel;
 using TFGVolandoVoy.Modelo;
+using TFGVolandoVoy.Vista;
 
 namespace TFGVolandoVoy;
 
@@ -25,6 +26,7 @@ public partial class RetosVnt : ContentPage
         selector_ciudades.ItemsSource = Localidades;
         lista_de_retos.ItemsSource = Retos;
         this.BindingContext = this;
+        
     }
 
 
@@ -113,4 +115,8 @@ public partial class RetosVnt : ContentPage
         await CargarLocalidades();
     }
 
+    private async void crear_reto_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new CrearReto(_supabaseClient));
+    }
 }

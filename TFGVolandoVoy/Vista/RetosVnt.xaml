@@ -29,6 +29,9 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+            <Button x:Name="crear_reto"
+                    Text="Crear Reto"
+                    Clicked="crear_reto_Clicked"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
