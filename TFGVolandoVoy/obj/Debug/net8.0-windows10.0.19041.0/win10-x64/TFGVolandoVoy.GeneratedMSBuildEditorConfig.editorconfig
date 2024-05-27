@@ -42,6 +42,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.Cambia
 build_metadata.AdditionalFiles.TargetPath = Vista\CambiarPass.xaml
 build_metadata.AdditionalFiles.RelativePath = Vista\CambiarPass.xaml
 
+[C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/Vista/CrearReto.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.CrearReto.xaml
+build_metadata.AdditionalFiles.TargetPath = Vista\CrearReto.xaml
+build_metadata.AdditionalFiles.RelativePath = Vista\CrearReto.xaml
+
 [C:/Users/Usuario/OneDrive/Documentos/GitHub/VolandoVoy/TFGVolandoVoy/Vista/DetallesLocalidadVtn.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.DetallesLocalidadVtn.xaml

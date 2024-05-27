@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TFGVolandoVoy.Vista.CrearReto"
+             Title="CrearReto">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="Nuevo Reto" Style="{StaticResource Headline}"/>
+            <Label Text="Seleccione una localidad: "/>
+            <Picker x:Name="selector_ciudades"
+                    Title="Selecciona una ciudad">
+                <Picker.ItemDisplayBinding>
+                    <Binding Path="NombreLocalidad"/>
+                </Picker.ItemDisplayBinding>
+            </Picker>
+            <Label Text="Tipo de reto:"/>
+            <Entry Placeholder="Defina el tipo de reto, por ej. Construccion/Limpieza"
+                   x:Name="TipoReto"/>
+            <Label Text="Reto:"/>
+            <Entry Placeholder="Describa el reto en detalle"
+                   x:Name="RetoDefinicion"/>
+
+
+            <Button x:Name="InsertarReto"
+                    HorizontalOptions="FillAndExpand"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage> 

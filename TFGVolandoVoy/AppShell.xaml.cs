@@ -48,5 +48,7 @@ namespace TFGVolandoVoy
                 await Navigation.PushAsync(page);
             }
         }
+
+
     }
 }
