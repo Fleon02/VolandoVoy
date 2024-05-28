@@ -94,7 +94,8 @@ public partial class RetosVnt : ContentPage
         if (localidades != null && localidades.Count > 0)
         {
             Localidades.Clear();
-            foreach (var localidad in localidades)
+            var localidadesOrdenadas = localidades.OrderBy(l => l.NombreLocalidad).ToList();
+            foreach (var localidad in localidadesOrdenadas)
             {
                 Localidades.Add(localidad);
             }

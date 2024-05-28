@@ -13,6 +13,9 @@ namespace TFGVolandoVoy.Vista
         public Localidad LocalidadSeleccionada { get; set; }
         private readonly Supabase.Client _supabaseClient;
 
+
+
+
         public CrearReto(Supabase.Client supabaseClient)
         {
             InitializeComponent();
@@ -22,9 +25,9 @@ namespace TFGVolandoVoy.Vista
             CargarLocalidades();
         }
 
-        private async 
-        Task
-CargarLocalidades()
+
+
+        private async Task CargarLocalidades()
         {
             try
             {
@@ -51,6 +54,8 @@ CargarLocalidades()
             }
         }
 
+
+
         
         private void Selector_ciudades_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -62,11 +67,16 @@ CargarLocalidades()
         }
 
 
+
+
         protected override async void OnAppearing()
         {
             base.OnAppearing();
             await CargarLocalidades();
         }
+
+
+
 
         private async void InsertarReto_Clicked(object sender, EventArgs e)
         {
