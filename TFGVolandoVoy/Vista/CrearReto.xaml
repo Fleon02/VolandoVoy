@@ -24,8 +24,9 @@
                    x:Name="RetoDefinicion"/>
 
 
-            <Button x:Name="InsertarReto"
-                    HorizontalOptions="FillAndExpand"/>
+            <Button x:Name="InsertarReto" Text="Insertar Reto"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="InsertarReto_Clicked"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

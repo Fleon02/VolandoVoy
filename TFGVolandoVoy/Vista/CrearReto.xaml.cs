@@ -22,7 +22,9 @@ namespace TFGVolandoVoy.Vista
             CargarLocalidades();
         }
 
-        private async void CargarLocalidades()
+        private async 
+        Task
+CargarLocalidades()
         {
             try
             {
@@ -58,73 +60,124 @@ namespace TFGVolandoVoy.Vista
                 // Manejar la localidad seleccionada si es necesario
             }
         }
+
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            await CargarLocalidades();
+        }
+
+        private async void InsertarReto_Clicked(object sender, EventArgs e)
+        {
+            if (LocalidadSeleccionada == null)
+            {
+                await DisplayAlert("Error", "Seleccione una localidad.", "OK");
+                return;
+            }
+
+            long idLocalidad = LocalidadSeleccionada.IdLocalidad;
+            string descripcionReto = RetoDefinicion.Text;
+            string tipoReto = TipoReto.Text;
+
+            var nuevoReto = new Reto
+            {
+                IdLocalidad = idLocalidad,
+                DescripcionReto = descripcionReto,
+                Superado = false,
+                TipoDeReto = tipoReto
+            };
+
+            try
+            {
+                var insertTask = await _supabaseClient.From<Reto>().Insert(nuevoReto);
+
+                // Verificar si la inserción fue exitosa
+                if (insertTask != null)
+                {
+                    // Inserción exitosa
+                    await DisplayAlert("Éxito", "El reto se ha insertado correctamente.", "OK");
+
+                    // Limpiar los campos después de la inserción exitosa
+                    RetoDefinicion.Text = "";
+                    TipoReto.Text = "";
+                    selector_ciudades.SelectedItem = null;
+                }
+                else
+                {
+                    // Error al insertar el reto
+                    await DisplayAlert("Error", "No se pudo insertar el reto. Por favor, inténtelo de nuevo.", "OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejar el error
+                await DisplayAlert("Error", $"Ocurrió un error: {ex.Message}", "OK");
+            }
+        }
     }
 }
 
 
-    //protected override async void OnAppearing()
-    //{
-    //    base.OnAppearing();
-    //    await CargarLocalidades();
-    //}
-
-    //public async void InsertarReto_Clicked(object sender, EventArgs e)
-    //{
-    //    Localidad localidadSeleccionada = (Localidad)selector_ciudades.SelectedItem;
-    //    long idLocalidad = localidadSeleccionada.IdLocalidad;
-    //    string descripcionReto = RetoDefinicion.Text;
-    //    string tipoReto = TipoReto.Text;
 
 
-    //    var nuevoReto = new Reto
-    //    {
-    //        IdLocalidad = idLocalidad,
-    //        DescripcionReto = descripcionReto,
-    //        Superado = false,
-    //        TipoDeReto = tipoReto
-    //    };
-
-    //    var insertTask = _supabaseClient.From<Reto>().Insert(nuevoReto);
-
-    //    // Esperar a que se complete la operación de inserción
-    //    await insertTask;
-
-    //    // Verificar si la inserción fue exitosa
-    //    if (insertTask.IsCompletedSuccessfully)
-    //    {
-    //        // Inserción exitosa
-    //        await DisplayAlert("Éxito", "El reto se ha insertado correctamente.", "OK");
-
-    //        // Limpiar los campos después de la inserción exitosa
-    //        RetoDefinicion.Text = "";
-    //        TipoReto.Text = "";
-    //    }
-    //    else
-    //    {
-    //        // Error al insertar el reto
-    //        await DisplayAlert("Error", "No se pudo insertar el reto. Por favor, inténtelo de nuevo.", "OK");
-    //    }
-    //}
-
-    //private void selector_ciudades_SelectedIndexChanged(object sender, EventArgs e)
-    //{
-    //    if (selector_ciudades.SelectedIndex != -1)
-    //    {
-    //        var localidadSeleccionada = (Localidad)selector_ciudades.SelectedItem;
-    //        long idLocalidad = localidadSeleccionada.IdLocalidad;
-    //        string nombreLocalidad = localidadSeleccionada.NombreLocalidad;
-
-    //    }
-    //}
+//public async void InsertarReto_Clicked(object sender, EventArgs e)
+//{
+//    Localidad localidadSeleccionada = (Localidad)selector_ciudades.SelectedItem;
+//    long idLocalidad = localidadSeleccionada.IdLocalidad;
+//    string descripcionReto = RetoDefinicion.Text;
+//    string tipoReto = TipoReto.Text;
 
 
-    //private void Selector_ciudades_SelectedIndexChanged(object sender, EventArgs e)
-    //{
-    //    if (selector_ciudades.SelectedIndex != -1)
-    //    {
-    //        var localidadSeleccionada = (Localidad)selector_ciudades.SelectedItem;
-    //        long idLocalidad = localidadSeleccionada.IdLocalidad;
-    //        string nombreLocalidad = localidadSeleccionada.NombreLocalidad;
+//    var nuevoReto = new Reto
+//    {
+//        IdLocalidad = idLocalidad,
+//        DescripcionReto = descripcionReto,
+//        Superado = false,
+//        TipoDeReto = tipoReto
+//    };
 
-    //    }
-    //}
+//    var insertTask = _supabaseClient.From<Reto>().Insert(nuevoReto);
+
+//    // Esperar a que se complete la operación de inserción
+//    await insertTask;
+
+//    // Verificar si la inserción fue exitosa
+//    if (insertTask.IsCompletedSuccessfully)
+//    {
+//        // Inserción exitosa
+//        await DisplayAlert("Éxito", "El reto se ha insertado correctamente.", "OK");
+
+//        // Limpiar los campos después de la inserción exitosa
+//        RetoDefinicion.Text = "";
+//        TipoReto.Text = "";
+//    }
+//    else
+//    {
+//        // Error al insertar el reto
+//        await DisplayAlert("Error", "No se pudo insertar el reto. Por favor, inténtelo de nuevo.", "OK");
+//    }
+//}
+
+//private void selector_ciudades_SelectedIndexChanged(object sender, EventArgs e)
+//{
+//    if (selector_ciudades.SelectedIndex != -1)
+//    {
+//        var localidadSeleccionada = (Localidad)selector_ciudades.SelectedItem;
+//        long idLocalidad = localidadSeleccionada.IdLocalidad;
+//        string nombreLocalidad = localidadSeleccionada.NombreLocalidad;
+
+//    }
+//}
+
+
+//private void Selector_ciudades_SelectedIndexChanged(object sender, EventArgs e)
+//{
+//    if (selector_ciudades.SelectedIndex != -1)
+//    {
+//        var localidadSeleccionada = (Localidad)selector_ciudades.SelectedItem;
+//        long idLocalidad = localidadSeleccionada.IdLocalidad;
+//        string nombreLocalidad = localidadSeleccionada.NombreLocalidad;
+
+//    }
+//}
