@@ -18,9 +18,7 @@ namespace TFGVolandoVoy.Vista
             InitializeComponent();
             _supabaseClient = supabaseClient;
             Localidades = new ObservableCollection<Localidad>();
-            BindingContext = this;  // Establecer el contexto de enlace
-
-            // Cargar localidades al aparecer la vista
+            BindingContext = this;            
             CargarLocalidades();
         }
 
@@ -34,7 +32,8 @@ namespace TFGVolandoVoy.Vista
                 if (localidades != null && localidades.Count > 0)
                 {
                     Localidades.Clear();
-                    foreach (var localidad in localidades)
+                    var localidadesOrdenadas = localidades.OrderBy(l => l.NombreLocalidad).ToList();
+                    foreach (var localidad in localidadesOrdenadas)
                     {
                         Localidades.Add(localidad);
                     }
@@ -50,7 +49,7 @@ namespace TFGVolandoVoy.Vista
             }
         }
 
-        // Opcional: Método para manejar el evento cuando se selecciona una localidad
+        
         private void Selector_ciudades_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (selector_ciudades.SelectedIndex != -1)
