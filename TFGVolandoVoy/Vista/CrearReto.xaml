@@ -9,7 +9,9 @@
             <Label Text="Nuevo Reto" Style="{StaticResource Headline}"/>
             <Label Text="Seleccione una localidad: "/>
             <Picker x:Name="selector_ciudades"
-                    Title="Selecciona una ciudad">
+                    Title="Selecciona una ciudad"
+                    ItemsSource="{Binding Localidades}"
+                    SelectedItem="{Binding LocalidadSeleccionada}">
                 <Picker.ItemDisplayBinding>
                     <Binding Path="NombreLocalidad"/>
                 </Picker.ItemDisplayBinding>
@@ -26,4 +28,4 @@
                     HorizontalOptions="FillAndExpand"/>
         </VerticalStackLayout>
     </ScrollView>
-</ContentPage> 
+</ContentPage>
