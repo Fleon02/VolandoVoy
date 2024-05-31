@@ -20,9 +20,14 @@ namespace TFGVolandoVoy
             InitializeComponent();
             Shell.SetFlyoutBehavior(this, FlyoutBehavior.Disabled);
             // Verificar la plataforma en tiempo de ejecución y ajustar el diseño en consecuencia
-            if (Device.RuntimePlatform == Device.Android)
+            if (Device.RuntimePlatform == Device.WinUI)
             {
-                // Cambiar la disposición de las columnas a filas para Android
+                ImgLoc.HeightRequest = 250;
+                ComAu.HeightRequest = 250;
+            }
+            else if (Device.RuntimePlatform == Device.Android || Device.RuntimePlatform == Device.iOS)
+            {
+                // Cambiar la disposición de las columnas a filas para Android e iOS
                 DetailsGrid.RowDefinitions.Clear();
                 DetailsGrid.ColumnDefinitions.Clear();
                 DetailsGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });

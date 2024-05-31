@@ -52,30 +52,22 @@
                        SemanticProperties.HeadingLevel="Level2" />
                 <StackLayout x:Name="SLMapLocalidad"></StackLayout>
                 <Entry x:Name="ComentarioT" Placeholder="Escribe tu Comentario" HeightRequest="125"/>
-                <Entry x:Name="ValoracionNum" Keyboard="Numeric" Placeholder="Valoración (1-10)" />
+                <Entry x:Name="ValoracionNum" Keyboard="Numeric" Placeholder="Pon Valoración Entre 1 y 5 (Solo Números)" />
                 <Button Text="Insertar Comentario" HorizontalOptions="CenterAndExpand" Clicked="CrearComentario"/>
-                <ListView
-                x:Name="ComentariosListView"
-                Margin="0,20,0,0"
-                RowHeight="75">
+                <ListView x:Name="ComentariosListView" Margin="0,20,0,0" RowHeight="125">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <Border Stroke="DarkOrange">
                                     <StackLayout Orientation="Horizontal" Padding="20,0" Margin="0,5">
-                                        <Border Stroke="Blue" Padding="5">
-                                            <Border.StrokeShape>
-                                                <RoundRectangle CornerRadius="40,40,40,40" />
-                                            </Border.StrokeShape>
-                                            <Label Text="{Binding Valoracion, StringFormat='{0}/5'}" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
-                                        </Border>
                                         <Image Source="{Binding Valoracion, StringFormat='star{0}.png'}" HeightRequest="150"/>
-                                        <Border Stroke="Blue" Padding="5">
-                                            <Border.StrokeShape>
-                                                <RoundRectangle CornerRadius="40,40,40,40" />
-                                            </Border.StrokeShape>
-                                            <Label Text="{Binding Comentario}" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
-                                        </Border>
+                                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                            <Border Stroke="Transparent" Padding="10">
+                                                <Editor Text="{Binding Comentario}" IsReadOnly="True" 
+                                                        HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                                        AutoSize="TextChanges"/>
+                                            </Border>
+                                        </Grid>
                                     </StackLayout>
                                 </Border>
                             </ViewCell>
