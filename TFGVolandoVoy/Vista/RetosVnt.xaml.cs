@@ -1,7 +1,6 @@
 using Supabase.Interfaces;
 using System.Collections.ObjectModel;
 using TFGVolandoVoy.Modelo;
-using TFGVolandoVoy.Vista;
 
 namespace TFGVolandoVoy;
 
@@ -26,7 +25,6 @@ public partial class RetosVnt : ContentPage
         selector_ciudades.ItemsSource = Localidades;
         lista_de_retos.ItemsSource = Retos;
         this.BindingContext = this;
-        
     }
 
 
@@ -94,8 +92,7 @@ public partial class RetosVnt : ContentPage
         if (localidades != null && localidades.Count > 0)
         {
             Localidades.Clear();
-            var localidadesOrdenadas = localidades.OrderBy(l => l.NombreLocalidad).ToList();
-            foreach (var localidad in localidadesOrdenadas)
+            foreach (var localidad in localidades)
             {
                 Localidades.Add(localidad);
             }
@@ -116,8 +113,4 @@ public partial class RetosVnt : ContentPage
         await CargarLocalidades();
     }
 
-    private async void crear_reto_Clicked(object sender, EventArgs e)
-    {
-        Navigation.PushAsync(new CrearReto(_supabaseClient));
-    }
 }
