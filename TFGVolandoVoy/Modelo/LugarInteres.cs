@@ -13,6 +13,6 @@ public class LugarInteres : BaseModel
     [Column("lugar")]
     public string? NombreLugar { get; set; }
 
-    [Column("imglugar")]
-    public string? ImagenLugar { get; set; }
+    [Column("tipo")]
+    public string? Tipo { get; set; }
 }

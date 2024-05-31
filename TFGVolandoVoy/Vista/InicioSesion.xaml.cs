@@ -124,7 +124,8 @@ namespace TFGVolandoVoy
         private void OnRegistroTapped(object sender, EventArgs e)
         {
             // Aquí navegas a la ventana de registro
-            Navigation.PushAsync(new Registro());
+            //Navigation.PushAsync(new Registro());
+            Navigation.PushAsync(new CrearLocalidad());
         }
 
         private void CambiarTapped(object sender, EventArgs e)
