@@ -3,22 +3,28 @@
     public partial class AppShell : Shell
     {
         public static UsuarioModel CurrentUser { get; set; } = new UsuarioModel();
+        public static AppShell Current;
 
         public AppShell()
         {
+
             InitializeComponent();
 
+            Current = this;
+
             Routing.RegisterRoute("InicioSesion", typeof(InicioSesion));
-            Routing.RegisterRoute("ProvinciaVnt", typeof(ProvinciaVnt));
             Routing.RegisterRoute("LocalidadVnt", typeof(LocalidadVnt));
             Routing.RegisterRoute("CerrarSesion", typeof(InicioSesion));
             Routing.RegisterRoute("RetosVnt", typeof(RetosVnt));
             BindingContext = CurrentUser;
 
+
             GoToAsync("InicioSesion");
             SetAppIcon();
             Application.Current.RequestedThemeChanged += OnRequestedThemeChanged;
+
         }
+
 
         private void OnRequestedThemeChanged(object sender, AppThemeChangedEventArgs e)
         {
@@ -52,9 +58,6 @@
             {
                 case "InicioSesion":
                     page = new InicioSesion();
-                    break;
-                case "ProvinciaVnt":
-                    page = new ProvinciaVnt();
                     break;
                 case "LocalidadVnt":
                     page = new LocalidadVnt();

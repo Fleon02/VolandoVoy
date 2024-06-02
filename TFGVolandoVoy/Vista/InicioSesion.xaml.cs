@@ -101,6 +101,8 @@ namespace TFGVolandoVoy
                         await Shell.Current.GoToAsync("//VntPrincipal");
                         AppShell.CurrentUser.Username = usuarioExistente.NombreUsuario;
                         AppShell.CurrentUser.UserImage = usuarioExistente.ImagenUsuario;
+                        AppShell.CurrentUser.Rol = usuarioExistente.Rol;
+
                     }
                     else
                     {
@@ -124,8 +126,7 @@ namespace TFGVolandoVoy
         private void OnRegistroTapped(object sender, EventArgs e)
         {
             // Aquí navegas a la ventana de registro
-            //Navigation.PushAsync(new Registro());
-            Navigation.PushAsync(new CrearLocalidad());
+            Navigation.PushAsync(new Registro());
         }
 
         private void CambiarTapped(object sender, EventArgs e)

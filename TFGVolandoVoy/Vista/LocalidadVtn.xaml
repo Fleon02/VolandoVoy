@@ -85,6 +85,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Button Text="Crear Localidad" x:Name="crearLocalidadBoton" Clicked="crearLocalidadBoton_Clicked"></Button>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -68,6 +68,7 @@
 	  <None Remove="Resources\Images\invisible.png" />
 	  <None Remove="Resources\Images\invisibledark.png" />
 	  <None Remove="Resources\Images\retoss.png" />
+	  <None Remove="Resources\Images\star5.png" />
 	  <None Remove="Resources\Images\visible.png" />
 	  <None Remove="Resources\Images\visibledark.png" />
 	  <None Remove="Resources\Splash\splash_vl.png" />
@@ -114,9 +115,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Vista\VntPrincipal.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Vista\ProvinciaVnt.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Vista\Registro.xaml">
