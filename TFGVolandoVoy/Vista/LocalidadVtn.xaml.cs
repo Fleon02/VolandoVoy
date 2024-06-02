@@ -25,6 +25,14 @@ namespace TFGVolandoVoy
         {
             base.OnAppearing();
 
+            if (AppShell.CurrentUser.Rol == "admin")
+            {
+                crearLocalidadBoton.IsVisible = true;
+            }else {
+
+                crearLocalidadBoton.IsVisible = false;
+            }
+
             // Reiniciar la página
             Logo.Source = "logo.png";
 
@@ -278,17 +286,16 @@ namespace TFGVolandoVoy
             }
         }
 
-        private void OnClicLabelTapped(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new ProvinciaVnt());
-        }
-
         private void DetallesL(object sender, EventArgs e)
         {
             var label = (Label)sender;
             var labelText = label.Text;
             Navigation.PushAsync(new DetallesLocalidadVtn(labelText));
         }
-       
+
+        private void crearLocalidadBoton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new CrearLocalidad());
+        }
     }
 }

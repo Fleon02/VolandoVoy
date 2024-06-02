@@ -27,6 +27,8 @@ public partial class CrearLocalidad : ContentPage
 	{
 		InitializeComponent();
 
+        Shell.SetFlyoutBehavior(this, FlyoutBehavior.Disabled);
+
         suggestions = new List<Place>(); // Initialize empty suggestion list
 
         lugaresInteres = new Dictionary<string, string>();
@@ -97,7 +99,6 @@ public partial class CrearLocalidad : ContentPage
 
     private async void ListBoxPlaces_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
-        await DisplayAlert("Place Selected", $"hhhhh", "OK");
         if (e.SelectedItem != null)
         {
             var selectedPlace = (Place)e.SelectedItem;
@@ -210,7 +211,7 @@ public partial class CrearLocalidad : ContentPage
                         latitude = lat,
                         longitude = lon
                     },
-                    radius = 1000.0
+                    radius = 5000.0
                 }
             },
             excludedTypes = tiposExcluidos
@@ -353,7 +354,7 @@ public partial class CrearLocalidad : ContentPage
             {
                 lu = new LugarInteres();
 
-                lu.NombreLugar = item.Key;
+                lu.Lugar = item.Key;
                 lu.Tipo = item.Value;
                 lu.IdLocalidad = idLocalidadInsertada;
 

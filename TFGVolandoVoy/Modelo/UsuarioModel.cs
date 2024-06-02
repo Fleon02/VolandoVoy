@@ -17,6 +17,20 @@ public class UsuarioModel : INotifyPropertyChanged
         }
     }
 
+    private string _rol;
+    public string Rol
+    {
+        get { return _rol; }
+        set
+        {
+            if (_rol != value)
+            {
+                _rol = value;
+                OnPropertyChanged(nameof(Rol));
+            }
+        }
+    }
+
     private string _userImage;
     public string UserImage
     {
