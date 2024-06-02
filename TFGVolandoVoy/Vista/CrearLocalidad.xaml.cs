@@ -269,7 +269,7 @@ public partial class CrearLocalidad : ContentPage
 
     private async Task GetPlacePhoto(string placeId, string photosName)
     {
-        string url = $"https://places.googleapis.com/v1/{photosName}/media?maxHeightPx=400&maxWidthPx=400&key={ApiKey}";
+        string url = $"https://places.googleapis.com/v1/{photosName}/media?maxHeightPx=2000&maxWidthPx=2000&key={ApiKey}";
 
         if (photosName == "Sin Fotos")
         {
@@ -340,14 +340,7 @@ public partial class CrearLocalidad : ContentPage
 
         var response = await cliente.From<Localidad>().Insert(l);
 
-        var response2 = await cliente.From<Provincia>().Get();
 
-        /*
-        foreach (var item in response2.Models)
-        {
-            MessageBox.Show(item.NombreProvincia);
-        }
-        */
 
 
         if (response.Models.Count > 0)
@@ -368,6 +361,7 @@ public partial class CrearLocalidad : ContentPage
             }
 
             await DisplayAlert("Detalles", "Todo Insertado", "OK");
+            lugaresInteres.Clear();
         }
 
 
