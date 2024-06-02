@@ -11,7 +11,7 @@ public class LugarInteres : BaseModel
     public long IdLocalidad { get; set; }
 
     [Column("lugar")]
-    public string? NombreLugar { get; set; }
+    public string? Lugar { get; set; }
 
     [Column("tipo")]
     public string? Tipo { get; set; }
