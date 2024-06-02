@@ -86,7 +86,7 @@ namespace TFGVolandoVoy
                         }
                         else
                         {
-                            // Ordenar los comentarios por valoración (de mayor a menor) y mostrar los mejores 3
+                            // Ordenar los comentarios por valoración (de mayor a menor) y mostrar los 3 mejores
                             var mejoresComentarios = comentariosLocalidad.OrderByDescending(c => c.Valoracion).Take(3).ToList();
                             ComentariosListView.ItemsSource = new ObservableCollection<Comentarios>(mejoresComentarios);
                         }
@@ -118,8 +118,22 @@ namespace TFGVolandoVoy
                         NombreProvincia.Text = $"Provincia: {provincia.NombreProvincia}";
                         ComunidadAutonoma.Text = $"Comunidad Autonoma: {provincia.ComunidadAutonoma}";
                         ComAu.Source = provincia.ImagenProvincia;
+                        // Obtener los lugares de interés para la localidad
+                        var lugaresInteres = await _supabaseClient.From<LugarInteres>().Get();
+                        var lugaresInteresL = lugaresInteres.Models.Where(l => l.IdLocalidad == localidad.IdLocalidad).ToList();
+                        // Agregar los lugares de interés al StackLayout
+                        foreach (var lugar in lugaresInteresL)
+                        {
+                            var lugarLabel = new Label
+                            {
+                                Text = $"{lugar.Lugar} ({lugar.Tipo})",
+                                FontSize = 18,
+                                HorizontalTextAlignment = TextAlignment.Center,
+                            };
+                            SLLugaresInteres.Children.Add(lugarLabel);
+                        }
                         MapaLocalidad(localidad, provincia);
-                        MostrarLugaresInteres(localidad.Coordenada1, localidad.Coordenada2);
+                        //MostrarLugaresInteres(localidad.Coordenada1, localidad.Coordenada2);
                     }
                     else
                     {
@@ -163,7 +177,7 @@ namespace TFGVolandoVoy
         {
             var mapView = new Map
             {
-                HeightRequest = 200,
+                HeightRequest = 300,
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 IsShowingUser = false,
@@ -238,7 +252,7 @@ namespace TFGVolandoVoy
                         index++;
                     }
                     //await DisplayAlert("Top 5 Lugares de Interés Cercanos", places, "OK");
-                    LugaresInteres.Text = places;
+                    //LugaresInteres.Text = places;
 
                 }
                 else

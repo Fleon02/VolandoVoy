@@ -54,6 +54,7 @@
                     <TapGestureRecognizer Tapped="OnClicLabelTapped"/>
                 </Label.GestureRecognizers>
             </Label>-->
+            <Label Text="Selecciona Localidad para ver sus Detalles" FontSize="18" VerticalOptions="Center"/>
             <ListView
                 x:Name="LocalidadesListView"
                 Margin="0,20,0,0"
@@ -64,15 +65,15 @@
                             <Border Stroke="DarkOrange">
                                 <StackLayout Orientation="Horizontal" Padding="20,0" Margin="0,5" >
                                     <Image Source="{Binding ImagenLocalidad}"
-                                    HorizontalOptions="StartAndExpand"
-                                    Margin="0,0,20,0"
-                                    Aspect="AspectFit">
+                                        HorizontalOptions="StartAndExpand"
+                                        HeightRequest="50" WidthRequest="150"
+                                        Margin="0,0,20,0" Aspect="AspectFit">
                                     </Image>
-                                    <Border Stroke="Blue" BackgroundColor="Blue" Padding="5">
+                                    <Border Stroke="Blue" Padding="5">
                                         <Border.StrokeShape>
                                             <RoundRectangle CornerRadius="40,40,40,40" />
                                         </Border.StrokeShape>
-                                        <Label Text="{Binding NombreLocalidad}" VerticalOptions="Center" BackgroundColor="Red">
+                                        <Label Text="{Binding NombreLocalidad}" VerticalOptions="Center">
                                             <Label.GestureRecognizers>
                                                 <TapGestureRecognizer Tapped="DetallesL"/>
                                             </Label.GestureRecognizers>
