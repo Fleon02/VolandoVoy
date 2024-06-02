@@ -41,15 +41,16 @@
                     x:Name="ComunidadAutonoma" Text="Comunidad Autonoma: "
                     SemanticProperties.HeadingLevel="Level2" />
             </Grid>
-            <VerticalStackLayout Spacing="20" HorizontalOptions="CenterAndExpand">
+            <VerticalStackLayout Spacing="20" HorizontalOptions="FillAndExpand">
                 <Label
                     Text="Lugares de Interés"
                     Style="{StaticResource SubHeadline}" FontSize="30"
                     SemanticProperties.HeadingLevel="Level2"
                     HorizontalOptions="CenterAndExpand" />
-                <Label HorizontalTextAlignment="Center"
+                <!--<Label HorizontalTextAlignment="Center"
                        FontSize="18" x:Name="LugaresInteres" 
-                       SemanticProperties.HeadingLevel="Level2" />
+                       SemanticProperties.HeadingLevel="Level2" />-->
+                <StackLayout x:Name="SLLugaresInteres"></StackLayout>
                 <StackLayout x:Name="SLMapLocalidad"></StackLayout>
                 <Entry x:Name="ComentarioT" Placeholder="Escribe tu Comentario" HeightRequest="125"/>
                 <Entry x:Name="ValoracionNum" Keyboard="Numeric" Placeholder="Pon Valoración Entre 1 y 5 (Solo Números)" />

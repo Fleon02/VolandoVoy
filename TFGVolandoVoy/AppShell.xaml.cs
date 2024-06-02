@@ -1,8 +1,4 @@
-﻿using Microsoft.Maui.Controls;
-using Supabase.Interfaces;
-using TFGVolandoVoy.Vista;
-
-namespace TFGVolandoVoy
+﻿namespace TFGVolandoVoy
 {
     public partial class AppShell : Shell
     {
@@ -20,6 +16,31 @@ namespace TFGVolandoVoy
             BindingContext = CurrentUser;
 
             GoToAsync("InicioSesion");
+            SetAppIcon();
+            Application.Current.RequestedThemeChanged += OnRequestedThemeChanged;
+        }
+
+        private void OnRequestedThemeChanged(object sender, AppThemeChangedEventArgs e)
+        {
+            SetAppIcon();
+        }
+
+        private void SetAppIcon()
+        {
+            if (Application.Current.RequestedTheme == AppTheme.Dark)
+            {
+                this.Resources["IconoInicio"] = "inicio.png";
+                this.Resources["IconoRetos"] = "reto.png";
+                this.Resources["IconoLocalidad"] = "map.png";
+                this.Resources["IconoLogout"] = "logout.png";
+            }
+            else
+            {
+                this.Resources["IconoInicio"] = "iniciodark.png";
+                this.Resources["IconoRetos"] = "retodark.png";
+                this.Resources["IconoLocalidad"] = "mapdark.png";
+                this.Resources["IconoLogout"] = "logoutdark.png";
+            }
         }
 
         public async Task NavigateToPage(string route)
