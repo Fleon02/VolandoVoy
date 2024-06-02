@@ -95,15 +95,6 @@ namespace TFGVolandoVoy
 
             stacklayout.Children.Add(mapView);
 
-            Grid g = new Grid
-            {
-                BackgroundColor = Colors.Red
-            };
-            Button b = new Button();
-
-            g.Children.Add(b);
-
-            stacklayout.Children.Add(g);
         }
 
 

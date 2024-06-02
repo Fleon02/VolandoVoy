@@ -42,15 +42,19 @@ build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.Cambia
 build_metadata.AdditionalFiles.TargetPath = Vista\CambiarPass.xaml
 build_metadata.AdditionalFiles.RelativePath = Vista\CambiarPass.xaml
 
+[C:/Users/soraf/Documents/GitHub/VolandoVoy/TFGVolandoVoy/Vista/CrearLocalidad.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.CrearLocalidad.xaml
+build_metadata.AdditionalFiles.TargetPath = Vista\CrearLocalidad.xaml
+build_metadata.AdditionalFiles.RelativePath = Vista\CrearLocalidad.xaml
 
-[C:/Users/guapi/OneDrive/Documents/GitHub/VolandoVoy/TFGVolandoVoy/Vista/CrearReto.xaml]
+[C:/Users/soraf/Documents/GitHub/VolandoVoy/TFGVolandoVoy/Vista/CrearReto.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.CrearReto.xaml
 build_metadata.AdditionalFiles.TargetPath = Vista\CrearReto.xaml
 build_metadata.AdditionalFiles.RelativePath = Vista\CrearReto.xaml
 
-[C:/Users/guapi/OneDrive/Documents/GitHub/VolandoVoy/TFGVolandoVoy/Vista/DetallesLocalidadVtn.xaml]
-
+[C:/Users/soraf/Documents/GitHub/VolandoVoy/TFGVolandoVoy/Vista/DetallesLocalidadVtn.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.DetallesLocalidadVtn.xaml
 build_metadata.AdditionalFiles.TargetPath = Vista\DetallesLocalidadVtn.xaml
@@ -67,12 +71,6 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.LocalidadVtn.xaml
 build_metadata.AdditionalFiles.TargetPath = Vista\LocalidadVtn.xaml
 build_metadata.AdditionalFiles.RelativePath = Vista\LocalidadVtn.xaml
-
-[C:/Users/soraf/Documents/GitHub/VolandoVoy/TFGVolandoVoy/Vista/ProvinciaVnt.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.ProvinciaVnt.xaml
-build_metadata.AdditionalFiles.TargetPath = Vista\ProvinciaVnt.xaml
-build_metadata.AdditionalFiles.RelativePath = Vista\ProvinciaVnt.xaml
 
 [C:/Users/soraf/Documents/GitHub/VolandoVoy/TFGVolandoVoy/Vista/Registro.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
