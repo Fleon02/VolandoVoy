@@ -22,30 +22,25 @@
         Route="InicioSesion" 
         FlyoutItemIsVisible="False"
         Shell.FlyoutBehavior="Disabled"/>
-
     <ShellContent
         Title="Inicio"
         ContentTemplate="{DataTemplate local:VntPrincipal}"
         Route="VntPrincipal" 
-        Icon="select_image.png"
+        Icon="{DynamicResource IconoInicio}"
         Shell.FlyoutBehavior="Flyout"/>
-    
-    
     <ShellContent
         Title="Retos"
         ContentTemplate="{DataTemplate local:RetosVnt}"
         Route="RetosVnt" 
+        Icon="{DynamicResource IconoRetos}"
         Shell.FlyoutBehavior="Flyout"/>
-    
-    
-
     <ShellContent
         Title="Localidad"
         ContentTemplate="{DataTemplate local:LocalidadVnt}"
         Route="LocalidadVnt" 
+        Icon="{DynamicResource IconoLocalidad}"
         Shell.FlyoutBehavior="Flyout"/>
-
-    <FlyoutItem Title="Cerrar Sesión" Route="CerrarSesion" FlyoutDisplayOptions="AsSingleItem">
+    <FlyoutItem Title="Cerrar Sesión" Route="CerrarSesion" FlyoutDisplayOptions="AsSingleItem" Icon="{DynamicResource IconoLogout}">
         <ShellContent ContentTemplate="{DataTemplate local:InicioSesion}" Shell.FlyoutBehavior="Disabled" Title="Home"/>
     </FlyoutItem>
 </Shell>
