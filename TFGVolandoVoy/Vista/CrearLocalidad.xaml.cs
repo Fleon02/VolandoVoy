@@ -1,9 +1,13 @@
+using DocumentFormat.OpenXml.Bibliography;
+using Microsoft.Maui.Controls.Maps;
+using Microsoft.Maui.Maps;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Net;
 using System.Text;
 using TFGVolandoVoy.Modelo;
 using static System.Net.WebRequestMethods;
+using Map = Microsoft.Maui.Controls.Maps.Map;
 
 namespace TFGVolandoVoy;
 
@@ -20,6 +24,10 @@ public partial class CrearLocalidad : ContentPage
     private double longitud;
     private double latitud;
     private string imgProvincia = "";
+
+    private String PlaceID = "";
+
+    private String PhotoName = "";
 
     Dictionary<string, string> lugaresInteres;
 
@@ -102,17 +110,19 @@ public partial class CrearLocalidad : ContentPage
         if (e.SelectedItem != null)
         {
             var selectedPlace = (Place)e.SelectedItem;
-            string placeId = selectedPlace.PlaceId;
+            PlaceID = selectedPlace.PlaceId;
 
-            await DisplayAlert("Place Selected", $"{placeId} - {selectedPlace.Description}", "OK");
+            await DisplayAlert("Place Selected", $"{PlaceID} - {selectedPlace.Description}", "OK");
 
-            GetAddressDetails(placeId);
+
+
+            GetAddressDetails();
         }
     }
 
-    private async void GetAddressDetails(string placeId)
+    private async void GetAddressDetails()
     {
-        string url = $"https://places.googleapis.com/v1/places/{placeId}?fields=addressComponents,location,photos&key={ApiKey}&languageCode=es";
+        string url = $"https://places.googleapis.com/v1/places/{PlaceID}?fields=addressComponents,location,photos&key={ApiKey}&languageCode=es";
 
         using (var client = new HttpClient())
         {
@@ -127,7 +137,6 @@ public partial class CrearLocalidad : ContentPage
                 string administrativeAreaLevel2 = "";
                 string country = "";
                 string postalCode = "";
-                string PhotosName = "";
 
                 double latitude = 0.0;
                 double longitude = 0.0;
@@ -137,7 +146,7 @@ public partial class CrearLocalidad : ContentPage
                     var addressComponents = data.addressComponents;
                     if (data.photos != null && data.photos.Count > 0)
                     {
-                        PhotosName = data.photos[0]["name"]?.ToString() ?? "Sin Fotos";
+                        PhotoName = data.photos[0]["name"]?.ToString() ?? "Sin Fotos";
                     }
 
                     foreach (var component in addressComponents)
@@ -185,17 +194,42 @@ public partial class CrearLocalidad : ContentPage
                 }
 
                 string addressDetails = $"Localidad: {locality}\nProvincia: {administrativeAreaLevel2}\nComunidad Autonoma: {administrativeAreaLevel1}\nPaís: {country}\nCódigo Postal: {postalCode}\n\nCoordenadas:\nLatitud: {latitude:F6}\nLongitud: {longitude:F6}";
-                
-                await DisplayAlert("Detalles de la dirección", addressDetails, "OK");
+
+                //await DisplayAlert("Detalles de la dirección", addressDetails, "OK");
 
 
+                if (SLMapa.Children.Count > 0)
+                {
+                    SLMapa.Children.RemoveAt(0);
+                    lugaresInteres.Clear();
+                }
 
-                await ShowNearbyPlacesAsync(latitude, longitude, placeId, PhotosName);
+                var mapView = new Map
+                {
+                    HeightRequest = 300,
+                    VerticalOptions = LayoutOptions.FillAndExpand,
+                    HorizontalOptions = LayoutOptions.FillAndExpand,
+                    IsShowingUser = false,
+                    MapType = MapType.Street
+                };
+                var coordenadas = new Location(latitud, longitud);
+                Pin pinmapa = new Pin
+                {
+                    Label = nombreLocalidad + " (" + nombreProvincia + ")", // Nombre del marcador            
+                    Location = coordenadas
+                };
+                mapView.Pins.Add(pinmapa);
+
+                mapView.MoveToRegion(MapSpan.FromCenterAndRadius(coordenadas, Distance.FromKilometers(1)));
+                SLMapa.Children.Add(mapView);
+
+                btnConfirmar.IsVisible = true;
+
             }
         }
     }
 
-    private async Task ShowNearbyPlacesAsync(double lat, double lon, string placeId, string photosName)
+    private async Task ShowNearbyPlacesAsync()
     {
         string url = "https://places.googleapis.com/v1/places:searchNearby";
         string[] tiposExcluidos = { "subway_station", "train_station", "bank", "supermarket" };
@@ -208,8 +242,8 @@ public partial class CrearLocalidad : ContentPage
                 {
                     center = new
                     {
-                        latitude = lat,
-                        longitude = lon
+                        latitude = latitud,
+                        longitude = longitud
                     },
                     radius = 5000.0
                 }
@@ -257,9 +291,11 @@ public partial class CrearLocalidad : ContentPage
                     index++;
                 }
 
-                await DisplayAlert("Top 5 Lugares de Interés Cercanos", places, "OK");
+                //await DisplayAlert("Top 5 Lugares de Interés Cercanos", places, "OK");
 
-                await GetPlacePhoto(placeId, photosName);
+                await GetPlacePhoto();
+
+                
             }
             else
             {
@@ -268,11 +304,13 @@ public partial class CrearLocalidad : ContentPage
         }
     }
 
-    private async Task GetPlacePhoto(string placeId, string photosName)
-    {
-        string url = $"https://places.googleapis.com/v1/{photosName}/media?maxHeightPx=2000&maxWidthPx=2000&key={ApiKey}";
+    
 
-        if (photosName == "Sin Fotos")
+    private async Task GetPlacePhoto()
+    {
+        string url = $"https://places.googleapis.com/v1/{PhotoName}/media?maxHeightPx=2000&maxWidthPx=2000&key={ApiKey}";
+
+        if (PhotoName == "Sin Fotos")
         {
             imgLocalidad = "https://clfynwobrskueprtvnmg.supabase.co/storage/v1/object/public/ComunidadAutonoma/placeholder.jpg";
         }
@@ -396,5 +434,11 @@ public partial class CrearLocalidad : ContentPage
             Description = description;
             PlaceId = placeId;
         }
+    }
+
+
+    private async void btnConfirmar_Clicked_1(object sender, EventArgs e)
+    {
+        await ShowNearbyPlacesAsync();
     }
 }

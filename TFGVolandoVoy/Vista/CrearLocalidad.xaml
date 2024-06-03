@@ -11,5 +11,12 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <StackLayout x:Name="SLMapa"></StackLayout>
+        <Button
+                x:Name="btnConfirmar"
+                Text="Crear Localidad" 
+                Clicked= "btnConfirmar_Clicked_1"
+                HorizontalOptions="CenterAndExpand"
+                IsVisible="False"/>
     </StackLayout>
 </ContentPage>
