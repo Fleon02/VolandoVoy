@@ -15,4 +15,10 @@ public class LugarInteres : BaseModel
 
     [Column("tipo")]
     public string? Tipo { get; set; }
+
+    [Column("latitud")]
+    public double Latitud { get; set; }
+
+    [Column("longitud")]
+    public double Longitud { get; set; }
 }
