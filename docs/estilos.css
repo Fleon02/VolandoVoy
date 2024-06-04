@@ -1,25 +1,30 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: orange;
     text-align: center;
     padding: 50px;
 }
-.container {
+#logo{
+    width: 60%;
+}
+.contenedor {
     max-width: 600px;
     margin: 0 auto;
     background: #fff;
     padding: 20px;
+    border: 10px double red;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 8px 8px 8px 6px rgba(0, 0, 0, 0.4);
 }
 h1 {
     color: #007BFF;
+    text-decoration: underline;
 }
 p {
     font-size: 18px;
+    font-weight: bold;
 }
-.button {
+.boton {
     display: inline-block;
     margin: 10px;
     padding: 10px 20px;
@@ -30,6 +35,6 @@ p {
     border-radius: 5px;
     text-decoration: none;
 }
-.button:hover {
-    background-color: #0056b3;
+.boton:hover {
+    background-color: black;
 }

@@ -190,6 +190,13 @@ namespace TFGVolandoVoy
                 Location = coordenadas
             };
             mapView.Pins.Add(pinmapa);
+            var coordenadaslugar1 = new Location(40.3488132, -3.8373739);
+            Pin pinmapalugar1 = new Pin
+            {
+                Label = localidad.NombreLocalidad + " (" + provincia.NombreProvincia + ")", // Nombre del marcador            
+                Location = coordenadaslugar1
+            };
+            mapView.Pins.Add(pinmapalugar1);
 
             mapView.MoveToRegion(MapSpan.FromCenterAndRadius(coordenadas, Distance.FromKilometers(1)));
             SLMapLocalidad.Children.Add(mapView);
