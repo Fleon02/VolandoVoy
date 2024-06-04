@@ -29,7 +29,7 @@ public partial class CrearLocalidad : ContentPage
 
     private String PhotoName = "";
 
-    Dictionary<string, string> lugaresInteres;
+    List<LugarInteres> lugaresIntereses;
 
     public CrearLocalidad()
 	{
@@ -39,7 +39,7 @@ public partial class CrearLocalidad : ContentPage
 
         suggestions = new List<Place>(); // Initialize empty suggestion list
 
-        lugaresInteres = new Dictionary<string, string>();
+        lugaresIntereses = new List<LugarInteres>();
 
 
     }
@@ -201,7 +201,7 @@ public partial class CrearLocalidad : ContentPage
                 if (SLMapa.Children.Count > 0)
                 {
                     SLMapa.Children.RemoveAt(0);
-                    lugaresInteres.Clear();
+                    lugaresIntereses.Clear();
                 }
 
                 var mapView = new Map
@@ -257,7 +257,7 @@ public partial class CrearLocalidad : ContentPage
         using (var client = new HttpClient())
         {
             client.DefaultRequestHeaders.Add("X-Goog-Api-Key", ApiKey);
-            client.DefaultRequestHeaders.Add("X-Goog-FieldMask", "places.displayName,places.primaryTypeDisplayName,places.id");
+            client.DefaultRequestHeaders.Add("X-Goog-FieldMask", "places.displayName,places.primaryTypeDisplayName,places.id,places.location");
 
             var response = await client.PostAsync(url, httpContent);
             if (response.IsSuccessStatusCode)
@@ -270,22 +270,44 @@ public partial class CrearLocalidad : ContentPage
                 string places = "";
                 string types = "";
                 int index = 1;
+                LugarInteres lu;
                 foreach (var result in results)
                 {
+                    lu = new LugarInteres();
                     string name = result["displayName"]["text"].ToString();
                     string id = result["id"].ToString();
+                    double latitud;
+                    double longitud;
                     // Check if primaryTypeDisplayName is available
                     if (result["primaryTypeDisplayName"] != null)
                     {
+
                         types = result["primaryTypeDisplayName"]["text"].ToString();
                         places += $"{index}. {name} - {id} - Tipo: {types}\n";
 
-                        lugaresInteres.Add(name, types);
+                        latitud = result["location"]["latitude"];
+                        longitud = result["location"]["longitude"];
+
+                        lu.Lugar = name;
+                        lu.Tipo = types;
+                        lu.Latitud = latitud;
+                        lu.Longitud = longitud;
+
+                        lugaresIntereses.Add(lu);
+
                     }
                     else
                     {
+                        latitud = result["location"]["latitude"];
+                        longitud = result["location"]["longitude"];
+
+                        lu.Lugar = name;
+                        lu.Latitud = latitud;
+                        lu.Longitud = longitud;
+                        lu.Tipo = "Otro";
                         places += $"{index}. {name}  - {id} - Tipo: Otro\n";
-                        lugaresInteres.Add(name, "Otro");
+
+                        lugaresIntereses.Add(lu);
                     }
 
                     index++;
@@ -387,20 +409,16 @@ public partial class CrearLocalidad : ContentPage
             Localidad localidadInsertada = response.Models[0];
             long idLocalidadInsertada = localidadInsertada.IdLocalidad;
 
-            LugarInteres lu;
-            foreach (var item in lugaresInteres)
+            foreach (var item in lugaresIntereses)
             {
-                lu = new LugarInteres();
+                item.IdLocalidad = idLocalidadInsertada;
 
-                lu.Lugar = item.Key;
-                lu.Tipo = item.Value;
-                lu.IdLocalidad = idLocalidadInsertada;
-
-                await cliente.From<LugarInteres>().Insert(lu);
+                await cliente.From<LugarInteres>().Insert(item);
             }
 
             await DisplayAlert("Detalles", "Todo Insertado", "OK");
-            lugaresInteres.Clear();
+            lugaresIntereses.Clear();
+
         }
 
 
