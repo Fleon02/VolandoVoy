@@ -66,7 +66,7 @@
                                 <StackLayout Orientation="Horizontal" Padding="20,0" Margin="0,5" >
                                     <Image Source="{Binding ImagenLocalidad}"
                                         HorizontalOptions="StartAndExpand"
-                                        HeightRequest="50" WidthRequest="150"
+                                        HeightRequest="50" WidthRequest="100"
                                         Margin="0,0,20,0" Aspect="AspectFit">
                                     </Image>
                                     <Border Stroke="Blue" Padding="5">
