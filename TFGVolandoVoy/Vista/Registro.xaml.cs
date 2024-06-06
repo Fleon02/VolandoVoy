@@ -1,6 +1,8 @@
 using Supabase.Interfaces;
 using TFGVolandoVoy.Modelo;
 using System.Text.RegularExpressions;
+using System.Net.Mail;
+using System.Net;
 
 namespace TFGVolandoVoy.Vista;
 
@@ -60,17 +62,48 @@ public partial class Registro : ContentPage
             return;
         }
 
-        Usuario u = new Usuario
-        {
-            NombreUsuario = nombre,
-            ApellidosUsuario = apellidos,
-            EmailUsuario = email,
-            ImagenUsuario = imagen,
-            FechaAlta = DateTime.Now
-        };
 
-        await InsertUsuario(u, contrasena);
+        // Generate confirmation code
+        string confirmationCode = GenerateConfirmationCode();
+
+        // Send confirmation email
+        await SendConfirmationEmail(email, confirmationCode);
+
+        bool isCodeValid = false;
+
+        while (!isCodeValid)
+        {
+            // Prompt user to enter the confirmation code
+            string enteredCode = await DisplayPromptAsync("Código de Confirmación", "Ingrese el código de confirmación enviado a su correo electrónico:", "Confirmar", "Cancelar", "Código de confirmación", maxLength: 6, keyboard: Keyboard.Numeric);
+
+            if (enteredCode == null)
+            {
+                await DisplayAlert("Cancelado", "El registro ha sido cancelado.", "Aceptar");
+                return;
+            }
+
+            if (enteredCode == confirmationCode)
+            {
+                Usuario u = new Usuario
+                {
+                    NombreUsuario = nombre,
+                    ApellidosUsuario = apellidos,
+                    EmailUsuario = email,
+                    ImagenUsuario = imagen,
+                    FechaAlta = DateTime.Now
+                };
+
+                await InsertUsuario(u, contrasena);
+                isCodeValid = true;
+            }
+            else
+            {
+                await DisplayAlert("Error", "El código de confirmación no es válido. Por favor, inténtelo de nuevo.", "Aceptar");
+            }
+        }
     }
+
+
 
     private void MostrarPass(object sender, EventArgs e)
     {
@@ -133,6 +166,7 @@ public partial class Registro : ContentPage
     {
         try
         {
+
             var count = await _supabaseClient.From<Usuario>().Select(x => new object[] { x.IdUsuario }).Count(Postgrest.Constants.CountType.Exact);
 
             usuario.Rol = count == 0 ? "admin" : "usuario";
@@ -172,4 +206,44 @@ public partial class Registro : ContentPage
         const string emailRegex = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
         return Regex.IsMatch(email, emailRegex);
     }
+
+    private string GenerateConfirmationCode()
+    {
+        Random random = new Random();
+        return random.Next(100000, 999999).ToString();
+    }
+
+    private async Task SendConfirmationEmail(string email, string confirmationCode)
+    {
+        string senderEmail = "tfgvolandovoy@gmail.com";
+        string senderPassword = "efnq mfgn dego nrhg";
+
+        string recipientEmail = email;
+        string subject = "Código de Confirmación VolandoVoy";
+        string body = $"Su código de confirmación es: {confirmationCode}";
+
+        var smtpClient = new SmtpClient("smtp.gmail.com")
+        {
+            Port = 587,
+            Credentials = new NetworkCredential(senderEmail, senderPassword),
+            EnableSsl = true,
+        };
+
+        var message = new MailMessage(senderEmail, recipientEmail, subject, body);
+
+        try
+        {
+            smtpClient.Send(message);
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", "Error al enviar el correo electrónico de confirmación: " + ex.Message, "OK");
+        }
+        finally
+        {
+            message.Dispose();
+            smtpClient.Dispose();
+        }
+    }
 }
+

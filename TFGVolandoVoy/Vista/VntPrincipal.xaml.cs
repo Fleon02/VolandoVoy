@@ -83,15 +83,15 @@ namespace TFGVolandoVoy
                 IsScrollEnabled = false,
                 IsZoomEnabled = false,
             };
-                    Pin mediasetPin = new Pin
-                    {
-                        Label = "Volando Voy - Mediaset", // Nombre del marcador               
-                        Location = new Location(40.5124429, -3.6810871)
-                    };
-                    mapView.Pins.Add(mediasetPin);
+            Pin mediasetPin = new Pin
+            {
+                Label = "Volando Voy - Mediaset", // Nombre del marcador               
+                Location = new Location(40.5124429, -3.6810871)
+            };
+            mapView.Pins.Add(mediasetPin);
 
-                    // Configura la ubicación y el nivel de zoom inicial
-                    mapView.MoveToRegion(MapSpan.FromCenterAndRadius(new Location(40.5124429, -3.6810871), Distance.FromKilometers(1)));
+            // Configura la ubicación y el nivel de zoom inicial
+            mapView.MoveToRegion(MapSpan.FromCenterAndRadius(new Location(40.5124429, -3.6810871), Distance.FromKilometers(1)));
 
             stacklayout.Children.Add(mapView);
 
