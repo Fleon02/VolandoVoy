@@ -1,4 +1,3 @@
-using DocumentFormat.OpenXml.Office2010.Excel;
 using System.Collections.ObjectModel;
 using TFGVolandoVoy.Modelo;
 
@@ -14,6 +13,17 @@ namespace TFGVolandoVoy
             _supabaseClient = supabaseClient;
             InitializeComponent();
         }
+        private void OnImageSizeChanged(object sender, EventArgs e)
+        {
+            // Verificar si la plataforma actual es Windows
+            if (DeviceInfo.Platform == DevicePlatform.WinUI)
+            {
+                // Cambiar el ancho de la imagen
+                var image = (Image)sender;
+                image.WidthRequest = 350; // Cambia el valor según tus necesidades
+                image.HeightRequest = 75; // Cambia el valor según tus necesidades
+            }
+        }
 
         // Constructor sin parámetros
         public LocalidadVnt() : this(new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY))
@@ -28,14 +38,13 @@ namespace TFGVolandoVoy
             if (AppShell.CurrentUser.Rol == "admin")
             {
                 crearLocalidadBoton.IsVisible = true;
-            }else {
-
+            }
+            else
+            {
                 crearLocalidadBoton.IsVisible = false;
             }
-
             // Reiniciar la página
             Logo.Source = "logo.png";
-
             //NombreLocalidad.Text = "Localidad : ";
             //NombreProvincia.Text = "Provincia : ";
             CargarLocalidades();
