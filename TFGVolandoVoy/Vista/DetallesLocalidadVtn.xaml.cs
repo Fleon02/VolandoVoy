@@ -132,7 +132,7 @@ namespace TFGVolandoVoy
                             };
                             SLLugaresInteres.Children.Add(lugarLabel);
                         }
-                        MapaLocalidad(localidad, provincia);
+                        MapaLocalidadAsync(localidad, provincia);
                         //MostrarLugaresInteres(localidad.Coordenada1, localidad.Coordenada2);
                     }
                     else
@@ -173,7 +173,7 @@ namespace TFGVolandoVoy
             }
         }
 
-        private void MapaLocalidad(Localidad localidad, Provincia provincia)
+        private async Task MapaLocalidadAsync(Localidad localidad, Provincia provincia)
         {
             var mapView = new Map
             {
@@ -190,21 +190,31 @@ namespace TFGVolandoVoy
                 Location = coordenadas
             };
             mapView.Pins.Add(pinmapa);
-            var coordenadaslugar1 = new Location(40.3488132, -3.8373739);
-            Pin pinmapalugar1 = new Pin
+            // Verificar la plataforma en tiempo de ejecución y ajustar el diseño en consecuencia
+            if (Device.RuntimePlatform == Device.WinUI)
             {
-                Label = localidad.NombreLocalidad + " (" + provincia.NombreProvincia + ")", // Nombre del marcador            
-                Location = coordenadaslugar1
-            };
-            mapView.Pins.Add(pinmapalugar1);
-
+                // Obtener los lugares de interés para la localidad
+                var lugaresInteres = await _supabaseClient.From<LugarInteres>().Get();
+                var lugaresInteresL = lugaresInteres.Models.Where(l => l.IdLocalidad == localidad.IdLocalidad).ToList();
+                // Agregar los lugares de interés al StackLayout
+                foreach (var lugares in lugaresInteresL)
+                {
+                    var coordenadaslugar = new Location(lugares.Latitud, lugares.Longitud);
+                    Pin pinmapalugar = new Pin
+                    {
+                        Label = lugares.Lugar + " (" + lugares.Tipo + ")", // Nombre del marcador            
+                        Location = coordenadaslugar
+                    };
+                    mapView.Pins.Add(pinmapalugar);
+                }
+            }
             mapView.MoveToRegion(MapSpan.FromCenterAndRadius(coordenadas, Distance.FromKilometers(1)));
             SLMapLocalidad.Children.Add(mapView);
         }
 
         private void MapaLocalidadBing(Localidad localidad, Provincia provincia)
         {
-            MapaLocalidad(localidad, provincia);
+            MapaLocalidadAsync(localidad, provincia);
         }
         private async Task MostrarLugaresInteres(double lat, double lon)
         {

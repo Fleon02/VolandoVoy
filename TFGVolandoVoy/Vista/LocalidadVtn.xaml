@@ -54,11 +54,11 @@
                     <TapGestureRecognizer Tapped="OnClicLabelTapped"/>
                 </Label.GestureRecognizers>
             </Label>-->
-            <Label Text="Selecciona Localidad para ver sus Detalles" FontSize="18" VerticalOptions="Center"/>
+            <Label Text="Selecciona Localidad para ver sus Detalles" FontSize="18" HorizontalOptions="Center"/>
             <ListView
                 x:Name="LocalidadesListView"
                 Margin="0,20,0,0"
-                RowHeight="75">
+                RowHeight="100">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -67,7 +67,8 @@
                                     <Image Source="{Binding ImagenLocalidad}"
                                         HorizontalOptions="StartAndExpand"
                                         HeightRequest="50" WidthRequest="100"
-                                        Margin="0,0,20,0" Aspect="AspectFit">
+                                        Margin="0,0,20,0" Aspect="AspectFit"
+                                        SizeChanged="OnImageSizeChanged">
                                     </Image>
                                     <Border Stroke="Blue" Padding="5">
                                         <Border.StrokeShape>
