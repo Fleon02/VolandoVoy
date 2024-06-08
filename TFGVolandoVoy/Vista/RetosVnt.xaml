@@ -5,7 +5,6 @@
              x:Class="TFGVolandoVoy.RetosVnt"
              Title="RetosVnt">
 
-
     <ScrollView>
         <StackLayout Padding="10">
             <Picker x:Name="selector_ciudades"
@@ -15,22 +14,35 @@
                     <Binding Path="NombreLocalidad"/>
                 </Picker.ItemDisplayBinding>
             </Picker>
-            <CollectionView x:Name="lista_de_retos"
-                            ItemsSource="{Binding Retos}">
-                <CollectionView.ItemTemplate>
+            <ListView x:Name="RetosListView"
+                 Margin="0,20,0,0"
+                 RowHeight="100">   
+                <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Frame Padding="10" Margin="5" BorderColor="Gray" CornerRadius="5" BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark=#FFFF8C00}">
-                            <StackLayout>
-                                <Image Source="{Binding ImagenRetoPreview}" WidthRequest="600" HeightRequest="300"/>
-                                <Label Text="{Binding DescripcionReto}"
-                                       LineBreakMode="WordWrap"
-                                       VerticalOptions="StartAndExpand"/>
-                                <Image Source="{Binding ImagenCompletado}" WidthRequest="600" HeightRequest="300"/>
-                            </StackLayout>
-                        </Frame>
+                        <ViewCell>
+                            <Border Stroke="DarkOrange">
+                                <StackLayout Orientation="Horizontal" Padding="20,0" Margin="0,5" >
+                                    <Image Source="{Binding ImagenRetoPreview}"
+                                         HorizontalOptions="StartAndExpand"
+                                         HeightRequest="50" WidthRequest="100"
+                                         Margin="0,0,20,0" Aspect="AspectFit">  
+                                    </Image>
+                                    <Border Stroke="Blue" Padding="5">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="40,40,40,40" />
+                                        </Border.StrokeShape>
+                                        <Label Text="{Binding ResumenDeReto}"                                                           VerticalOptions="Center">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="DetallesR"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                    </Border>                                    
+                                </StackLayout>
+                            </Border>
+                        </ViewCell>
                     </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+                </ListView.ItemTemplate>
+            </ListView>
             <Button Text="Crear Retos" x:Name="crear_retos_boton" Clicked="crear_retos_boton_Clicked"/>
         </StackLayout>
     </ScrollView>
