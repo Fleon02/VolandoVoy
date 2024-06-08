@@ -70,7 +70,7 @@
                                         Margin="0,0,20,0" Aspect="AspectFit"
                                         SizeChanged="OnImageSizeChanged">
                                     </Image>
-                                    <Border Stroke="Blue" Padding="5">
+                                    <Border Stroke="{AppThemeBinding Light=Black, Dark=White}" Padding="5">
                                         <Border.StrokeShape>
                                             <RoundRectangle CornerRadius="40,40,40,40" />
                                         </Border.StrokeShape>
