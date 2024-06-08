@@ -38,16 +38,16 @@ namespace TFGVolandoVoy
 
                 Grid.SetRow(NombreLocalidad, 0);
                 Grid.SetRow(ImgLoc, 1);
-                Grid.SetRow(NombreProvincia, 2);
-                Grid.SetRow(ComAu, 3);
+                Grid.SetRow(ComAu, 2);
+                Grid.SetRow(NombreProvincia, 3);
                 Grid.SetRow(ComunidadAutonoma, 4);
 
                 Grid.SetColumn(NombreLocalidad, 0);
                 Grid.SetColumnSpan(NombreLocalidad, 2);
                 Grid.SetColumn(ImgLoc, 0);
+                Grid.SetColumn(ComAu, 0);
                 Grid.SetColumn(NombreProvincia, 0);
-                Grid.SetColumn(ComAu, 1);
-                Grid.SetColumn(ComunidadAutonoma, 1);
+                Grid.SetColumn(ComunidadAutonoma, 0);
             }
         }
 
