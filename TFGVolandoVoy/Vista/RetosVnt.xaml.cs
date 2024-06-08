@@ -1,6 +1,7 @@
 using Supabase.Interfaces;
 using System.Collections.ObjectModel;
 using TFGVolandoVoy.Modelo;
+using TFGVolandoVoy.Vista;
 
 namespace TFGVolandoVoy;
 
@@ -25,6 +26,14 @@ public partial class RetosVnt : ContentPage
         selector_ciudades.ItemsSource = Localidades;
         lista_de_retos.ItemsSource = Retos;
         this.BindingContext = this;
+        if (AppShell.CurrentUser.Rol == "admin")
+        {
+            crear_retos_boton.IsVisible = true;
+        }
+        else
+        {
+            crear_retos_boton.IsVisible = false;
+        }
     }
 
 
@@ -113,4 +122,8 @@ public partial class RetosVnt : ContentPage
         await CargarLocalidades();
     }
 
+    private void crear_retos_boton_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new CrearReto());
+    }
 }
