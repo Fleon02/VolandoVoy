@@ -10,11 +10,23 @@ public partial class Registro : ContentPage
 {
     private readonly Supabase.Client _supabaseClient;
     String? imagenElegida = null;
+
     public Registro(Supabase.Client supabaseClient)
     {
         _supabaseClient = supabaseClient;
         InitializeComponent();
         Shell.SetFlyoutBehavior(this, FlyoutBehavior.Disabled);
+        var temaActual = App.Current.RequestedTheme;
+
+        // Establecer la imagen según el tema
+        if (temaActual != AppTheme.Dark)
+        {
+            cargarImagenBtn.Source = "select_imagedark.png";
+        }
+        else
+        {
+            cargarImagenBtn.Source = "select_image.png";
+        }
     }
 
     // Constructor sin parámetros
@@ -64,14 +76,14 @@ public partial class Registro : ContentPage
 
 
         // Generate confirmation code
-        string confirmationCode = GenerateConfirmationCode();
+        string codigoConfirmacion = GenerarCodigoConfirmacion();
 
         // Send confirmation email
-        await SendConfirmationEmail(email, confirmationCode);
+        await EnviarEmailConfirmacion(email, codigoConfirmacion);
 
-        bool isCodeValid = false;
+        bool codigoValido = false;
 
-        while (!isCodeValid)
+        while (!codigoValido)
         {
             // Prompt user to enter the confirmation code
             string enteredCode = await DisplayPromptAsync("Código de Confirmación", "Ingrese el código de confirmación enviado a su correo electrónico:", "Confirmar", "Cancelar", "Código de confirmación", maxLength: 6, keyboard: Keyboard.Numeric);
@@ -82,7 +94,7 @@ public partial class Registro : ContentPage
                 return;
             }
 
-            if (enteredCode == confirmationCode)
+            if (enteredCode == codigoConfirmacion)
             {
                 Usuario u = new Usuario
                 {
@@ -94,7 +106,7 @@ public partial class Registro : ContentPage
                 };
 
                 await InsertUsuario(u, contrasena);
-                isCodeValid = true;
+                codigoValido = true;
             }
             else
             {
@@ -184,7 +196,7 @@ public partial class Registro : ContentPage
             await _supabaseClient.From<Usuario>().Insert(usuario);
             await _supabaseClient.From<Beep>().Insert(b);
             await DisplayAlert("Éxito", "Usuario insertado correctamente.", "Aceptar");
-            ResetFields();
+            VaciarCampos();
         }
         catch (Exception ex)
         {
@@ -192,7 +204,7 @@ public partial class Registro : ContentPage
         }
     }
 
-    private void ResetFields()
+    private void VaciarCampos()
     {
         CampoNombre.Text = "";
         CampoApellidos.Text = "";
@@ -207,13 +219,13 @@ public partial class Registro : ContentPage
         return Regex.IsMatch(email, emailRegex);
     }
 
-    private string GenerateConfirmationCode()
+    private string GenerarCodigoConfirmacion()
     {
         Random random = new Random();
         return random.Next(100000, 999999).ToString();
     }
 
-    private async Task SendConfirmationEmail(string email, string confirmationCode)
+    private async Task EnviarEmailConfirmacion(string email, string confirmationCode)
     {
         string senderEmail = "tfgvolandovoy@gmail.com";
         string senderPassword = "efnq mfgn dego nrhg";

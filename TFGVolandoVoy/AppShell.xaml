@@ -17,7 +17,7 @@
         </Grid>
     </Shell.FlyoutHeader>
     <ShellContent
-        Title="Home"
+        Title="Login"
         ContentTemplate="{DataTemplate local:InicioSesion}"
         Route="InicioSesion" 
         FlyoutItemIsVisible="False"
@@ -41,6 +41,6 @@
         Icon="{DynamicResource IconoLocalidad}"
         Shell.FlyoutBehavior="Flyout"/>
     <FlyoutItem Title="Cerrar Sesión" Route="CerrarSesion" FlyoutDisplayOptions="AsSingleItem" Icon="{DynamicResource IconoLogout}">
-        <ShellContent ContentTemplate="{DataTemplate local:InicioSesion}" Shell.FlyoutBehavior="Disabled" Title="Home"/>
+        <ShellContent ContentTemplate="{DataTemplate local:InicioSesion}" Shell.FlyoutBehavior="Disabled" Title="Login"/>
     </FlyoutItem>
 </Shell>

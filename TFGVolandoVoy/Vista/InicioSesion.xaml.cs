@@ -23,6 +23,14 @@ namespace TFGVolandoVoy
             MostrarPass();
             PasswordEntry.Text = "";
             userEntry.Text = "";
+#if WINDOWS
+        BtnLogin.HorizontalOptions = LayoutOptions.FillAndExpand;
+#endif
+
+#if ANDROID
+        BtnLogin.WidthRequest = 200;
+        BtnLogin.HeightRequest = 50;
+#endif
         }
 
         // Constructor sin parámetros
@@ -71,7 +79,7 @@ namespace TFGVolandoVoy
             }
         }
 
-        private async void OnCounterClicked(object sender, EventArgs e)
+        private async void IniciaSesion(object sender, EventArgs e)
         {
             // Define el correo electrónico y la contraseña para el registro
             string email = userEntry.Text;
