@@ -24,4 +24,7 @@ public class Reto : BaseModel
 
     [Column("imagenRetoPreview")]
     public string? ImagenRetoPreview { get; set; }
+
+    [Column("resumenReto")]
+    public string? ResumenDeReto { get; set; }
 }
