@@ -21,8 +21,13 @@ namespace TFGVolandoVoy.Vista
             InitializeComponent();
             _supabaseClient = supabaseClient;
             Localidades = new ObservableCollection<Localidad>();
-            BindingContext = this;            
+            BindingContext = this;
+            Shell.SetFlyoutBehavior(this, FlyoutBehavior.Disabled);
             CargarLocalidades();
+        }
+
+        public CrearReto() : this(new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY))
+        {
         }
 
 
@@ -124,6 +129,11 @@ namespace TFGVolandoVoy.Vista
                 // Manejar el error
                 await DisplayAlert("Error", $"Ocurrió un error: {ex.Message}", "OK");
             }
+        }
+
+        private void Imagen_antes_reto(object sender, EventArgs e)
+        {
+
         }
     }
 }

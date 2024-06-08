@@ -21,14 +21,17 @@
                     <DataTemplate>
                         <Frame Padding="10" Margin="5" BorderColor="Gray" CornerRadius="5" BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark=#FFFF8C00}">
                             <StackLayout>
+                                <Image Source="{Binding ImagenRetoPreview}" WidthRequest="600" HeightRequest="300"/>
                                 <Label Text="{Binding DescripcionReto}"
                                        LineBreakMode="WordWrap"
                                        VerticalOptions="StartAndExpand"/>
+                                <Image Source="{Binding ImagenCompletado}" WidthRequest="600" HeightRequest="300"/>
                             </StackLayout>
                         </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+            <Button Text="Crear Retos" x:Name="crear_retos_boton" Clicked="crear_retos_boton_Clicked"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
