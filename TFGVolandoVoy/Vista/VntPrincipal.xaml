@@ -49,11 +49,14 @@
                         <Span Text="&#x0a;" />
                         <Span Text="&#x0a;" />
                         <Span Text="En algunos programas, famosos, ayudarán a Jesús Calleja a conseguir los retos propuestos por el programa." />
-
+                        <Span Text="&#x0a;" />
+                        <Span Text="&#x0a;" />
+                        <Span Text="Oficinas Volando Voy (Mediaset) " />
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
 
+            <Image x:Name="jesus" Source="https://estaticosgn-cdn.deia.eus/clip/acfb40c0-eda5-42f4-8ae3-4c7c0bbf0a13_16-9-aspect-ratio_default_0.jpg"> </Image>
         </StackLayout>
     </ScrollView>
 
