@@ -27,15 +27,15 @@
                 <!-- ImgLoc -->
                 <Image Grid.Row="1" Grid.Column="0" Source="logo.png" HeightRequest="150" 
                        Aspect="AspectFit" x:Name="ImgLoc" HorizontalOptions="CenterAndExpand" />
-                <!-- NombreProvincia -->
-                <Label Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Center" FontSize="18"
-                       x:Name="NombreProvincia" Text="Provincia: " SemanticProperties.HeadingLevel="Level2" />
                 <!-- ComAu -->
                 <Image Grid.Row="1" Grid.Column="1" Source="logo.png" HeightRequest="150"
                     Aspect="AspectFit" x:Name="ComAu"
                     HorizontalOptions="CenterAndExpand" />
+                <!-- NombreProvincia -->
+                <Label Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Center" FontSize="18"
+                       x:Name="NombreProvincia" Text="Provincia: " SemanticProperties.HeadingLevel="Level2" />
                 <!-- ComunidadAutonoma -->
-                <Label Grid.Row="2" Grid.Column="1"
+                <Label Grid.Row="3" Grid.Column="1"
                     HorizontalTextAlignment="Center"
                     FontSize="18"
                     x:Name="ComunidadAutonoma" Text="Comunidad Autonoma: "
