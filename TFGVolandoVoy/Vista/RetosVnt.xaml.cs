@@ -24,7 +24,7 @@ public partial class RetosVnt : ContentPage
         Localidades = new ObservableCollection<Localidad>();
         Retos = new ObservableCollection<Reto>();
         selector_ciudades.ItemsSource = Localidades;
-        lista_de_retos.ItemsSource = Retos;
+        RetosListView.ItemsSource = Retos;
         this.BindingContext = this;
         if (AppShell.CurrentUser.Rol == "admin")
         {
@@ -34,6 +34,8 @@ public partial class RetosVnt : ContentPage
         {
             crear_retos_boton.IsVisible = false;
         }
+
+
     }
 
 
@@ -70,7 +72,9 @@ public partial class RetosVnt : ContentPage
             foreach (var reto in retos)
             {
                 Retos.Add(reto);
+                
             }
+
         }
         else
         {
@@ -87,7 +91,7 @@ public partial class RetosVnt : ContentPage
         var response = await _supabaseClient.From<Reto>().Where(r => r.IdLocalidad == idLocalidad).Get();
         var retos = response.Models;
 
-        lista_de_retos.ItemsSource = retos;
+        RetosListView.ItemsSource = retos;
     }
 
 
@@ -126,4 +130,12 @@ public partial class RetosVnt : ContentPage
     {
         Navigation.PushAsync(new CrearReto());
     }
+
+    private void DetallesR(object sender, TappedEventArgs e)
+    {
+        var label = (Label)sender;
+        var labelText = label.Text;
+        Navigation.PushAsync(new DetallesReto(labelText));
+    }
+
 }

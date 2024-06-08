@@ -25,7 +25,7 @@
             <Label Text="Imagen antes del Reto" HorizontalOptions="FillAndExpand"/>            
             <StackLayout Orientation="Horizontal" Spacing="10">
                 <Entry Placeholder="Inserte imagen de antes de completar el reto..." IsReadOnly="True" HorizontalOptions="FillAndExpand"/>
-                <ImageButton Source="select_image.png" Clicked="Imagen_antes_reto" WidthRequest="40" HeightRequest="40"/>
+                <ImageButton x:Name="cargarImagenRetoPreviewBtn" Source="select_image.png" Clicked="Imagen_antes_reto" WidthRequest="40" HeightRequest="40"/>
             </StackLayout>
             
             <Button x:Name="InsertarReto" Text="Insertar Reto"
