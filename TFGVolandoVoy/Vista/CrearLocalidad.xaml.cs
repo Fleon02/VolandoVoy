@@ -33,8 +33,8 @@ public partial class CrearLocalidad : ContentPage
     List<LugarInteres> lugaresIntereses;
 
     public CrearLocalidad()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
 
         Shell.SetFlyoutBehavior(this, FlyoutBehavior.Disabled);
 
@@ -318,7 +318,7 @@ public partial class CrearLocalidad : ContentPage
 
                 await GetPlacePhoto();
 
-                
+
             }
             else
             {
@@ -327,7 +327,7 @@ public partial class CrearLocalidad : ContentPage
         }
     }
 
-    
+
 
     private async Task GetPlacePhoto()
     {
@@ -403,7 +403,7 @@ public partial class CrearLocalidad : ContentPage
             IdProvincia = idProvincia
         };
 
-       
+
 
         var response = await cliente.From<Localidad>().Insert(l);
 
