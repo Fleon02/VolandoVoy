@@ -60,6 +60,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.Detall
 build_metadata.AdditionalFiles.TargetPath = Vista\DetallesLocalidadVtn.xaml
 build_metadata.AdditionalFiles.RelativePath = Vista\DetallesLocalidadVtn.xaml
 
+[C:/Users/soraf/Documents/GitHub/VolandoVoy/TFGVolandoVoy/Vista/DetallesReto.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.DetallesReto.xaml
+build_metadata.AdditionalFiles.TargetPath = Vista\DetallesReto.xaml
+build_metadata.AdditionalFiles.RelativePath = Vista\DetallesReto.xaml
+
 [C:/Users/soraf/Documents/GitHub/VolandoVoy/TFGVolandoVoy/Vista/InicioSesion.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TFGVolandoVoy.Vista.InicioSesion.xaml
