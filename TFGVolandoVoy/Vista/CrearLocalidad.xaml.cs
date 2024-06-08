@@ -3,6 +3,7 @@ using Microsoft.Maui.Controls.Maps;
 using Microsoft.Maui.Maps;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Supabase.Interfaces;
 using System.Net;
 using System.Text;
 using TFGVolandoVoy.Modelo;
@@ -332,9 +333,10 @@ public partial class CrearLocalidad : ContentPage
     {
         string url = $"https://places.googleapis.com/v1/{PhotoName}/media?maxHeightPx=2000&maxWidthPx=2000&key={ApiKey}";
 
-        if (PhotoName == "Sin Fotos")
+        if (PhotoName == "Sin Fotos" || PhotoName == "")
         {
             imgLocalidad = "https://clfynwobrskueprtvnmg.supabase.co/storage/v1/object/public/ComunidadAutonoma/placeholder.jpg";
+            await insertarLocalidad();
         }
         else
         {
@@ -384,6 +386,10 @@ public partial class CrearLocalidad : ContentPage
 
     private async Task insertarLocalidad() // Cambiado de void a Task
     {
+
+        Supabase.Client cliente = new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY);
+
+
         Provincia p = await ObtenerProvinciaPorNombre();
 
         idProvincia = p.IdProvincia;
@@ -397,7 +403,7 @@ public partial class CrearLocalidad : ContentPage
             IdProvincia = idProvincia
         };
 
-        Supabase.Client cliente = new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY);
+       
 
         var response = await cliente.From<Localidad>().Insert(l);
 
@@ -420,9 +426,6 @@ public partial class CrearLocalidad : ContentPage
             lugaresIntereses.Clear();
 
         }
-
-
-
 
     }
 
@@ -457,6 +460,24 @@ public partial class CrearLocalidad : ContentPage
 
     private async void btnConfirmar_Clicked_1(object sender, EventArgs e)
     {
+        Supabase.Client cliente = new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY);
+
+        var LocalidadesBBDD = await cliente.From<Localidad>().Get();
+        var localidadExistente = LocalidadesBBDD.Models.FirstOrDefault(l =>
+                AreCoordinatesEqual(l.Coordenada1, latitud) &&
+                AreCoordinatesEqual(l.Coordenada2, longitud));
+
+        if (localidadExistente != null)
+        {
+            await DisplayAlert("Error", "Lo sentimos, La localidad ya existe.", "OK");
+            return;
+        }
+
         await ShowNearbyPlacesAsync();
+    }
+
+    private bool AreCoordinatesEqual(double coord1, double coord2, double tolerance = 0.00001)
+    {
+        return Math.Abs(coord1 - coord2) < tolerance;
     }
 }
