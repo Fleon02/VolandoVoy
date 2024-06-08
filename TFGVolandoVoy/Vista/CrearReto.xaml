@@ -8,8 +8,7 @@
         <VerticalStackLayout>
             <Label Text="Nuevo Reto" Style="{StaticResource Headline}"/>
             <Label Text="Seleccione una localidad: "/>
-            <Picker x:Name="selector_ciudades"
-                    Title="Selecciona una ciudad"
+            <Picker x:Name="selector_ciudades"                    
                     ItemsSource="{Binding Localidades}"
                     SelectedItem="{Binding LocalidadSeleccionada}">
                 <Picker.ItemDisplayBinding>
@@ -22,8 +21,13 @@
             <Label Text="Reto:"/>
             <Entry Placeholder="Describa el reto en detalle"
                    x:Name="RetoDefinicion"/>
-
-
+            
+            <Label Text="Imagen antes del Reto" HorizontalOptions="FillAndExpand"/>            
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Entry Placeholder="Inserte imagen de antes de completar el reto..." IsReadOnly="True" HorizontalOptions="FillAndExpand"/>
+                <ImageButton Source="select_image.png" Clicked="Imagen_antes_reto" WidthRequest="40" HeightRequest="40"/>
+            </StackLayout>
+            
             <Button x:Name="InsertarReto" Text="Insertar Reto"
                     HorizontalOptions="FillAndExpand"
                     Clicked="InsertarReto_Clicked"/>
