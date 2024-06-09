@@ -5,41 +5,23 @@
              xmlns:mapping="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
              xmlns:sensors="clr-namespace:Microsoft.Maui.Devices;assembly=Microsoft.Maui.Essentials"
              x:Class="TFGVolandoVoy.VntPrincipal">
-    
     <ScrollView VerticalOptions="FillAndExpand">
         <StackLayout Margin="20" VerticalOptions="FillAndExpand" x:Name="stacklayout">
-
-            <Image Source="logo.png" 
-               HeightRequest="185"
-               Aspect="AspectFit"/>
-
-            <Label 
-            Text=""
-            FontSize="25"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            x:Name="Mensaje"/>
-
-            <Label 
-            Text="¿Que es Volando Voy?"
-            FontSize="35"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            Margin="0,20,0,0"
-            FontFamily="OswaldRegular"/>
-
-            <Label 
-            FontSize="25"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"    
-            x:Name="Descripcion">
+            <Image Source="logo.png" HeightRequest="185" Aspect="AspectFit"/>
+            <Label FontSize="25" VerticalOptions="Center" HorizontalOptions="Center" x:Name="Mensaje" FontFamily="OswaldRegular"/>
+            <Label Text="¿Que es Volando Voy?" FontSize="35" VerticalOptions="Center"
+                   HorizontalOptions="Center" Margin="0,20,0,0" FontFamily="OswaldRegular"/>
+            <Label FontSize="25" VerticalOptions="Center" HorizontalOptions="Center">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="&#x0a;" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label FontSize="25" VerticalOptions="Center" HorizontalOptions="Center" x:Name="Descripcion">
+                <Label.FormattedText>
+                    <FormattedString>
                         <Span Text="Volando voy, es un formado de aventuras de Jesús Calleja que junto a ciudadanos españoles recorrerá toda la geografía española desde un helicóptero (Robinson R44)."/>
-                        <Span Text="&#x0a;" />
-                        <Span Text="&#x0a;" />
-                        <Span Text="Los habitantes de diferentes regiones españolas serán testigos en primera persona de las vistas más espectaculares de sus localidades que siempre han tenido a su alcance y nunca han podido disfrutar." />
                         <Span Text="&#x0a;" />
                         <Span Text="&#x0a;" />
                         <Span Text="Investigaciones y estudios cartográficos en 3D o desarrollo de nuevas técnicas de salvamento marítimas serán dos de las muchas cosas que Jesús Calleja y su equipo completaran con éxito suponiendo un gran avance para los locales de cada pueblo." />
@@ -49,16 +31,28 @@
                         <Span Text="&#x0a;" />
                         <Span Text="&#x0a;" />
                         <Span Text="En algunos programas, famosos, ayudarán a Jesús Calleja a conseguir los retos propuestos por el programa." />
-                        <Span Text="&#x0a;" />
-                        <Span Text="&#x0a;" />
-                        <Span Text="Oficinas Volando Voy (Mediaset) " />
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-
-            <Image x:Name="jesus" Source="https://estaticosgn-cdn.deia.eus/clip/acfb40c0-eda5-42f4-8ae3-4c7c0bbf0a13_16-9-aspect-ratio_default_0.jpg"> </Image>
+            <Label FontSize="25" VerticalOptions="Center" HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="&#x0a;" />
+                        <Span Text="&#x0a;" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Image Source="https://estaticosgn-cdn.deia.eus/clip/acfb40c0-eda5-42f4-8ae3-4c7c0bbf0a13_16-9-aspect-ratio_default_0.jpg"/>
+            <Label FontSize="35" VerticalOptions="Center" HorizontalOptions="Center" FontFamily="OswaldRegular">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="&#x0a;" />
+                        <Span Text="Oficinas Volando Voy (Mediaset) " />
+                        <Span Text="&#x0a;" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
         </StackLayout>
     </ScrollView>
-
 </ContentPage>
     
