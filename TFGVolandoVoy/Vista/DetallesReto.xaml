@@ -15,7 +15,8 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-
+                
+    
                 <Label Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" Text="Antes" x:Name="l_antes"/>
                 <Image Grid.Row="1" Grid.Column="0" x:Name="ImagenRetoPreviewDetalles" WidthRequest="600" HeightRequest="300"/>
 
@@ -23,11 +24,13 @@
                 <Image Grid.Row="1" Grid.Column="1" x:Name="ImagenCompletadoDetalles" WidthRequest="600" HeightRequest="300"/>
             </Grid>
 
+            <Label x:Name="labelResumen" HorizontalTextAlignment="Center" Margin="0,40,0,20" FontSize="25"/>
+
             <Label x:Name="DescripcionRetoDetalles"
                    LineBreakMode="WordWrap"
-                   VerticalOptions="StartAndExpand" Margin="0,0,0,50" HorizontalTextAlignment="Center"/>
-
-            <Label x:Name="labelResumen" IsVisible="False"/>           
+                   VerticalOptions="StartAndExpand" 
+                   Margin="20,0,20,50" 
+                   HorizontalTextAlignment="Center"/>                  
 
             <Button x:Name="ActualizarReto" Clicked="ActualizarRetoImgCompletado_Clicked" Text="Subir imagen reto completado"/>
         </VerticalStackLayout>
