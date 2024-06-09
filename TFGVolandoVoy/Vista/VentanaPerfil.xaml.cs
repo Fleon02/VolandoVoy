@@ -26,7 +26,6 @@ public partial class VentanaPerfil : ContentPage
     }
 
 
-    // Method to load user data
     private async void cargarDatosUsuario(long idUsuario)
     {
 
@@ -52,6 +51,17 @@ public partial class VentanaPerfil : ContentPage
 
     }
 
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        imagenElegida = null;
+        imagenElegidaBytes = null;
+        imagenCambiada = false;
+
+        cargarDatosUsuario(AppShell.CurrentUser.IdUsuario);
+    }
+
     private async Task SeleccionarImagen()
     {
         var mediaFile = await MediaPicker.PickPhotoAsync();
@@ -61,24 +71,6 @@ public partial class VentanaPerfil : ContentPage
             imagenElegidaBytes = await ReadFileAsBytes(mediaFile);
             imagenCambiada = true;
 
-            /*
-            if (imagenElegidaBytes != null)
-            {
-                var fileName = $"imgUsuario_{DateTime.Now.Ticks}.png";
-                var response = await _supabaseClient.Storage.From("perfilesIMG").Upload(imagenElegidaBytes, fileName);
-
-                if (response != null)
-                {
-                    string imageUrl = $"{ConexionSupabase.SUPABASE_URL}/storage/v1/object/public/perfilesIMG/{fileName}";
-                    return imageUrl;
-                }
-                else
-                {
-                    await DisplayAlert("Error", "No se pudo cargar la imagen.", "Aceptar");
-                    return "null";
-                }
-            }
-            */
         }
     }
 
