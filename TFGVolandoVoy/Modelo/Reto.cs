@@ -17,10 +17,7 @@ public class Reto : BaseModel
     public bool Superado { get; set; }
 
     [Column("imagenRetoCompletado")]
-    public string? ImagenCompletado { get; set; }
-
-    [Column("tipoReto")]
-    public string? TipoDeReto { get; set; }
+    public string? ImagenCompletado { get; set; }    
 
     [Column("imagenRetoPreview")]
     public string? ImagenRetoPreview { get; set; }

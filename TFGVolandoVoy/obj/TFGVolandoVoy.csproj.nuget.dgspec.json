@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\guapi\\OneDrive\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj": {}
   },
   "projects": {
@@ -12,13 +13,30 @@
         "projectPath": "C:\\Users\\guapi\\OneDrive\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj",
         "packagesPath": "C:\\Users\\guapi\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\guapi\\OneDrive\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\obj\\",
+=======
+    "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj",
+        "projectName": "TFGVolandoVoy",
+        "projectPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\VolandoVoy\\TFGVolandoVoy\\obj\\",
+>>>>>>> main
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\guapi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> main
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -101,7 +119,11 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
+<<<<<<< HEAD
               "version": "[8.0.5, )",
+=======
+              "version": "[8.0.3, )",
+>>>>>>> main
               "autoReferenced": true
             },
             "supabase-csharp": {
@@ -128,7 +150,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+>>>>>>> main
         },
         "net8.0-ios17.2": {
           "targetAlias": "net8.0-ios",
@@ -168,7 +194,11 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
+<<<<<<< HEAD
               "version": "[8.0.5, )",
+=======
+              "version": "[8.0.3, )",
+>>>>>>> main
               "autoReferenced": true
             },
             "supabase-csharp": {
@@ -195,7 +225,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+>>>>>>> main
         },
         "net8.0-maccatalyst17.2": {
           "targetAlias": "net8.0-maccatalyst",
@@ -235,7 +269,11 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
+<<<<<<< HEAD
               "version": "[8.0.5, )",
+=======
+              "version": "[8.0.3, )",
+>>>>>>> main
               "autoReferenced": true
             },
             "supabase-csharp": {
@@ -263,7 +301,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+>>>>>>> main
         },
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
@@ -330,7 +372,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+>>>>>>> main
         }
       },
       "runtimes": {

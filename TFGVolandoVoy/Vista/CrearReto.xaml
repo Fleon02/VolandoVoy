@@ -5,9 +5,9 @@
              Title="CrearReto">
 
     <ScrollView>
-        <VerticalStackLayout>
+        <VerticalStackLayout Padding="10">
             <Label Text="Nuevo Reto" Style="{StaticResource Headline}"/>
-            <Label Text="Seleccione una localidad: "/>
+            <Label Text="Seleccione una localidad: " Margin="0,30,0, 10"/>
             <Picker x:Name="selector_ciudades"                    
                     ItemsSource="{Binding Localidades}"
                     SelectedItem="{Binding LocalidadSeleccionada}">
@@ -15,22 +15,31 @@
                     <Binding Path="NombreLocalidad"/>
                 </Picker.ItemDisplayBinding>
             </Picker>
-            <Label Text="Tipo de reto:"/>
-            <Entry Placeholder="Defina el tipo de reto, por ej. Construccion/Limpieza"
-                   x:Name="TipoReto"/>
-            <Label Text="Reto:"/>
+            <Label Text="Resumen de reto:" Margin="0,30,0, 10"/>
+            <Entry Placeholder="Breve resumen del reto..."
+                   x:Name="ResumenDelReto"/>
+            <Label Text="Reto:" Margin="0,30,0, 10"/>
             <Entry Placeholder="Describa el reto en detalle"
-                   x:Name="RetoDefinicion"/>
-            
-            <Label Text="Imagen antes del Reto" HorizontalOptions="FillAndExpand"/>            
+                   x:Name="RetoDefinicion" 
+                   HeightRequest="150"/>
+
+            <Label Text="Imagen antes del Reto" HorizontalOptions="FillAndExpand" Margin="0,30,0, 10"/>            
             <StackLayout Orientation="Horizontal" Spacing="10">
-                <Entry Placeholder="Inserte imagen de antes de completar el reto..." IsReadOnly="True" HorizontalOptions="FillAndExpand"/>
-                <ImageButton x:Name="cargarImagenRetoPreviewBtn" Source="select_image.png" Clicked="Imagen_antes_reto" WidthRequest="40" HeightRequest="40"/>
+                <Entry x:Name="entry_subir_imagen_antes" 
+                       Placeholder="Inserte imagen de antes de completar el reto..." 
+                       IsReadOnly="True" 
+                       HorizontalOptions="FillAndExpand"/>
+                <ImageButton x:Name="cargarImagenRetoPreviewBtn" 
+                             Source="select_image.png" 
+                             Clicked="Imagen_antes_reto" 
+                             WidthRequest="40" 
+                             HeightRequest="40"/>
             </StackLayout>
             
             <Button x:Name="InsertarReto" Text="Insertar Reto"
                     HorizontalOptions="FillAndExpand"
-                    Clicked="InsertarReto_Clicked"/>
+                    Clicked="InsertarReto_Clicked"
+                    Margin="0,30,0,10"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

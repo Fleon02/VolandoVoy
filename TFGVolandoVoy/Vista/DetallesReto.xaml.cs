@@ -1,5 +1,6 @@
 using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
+using Microsoft.Maps.MapControl.WPF.Overlays;
 using System.Collections.ObjectModel;
 using TFGVolandoVoy.Modelo;
 
@@ -11,7 +12,7 @@ public partial class DetallesReto : ContentPage
     private readonly Supabase.Client _supabaseClient;
     private string nombre_imagen_preview="";
     private string nombre_imagen_completado="";
-    String? imagenElegida = null;
+    private String? imagenElegida = null;
     private Reto? retoActual;
 
 
@@ -52,34 +53,22 @@ public partial class DetallesReto : ContentPage
         
     }
 
-    private void OnRetoSuperado(object sender, EventArgs e)
-    {
-        DisplayAlert("Botón Presionado", "El botón ha sido presionado", "OK");
-    }
-
-    
-
     public DetallesReto(string resumenR) : this(new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY))
     {
         GetRetoByResumen(resumenR);
         labelResumen.Text = resumenR;
 
-        if (nombre_imagen_completado.Equals("https://clfynwobrskueprtvnmg.supabase.co/storage/v1/object/public/ImagenesRetoCompletado/reto_no_completado.png"))
-        {
-            ImageButton boton = new ImageButton
-            {
-               Source = "select_image.png",
-                VerticalOptions = LayoutOptions.Center,
-                HorizontalOptions = LayoutOptions.Center
-            };
-
-            boton.Clicked += OnRetoSuperado;
-
-            // Agregar el botón al layout
-            DetallesRetoGrid.Children.Add(boton);
-        }
+        
     }
-    
+
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+
+        
+    }
 
     private async void GetRetoByResumen(string resumenR)
     {
@@ -94,7 +83,11 @@ public partial class DetallesReto : ContentPage
 
                 ImagenRetoPreviewDetalles.Source = nombre_imagen_preview;
                 ImagenCompletadoDetalles.Source = nombre_imagen_completado;
-                DescripcionRetoDetalles.Text = reto.DescripcionReto;                
+                DescripcionRetoDetalles.Text = reto.DescripcionReto;
+                if (!nombre_imagen_completado.Equals("https://clfynwobrskueprtvnmg.supabase.co/storage/v1/object/public/ImagenesRetoCompletado/reto_no_completado.png"))
+                {
+                    ActualizarReto.IsVisible = false;
+                }
             }
             else
             {
@@ -127,6 +120,7 @@ public partial class DetallesReto : ContentPage
                     ImagenCompletadoDetalles.Source = imagenElegida;
                     await _supabaseClient.From<Reto>().Update(reto1);
                     await DisplayAlert("Éxito", "Reto marcado como completado", "OK");
+
                 }
             }
             
