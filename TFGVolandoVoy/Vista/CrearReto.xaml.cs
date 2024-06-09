@@ -105,14 +105,33 @@ namespace TFGVolandoVoy.Vista
 
             long idLocalidad = LocalidadSeleccionada.IdLocalidad;
             string descripcionReto = RetoDefinicion.Text;
-            string tipoReto = TipoReto.Text;
+            string resumenR = ResumenDelReto.Text;
+
+            var retos = await _supabaseClient.From<Reto>().Get();
+            var reto = retos.Models.FirstOrDefault(p => p.ResumenDeReto == resumenR);
+
+            if (idLocalidad == reto.IdLocalidad && resumenR == reto.ResumenDeReto)
+            {
+                await DisplayAlert("Error", " Ya existe el reto en esa localidad", "Ok");
+            }
+
+            if (resumenR.Length < 20)
+            {
+                await DisplayAlert("Error", "Inserte un resumen más extenso", "OK");
+                return;
+
+             }else if(resumenR.Length > 80)
+            {
+                await DisplayAlert("Error", "Inserte un resumen más corto", "OK");
+                return;
+            }
 
             var nuevoReto = new Reto
             {
                 IdLocalidad = idLocalidad,
                 DescripcionReto = descripcionReto,
                 Superado = false,
-                TipoDeReto = tipoReto,
+                ResumenDeReto = resumenR,
                 ImagenRetoPreview = imagenElegida,
                 ImagenCompletado = "https://clfynwobrskueprtvnmg.supabase.co/storage/v1/object/public/ImagenesRetoCompletado/reto_no_completado.png"
             };
@@ -129,13 +148,14 @@ namespace TFGVolandoVoy.Vista
 
                     // Limpiar los campos después de la inserción exitosa
                     RetoDefinicion.Text = "";
-                    TipoReto.Text = "";
+                    ResumenDelReto.Text = "";
                     selector_ciudades.SelectedItem = null;
                 }
                 else
                 {
                     // Error al insertar el reto
                     await DisplayAlert("Error", "No se pudo insertar el reto. Por favor, inténtelo de nuevo.", "OK");
+                    return;
                 }
             }
             catch (Exception ex)
@@ -149,6 +169,8 @@ namespace TFGVolandoVoy.Vista
         {
 
             imagenElegida = await SeleccionarImagen();
+            entry_subir_imagen_antes.Placeholder = "Imagen seleccionada. ";
+            entry_subir_imagen_antes.PlaceholderColor = Colors.Orange;
         }
 
         private async Task<string> SeleccionarImagen()
