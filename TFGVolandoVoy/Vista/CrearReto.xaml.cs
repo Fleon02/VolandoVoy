@@ -110,10 +110,15 @@ namespace TFGVolandoVoy.Vista
             var retos = await _supabaseClient.From<Reto>().Get();
             var reto = retos.Models.FirstOrDefault(p => p.ResumenDeReto == resumenR);
 
-            if (idLocalidad == reto.IdLocalidad && resumenR == reto.ResumenDeReto)
+            if (reto != null)
             {
-                await DisplayAlert("Error", " Ya existe el reto en esa localidad", "Ok");
+                if (idLocalidad == reto.IdLocalidad && resumenR == reto.ResumenDeReto)
+                {
+                    await DisplayAlert("Error", " Ya existe el reto en esa localidad", "Ok");
+                }
+
             }
+
 
             if (resumenR.Length < 20)
             {
@@ -123,6 +128,12 @@ namespace TFGVolandoVoy.Vista
              }else if(resumenR.Length > 80)
             {
                 await DisplayAlert("Error", "Inserte un resumen más corto", "OK");
+                return;
+            }
+
+            if (imagenElegida == null)
+            {
+                await DisplayAlert("Error", "Debes subir una imagen de preview", "OK");
                 return;
             }
 

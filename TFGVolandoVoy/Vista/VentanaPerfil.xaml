@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TFGVolandoVoy.VentanaPerfil"
+             Title="Mis Datos">
+    <VerticalStackLayout Padding="20" Spacing="20">
+
+        <Label Text="Nombre: "/>
+        
+        <Entry x:Name="NombreUsuarioEntry" Placeholder="Nombre Usuario" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+
+        <Label Text="Apellidos: "/>
+        <Entry x:Name="ApellidoEntry" Placeholder="Apellido" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+
+        <Grid VerticalOptions="Center" HorizontalOptions="FillAndExpand" ColumnSpacing="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image x:Name="ImagenUsuario" HeightRequest="250" WidthRequest="250" Grid.Column="0" VerticalOptions="Center"/>
+
+            <Button Text="Cambiar Imagen" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="End" Clicked="CambiarImagen"/>
+        </Grid>
+
+
+        <Button x:Name="confirmarCambios" Clicked="confirmarCambios_Clicked" Text="Confirmar Cambios" VerticalOptions="Center" HorizontalOptions="Fill" Margin="0,70,0,0"/>
+    </VerticalStackLayout>
+</ContentPage>

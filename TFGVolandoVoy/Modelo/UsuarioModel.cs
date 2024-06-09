@@ -3,6 +3,20 @@ using System.ComponentModel;
 
 public class UsuarioModel : INotifyPropertyChanged
 {
+    private long _idUsuario;
+    public long IdUsuario
+    {
+        get { return _idUsuario; }
+        set
+        {
+            if (_idUsuario != value)
+            {
+                _idUsuario = value;
+                OnPropertyChanged(nameof(IdUsuario));
+            }
+        }
+    }
+
     private string _username;
     public string Username
     {
