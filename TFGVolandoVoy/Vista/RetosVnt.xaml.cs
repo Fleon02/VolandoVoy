@@ -123,6 +123,12 @@ public partial class RetosVnt : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
+
+        
+        Localidades.Clear();
+        Retos.Clear();
+        selector_ciudades.SelectedIndex = -1;
+
         await CargarLocalidades();
     }
 
