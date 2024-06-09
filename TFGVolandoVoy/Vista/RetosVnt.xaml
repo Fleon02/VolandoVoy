@@ -21,17 +21,27 @@
                     <DataTemplate>
                         <ViewCell>
                             <Border Stroke="DarkOrange">
-                                <StackLayout Orientation="Horizontal" Padding="20,0" Margin="0,5" >
+                                <StackLayout Orientation="Horizontal" 
+                                             Padding="20,0" 
+                                             Margin="0,5" >
                                     <Image Source="{Binding ImagenRetoPreview}"
                                          HorizontalOptions="StartAndExpand"
-                                         HeightRequest="50" WidthRequest="100"
-                                         Margin="0,0,20,0" Aspect="AspectFit">  
+                                         HeightRequest="50" 
+                                           WidthRequest="100"
+                                         Margin="0,0,20,0" 
+                                           Aspect="AspectFit">  
                                     </Image>
-                                    <Border Stroke="Blue" Padding="5">
+                                    <Border Stroke="Blue" 
+                                            Padding="5">
                                         <Border.StrokeShape>
                                             <RoundRectangle CornerRadius="40,40,40,40" />
                                         </Border.StrokeShape>
+<<<<<<< HEAD
                                         <Label Text="{Binding ResumenDeReto}" VerticalOptions="Center">
+=======
+                                        <Label Text="{Binding ResumenDeReto}" 
+                                               VerticalOptions="Center">
+>>>>>>> main
                                             <Label.GestureRecognizers>
                                                 <TapGestureRecognizer Tapped="DetallesR"/>
                                             </Label.GestureRecognizers>
@@ -43,7 +53,9 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button Text="Crear Retos" x:Name="crear_retos_boton" Clicked="crear_retos_boton_Clicked"/>
+            <Button Text="Crear Retos" 
+                    x:Name="crear_retos_boton" 
+                    Clicked="crear_retos_boton_Clicked"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
