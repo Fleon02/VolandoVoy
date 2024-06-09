@@ -155,6 +155,7 @@ public partial class Registro : ContentPage
                 else
                 {
                     await DisplayAlert("Error", "No se pudo cargar la imagen.", "Aceptar");
+                    return "null";
                 }
             }
         }

@@ -110,7 +110,7 @@ namespace TFGVolandoVoy
                         AppShell.CurrentUser.Username = usuarioExistente.NombreUsuario;
                         AppShell.CurrentUser.UserImage = usuarioExistente.ImagenUsuario;
                         AppShell.CurrentUser.Rol = usuarioExistente.Rol;
-
+                        AppShell.CurrentUser.IdUsuario = usuarioExistente.IdUsuario;
                     }
                     else
                     {
@@ -148,7 +148,7 @@ namespace TFGVolandoVoy
 
             string codigoRecibidoCorreo = "";
             // Obtener el nombre de usuario
-            string email = await DisplayPromptAsync("Por favor, introduce tu email:", "Nombre de Usuario");
+            string email = await DisplayPromptAsync("Por favor, introduce tu email:", "Email");
 
             var usuariosConEmail = await _supabaseClient.From<Usuario>().Get();
             var usuarioExistente = usuariosConEmail.Models.FirstOrDefault(u => u.EmailUsuario == email);

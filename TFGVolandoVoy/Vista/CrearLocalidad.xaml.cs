@@ -132,7 +132,7 @@ public partial class CrearLocalidad : ContentPage
             var selectedPlace = (Place)e.SelectedItem;
             PlaceID = selectedPlace.PlaceId;
 
-            await DisplayAlert("Place Selected", $"{PlaceID} - {selectedPlace.Description}", "OK");
+            await DisplayAlert("Lugar Seleccionado", $"{selectedPlace.Description}", "OK");
 
 
 
@@ -445,7 +445,7 @@ public partial class CrearLocalidad : ContentPage
                 await cliente.From<LugarInteres>().Insert(item);
             }
 
-            await DisplayAlert("Detalles", "Todo Insertado", "OK");
+            await DisplayAlert("Detalles", "Localidad Insertada Correctamente", "OK");
             lugaresIntereses.Clear();
 
         }

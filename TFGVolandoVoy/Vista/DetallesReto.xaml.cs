@@ -1,6 +1,5 @@
 using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
-using Microsoft.Maps.MapControl.WPF.Overlays;
 using System.Collections.ObjectModel;
 using TFGVolandoVoy.Modelo;
 
@@ -120,6 +119,7 @@ public partial class DetallesReto : ContentPage
                     ImagenCompletadoDetalles.Source = imagenElegida;
                     await _supabaseClient.From<Reto>().Update(reto1);
                     await DisplayAlert("Éxito", "Reto marcado como completado", "OK");
+                    ActualizarReto.IsVisible = false;
 
                 }
             }

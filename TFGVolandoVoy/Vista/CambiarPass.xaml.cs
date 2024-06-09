@@ -39,7 +39,7 @@ namespace TFGVolandoVoy.Vista
                     .Set(x => x.HashContrasena, nuevaContrasenaHasheada)
                     .Update();
 
-                await DisplayAlert("Error", "Contraseña Modificada", "Aceptar");
+                await DisplayAlert("Éxito", "Contraseña Modificada", "Aceptar");
                 EnviarCorreoConfimacion();
             }
             else
