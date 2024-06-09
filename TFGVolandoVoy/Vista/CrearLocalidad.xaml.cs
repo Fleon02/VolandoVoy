@@ -7,6 +7,7 @@ using Supabase.Interfaces;
 using System.Net;
 using System.Text;
 using TFGVolandoVoy.Modelo;
+using TraductorTipos;
 using static System.Net.WebRequestMethods;
 using Map = Microsoft.Maui.Controls.Maps.Map;
 
@@ -50,7 +51,7 @@ public partial class CrearLocalidad : ContentPage
         string input = e.NewTextValue;
         if (input.Length >= 3)
         {
-            suggestions = await GetAutocompleteSuggestionsAsync(input);
+            suggestions = await ObtenerSitios(input);
             listBoxPlaces.ItemsSource = null;
             listBoxPlaces.ItemsSource = suggestions;
         }
@@ -60,7 +61,25 @@ public partial class CrearLocalidad : ContentPage
         }
     }
 
-    private async Task<List<Place>> GetAutocompleteSuggestionsAsync(string input)
+    private async Task<List<Place>> ObtenerSitios(string input)
+    {
+        using (var client = new HttpClient())
+        {
+
+            List<Place> localityResults = await GetAutocompleteSuggestionsAsync(input, "locality");
+
+            List<Place> areaLevel3Results = await GetAutocompleteSuggestionsAsync(input,"administrative_area_level_3");
+
+            // Combine Results
+            List<Place> allResults = new List<Place>();
+            allResults.AddRange(localityResults);
+            allResults.AddRange(areaLevel3Results);
+
+            return allResults;
+        }
+    }
+
+    private async Task<List<Place>> GetAutocompleteSuggestionsAsync(string input, string tipo)
     {
         using (var client = new HttpClient())
         {
@@ -69,7 +88,7 @@ public partial class CrearLocalidad : ContentPage
                 input = input,
                 languageCode = "es",
                 includedRegionCodes = "es",
-                includedPrimaryTypes = "locality"
+                includedPrimaryTypes = tipo,
             };
 
             var jsonContent = JsonConvert.SerializeObject(requestBody);
@@ -164,6 +183,10 @@ public partial class CrearLocalidad : ContentPage
                                     case "locality":
                                         locality = longText;
                                         nombreLocalidad = longText;
+                                        break;
+                                    case "administrative_area_level_3":
+                                        nombreLocalidad = longText;
+                                        locality = longText;
                                         break;
                                     case "administrative_area_level_2":
                                         administrativeAreaLevel2 = longText;
@@ -290,7 +313,7 @@ public partial class CrearLocalidad : ContentPage
                         longitud = result["location"]["longitude"];
 
                         lu.Lugar = name;
-                        lu.Tipo = types;
+                        lu.Tipo = TraductorTipos.TraductorTipos.GetTraduccion(types);
                         lu.Latitud = latitud;
                         lu.Longitud = longitud;
 
