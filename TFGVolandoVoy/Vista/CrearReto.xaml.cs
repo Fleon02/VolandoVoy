@@ -162,7 +162,7 @@ namespace TFGVolandoVoy.Vista
                 if (fileBytes != null)
                 {
                     var fileName = $"imgRetoPreview_{DateTime.Now.Ticks}.png";
-                    var response = await _supabaseClient.Storage.From("perfilesIMG").Upload(fileBytes, fileName);
+                    var response = await _supabaseClient.Storage.From("ImagenesRetosPreview").Upload(fileBytes, fileName);
 
                     if (response != null)
                     {

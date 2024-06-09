@@ -5,7 +5,7 @@
              Title="DetallesReto">
 
     <ScrollView>
-        <VerticalStackLayout x:Name="stackDetallesReto">
+        <VerticalStackLayout x:Name="stackDetallesReto" Padding="10">
             <Grid x:Name="DetallesRetoGrid" ColumnSpacing="20" RowSpacing="20">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -25,7 +25,11 @@
 
             <Label x:Name="DescripcionRetoDetalles"
                    LineBreakMode="WordWrap"
-                   VerticalOptions="StartAndExpand" Margin="0,0,0,50"/>
+                   VerticalOptions="StartAndExpand" Margin="0,0,0,50" HorizontalTextAlignment="Center"/>
+
+            <Label x:Name="labelResumen" IsVisible="False"/>           
+
+            <Button x:Name="ActualizarReto" Clicked="ActualizarRetoImgCompletado_Clicked" Text="Subir imagen reto completado"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
