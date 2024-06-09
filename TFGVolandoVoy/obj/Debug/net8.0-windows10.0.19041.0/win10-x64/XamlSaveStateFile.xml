@@ -1,3 +1,5 @@
 
+
 ﻿<?xml version="1.0" encoding="utf-8"?><XamlCompilerSaveState><XamlFeatureControlFlags>EnableXBindDiagnostics, EnableDefaultValidationContextGeneration, EnableWin32Codegen, UsingCSWinRT</XamlFeatureControlFlags><ReferenceAssemblyList><LocalAssembly PathName="c:\users\usuario\onedrive\documentos\github\volandovoy\tfgvolandovoy\obj\debug\net8.0-windows10.0.19041.0\win10-x64\intermediatexaml\tfgvolandovoy.dll" HashGuid="149b27cd-7e63-fd42-8ea6-d20ba5e15b52" /></ReferenceAssemblyList><XamlSourceFileDataList><XamlSourceFileData XamlFileName="Platforms\Windows\App.xaml" ClassFullName="TFGVolandoVoy.WinUI.App" GeneratedCodePathPrefix="C:\Users\guapi\OneDrive\Documents\GitHub\VolandoVoy\TFGVolandoVoy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App" XamlFileTimeAtLastCompileInTicks="638523400713869717" HasBoundEventAssignments="False" /></XamlSourceFileDataList></XamlCompilerSaveState>
+
 
