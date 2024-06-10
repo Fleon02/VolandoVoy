@@ -332,19 +332,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -630,7 +617,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -3019,19 +3006,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -3317,7 +3291,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -5706,19 +5680,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -6004,7 +5965,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -8393,19 +8354,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -8691,7 +8639,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -11080,19 +11028,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -11378,7 +11313,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -13767,19 +13702,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -14065,7 +13987,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -16454,19 +16376,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -16752,7 +16661,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -19141,19 +19050,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -19439,7 +19335,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -21815,19 +21711,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -22099,7 +21982,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -22618,19 +22501,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -22902,7 +22772,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -23421,19 +23291,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -23705,7 +23562,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -24224,19 +24081,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -24508,7 +24352,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -25027,19 +24871,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -25311,7 +25142,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -25830,19 +25661,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -26114,7 +25932,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -26633,19 +26451,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -26917,7 +26722,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -27436,19 +27241,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -27720,7 +27512,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -28239,19 +28031,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -28523,7 +28302,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -29042,19 +28821,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -29326,7 +29092,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -29845,19 +29611,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -30129,7 +29882,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -30648,19 +30401,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -30932,7 +30672,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -31451,19 +31191,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -31735,7 +31462,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -32254,19 +31981,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -32538,7 +32252,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -33057,19 +32771,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -33341,7 +33042,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -33860,19 +33561,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -34144,7 +33832,7 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.3": {
+      "Microsoft.NET.ILLink.Tasks/8.0.4": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -34688,19 +34376,6 @@
         },
         "runtime": {
           "lib/net8.0/Microsoft.IdentityModel.Tokens.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
             "related": ".xml"
           }
         }
@@ -35639,19 +35314,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -36556,19 +36218,6 @@
         },
         "runtime": {
           "lib/net8.0/Microsoft.IdentityModel.Tokens.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
             "related": ".xml"
           }
         }
@@ -37481,19 +37130,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -38398,19 +38034,6 @@
         },
         "runtime": {
           "lib/net8.0/Microsoft.IdentityModel.Tokens.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
             "related": ".xml"
           }
         }
@@ -39323,19 +38946,6 @@
           }
         }
       },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Maui.Controls/8.0.21": {
         "type": "package",
         "dependencies": {
@@ -40240,19 +39850,6 @@
         },
         "runtime": {
           "lib/net8.0/Microsoft.IdentityModel.Tokens.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
             "related": ".xml"
           }
         }
@@ -41164,19 +40761,6 @@
         },
         "runtime": {
           "lib/net8.0/Microsoft.IdentityModel.Tokens.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {
             "related": ".xml"
           }
         }
@@ -42338,19 +41922,6 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
-    "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
-      "sha512": "P5Xys9PH/NIZY8qPASd03VOrZ/eXyS1hSoruR7oM+Otn98DkvUD1LwO8m9Aro4/5jCU1BgRmOTJrIQm5y9UHnQ==",
-      "type": "package",
-      "path": "microsoft.maps.mapcontrol.wpf/1.0.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll",
-        "lib/net40-Client/Microsoft.Maps.MapControl.WPF.xml",
-        "microsoft.maps.mapcontrol.wpf.1.0.0.3.nupkg.sha512",
-        "microsoft.maps.mapcontrol.wpf.nuspec"
-      ]
-    },
     "Microsoft.Maui.Controls/8.0.21": {
       "sha512": "G+Dz5ghMoJtR9xethz6spEfxNmfFOJ/UHVAI1GT5kZ3NxkHPJDHI7qfEK6TkMm37vQ/dHrcMLDamE91GCJHPNA==",
       "type": "package",
@@ -42514,39 +42085,73 @@
         "lib/net8.0-android34.0/Microsoft.Maui.Controls.pdb",
         "lib/net8.0-android34.0/Microsoft.Maui.Controls.xml",
         "lib/net8.0-android34.0/ar/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/ar/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/ca/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/ca/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/cs/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/cs/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/da/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/da/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/de/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/de/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/el/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/el/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/es/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/es/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/fi/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/fi/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/fr/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/fr/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/he/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/he/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/hi/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/hi/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/hr/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/hr/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/hu/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/hu/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/id/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/id/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/it/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/it/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/ja/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/ja/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/ko/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/ko/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/ms/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/ms/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/nb/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/nb/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/nl/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/nl/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/pl/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/pl/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/pt-BR/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/pt-BR/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/pt/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/pt/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/ro/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/ro/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/ru/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/ru/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/sk/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/sk/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/sv/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/sv/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/th/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/th/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/tr/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/tr/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/uk/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/uk/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/vi/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/vi/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/zh-HK/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/zh-HK/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/zh-Hans/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/zh-Hans/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-android34.0/zh-Hant/Microsoft.Maui.Controls.resources.dll",
+        "lib/net8.0-android34.0/zh-Hant/shrunk/Microsoft.Maui.Controls.resources.dll",
         "lib/net8.0-ios17.2/Design/Microsoft.Maui.Controls.DesignTools.dll",
         "lib/net8.0-ios17.2/Design/Microsoft.Maui.Controls.DesignTools.pdb",
         "lib/net8.0-ios17.2/Microsoft.Maui.Controls.dll",
@@ -43278,10 +42883,10 @@
         "microsoft.maui.resizetizer.nuspec"
       ]
     },
-    "Microsoft.NET.ILLink.Tasks/8.0.3": {
-      "sha512": "0kwNg0LBIvVTx9A2mo9Mnw4wLGtaeQgjSz5P13bOOwdWPPLe9HzI+XTkwiMhS7iQCM6X4LAbFR76xScaMw0MrA==",
+    "Microsoft.NET.ILLink.Tasks/8.0.4": {
+      "sha512": "PZb5nfQ+U19nhnmnR9T1jw+LTmozhuG2eeuzuW5A7DqxD/UXW2ucjmNJqnqOuh8rdPzM3MQXoF8AfFCedJdCUw==",
       "type": "package",
-      "path": "microsoft.net.illink.tasks/8.0.3",
+      "path": "microsoft.net.illink.tasks/8.0.4",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -43295,7 +42900,7 @@
         "build/Microsoft.NET.ILLink.Analyzers.props",
         "build/Microsoft.NET.ILLink.Tasks.props",
         "build/Microsoft.NET.ILLink.targets",
-        "microsoft.net.illink.tasks.8.0.3.nupkg.sha512",
+        "microsoft.net.illink.tasks.8.0.4.nupkg.sha512",
         "microsoft.net.illink.tasks.nuspec",
         "tools/net472/ILLink.Tasks.dll",
         "tools/net472/ILLink.Tasks.dll.config",
@@ -46587,43 +46192,39 @@
       "CommunityToolkit.Maui.Maps >= 2.0.2",
       "DocumentFormat.OpenXml >= 3.0.2",
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
-      "Microsoft.Maps.MapControl.WPF >= 1.0.0.3",
       "Microsoft.Maui.Controls >= 8.0.21",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.21",
       "Microsoft.Maui.Controls.Maps >= 8.0.21",
       "Microsoft.Maui.Maps >= 8.0.21",
-      "Microsoft.NET.ILLink.Tasks >= 8.0.3",
+      "Microsoft.NET.ILLink.Tasks >= 8.0.4",
       "supabase-csharp >= 0.16.2"
     ],
     "net8.0-ios17.2": [
       "CommunityToolkit.Maui.Maps >= 2.0.2",
       "DocumentFormat.OpenXml >= 3.0.2",
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
-      "Microsoft.Maps.MapControl.WPF >= 1.0.0.3",
       "Microsoft.Maui.Controls >= 8.0.21",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.21",
       "Microsoft.Maui.Controls.Maps >= 8.0.21",
       "Microsoft.Maui.Maps >= 8.0.21",
-      "Microsoft.NET.ILLink.Tasks >= 8.0.3",
+      "Microsoft.NET.ILLink.Tasks >= 8.0.4",
       "supabase-csharp >= 0.16.2"
     ],
     "net8.0-maccatalyst17.2": [
       "CommunityToolkit.Maui.Maps >= 2.0.2",
       "DocumentFormat.OpenXml >= 3.0.2",
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
-      "Microsoft.Maps.MapControl.WPF >= 1.0.0.3",
       "Microsoft.Maui.Controls >= 8.0.21",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.21",
       "Microsoft.Maui.Controls.Maps >= 8.0.21",
       "Microsoft.Maui.Maps >= 8.0.21",
-      "Microsoft.NET.ILLink.Tasks >= 8.0.3",
+      "Microsoft.NET.ILLink.Tasks >= 8.0.4",
       "supabase-csharp >= 0.16.2"
     ],
     "net8.0-windows10.0.19041": [
       "CommunityToolkit.Maui.Maps >= 2.0.2",
       "DocumentFormat.OpenXml >= 3.0.2",
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
-      "Microsoft.Maps.MapControl.WPF >= 1.0.0.3",
       "Microsoft.Maui.Controls >= 8.0.21",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.21",
       "Microsoft.Maui.Controls.Maps >= 8.0.21",
@@ -46632,24 +46233,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
+    "C:\\Users\\soraf\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj",
+      "projectUniqueName": "C:\\Users\\soraf\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj",
       "projectName": "TFGVolandoVoy",
-      "projectPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\VolandoVoy\\TFGVolandoVoy\\obj\\",
+      "projectPath": "C:\\Users\\soraf\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\TFGVolandoVoy.csproj",
+      "packagesPath": "C:\\Users\\soraf\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\soraf\\Documents\\GitHub\\VolandoVoy\\TFGVolandoVoy\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\soraf\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -46709,10 +46310,6 @@
             "target": "Package",
             "version": "[8.0.0, )"
           },
-          "Microsoft.Maps.MapControl.WPF": {
-            "target": "Package",
-            "version": "[1.0.0.3, )"
-          },
           "Microsoft.Maui.Controls": {
             "target": "Package",
             "version": "[8.0.21, )"
@@ -46732,7 +46329,7 @@
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[8.0.3, )",
+            "version": "[8.0.4, )",
             "autoReferenced": true
           },
           "supabase-csharp": {
@@ -46759,7 +46356,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       },
       "net8.0-ios17.2": {
         "targetAlias": "net8.0-ios",
@@ -46775,10 +46372,6 @@
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
             "version": "[8.0.0, )"
-          },
-          "Microsoft.Maps.MapControl.WPF": {
-            "target": "Package",
-            "version": "[1.0.0.3, )"
           },
           "Microsoft.Maui.Controls": {
             "target": "Package",
@@ -46799,7 +46392,7 @@
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[8.0.3, )",
+            "version": "[8.0.4, )",
             "autoReferenced": true
           },
           "supabase-csharp": {
@@ -46826,7 +46419,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       },
       "net8.0-maccatalyst17.2": {
         "targetAlias": "net8.0-maccatalyst",
@@ -46842,10 +46435,6 @@
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
             "version": "[8.0.0, )"
-          },
-          "Microsoft.Maps.MapControl.WPF": {
-            "target": "Package",
-            "version": "[1.0.0.3, )"
           },
           "Microsoft.Maui.Controls": {
             "target": "Package",
@@ -46866,7 +46455,7 @@
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[8.0.3, )",
+            "version": "[8.0.4, )",
             "autoReferenced": true
           },
           "supabase-csharp": {
@@ -46894,7 +46483,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       },
       "net8.0-windows10.0.19041": {
         "targetAlias": "net8.0-windows10.0.19041.0",
@@ -46910,10 +46499,6 @@
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
             "version": "[8.0.0, )"
-          },
-          "Microsoft.Maps.MapControl.WPF": {
-            "target": "Package",
-            "version": "[1.0.0.3, )"
           },
           "Microsoft.Maui.Controls": {
             "target": "Package",
@@ -46961,7 +46546,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
@@ -46987,17 +46572,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"Microsoft.Maps.MapControl.WPF 1.0.0.3\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0-android34.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "libraryId": "Microsoft.Maps.MapControl.WPF",
-      "targetGraphs": [
-        "net8.0-android34.0"
-      ]
-    }
-  ]
+  }
 }

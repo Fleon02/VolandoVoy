@@ -51,10 +51,12 @@ public partial class RetosVnt : ContentPage
 
     private async void selector_ciudades_SelectedIndexChanged(object sender, EventArgs e)
     {
+        Retos.Clear();
         var selectedCiudad = selector_ciudades.SelectedItem as Localidad;
         if (selectedCiudad != null)
         {
             await CargarRetos(selectedCiudad);
+
         }
     }
 
@@ -78,7 +80,8 @@ public partial class RetosVnt : ContentPage
         }
         else
         {
-            Console.WriteLine("No se encontraron retos para la localidad seleccionada.");
+           await DisplayAlert("Error", "No existen Retos para esta localidad", "Aceptar");
+
         }
     }
 

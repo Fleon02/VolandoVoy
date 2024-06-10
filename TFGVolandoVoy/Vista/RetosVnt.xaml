@@ -36,6 +36,7 @@
                                         <Border.StrokeShape>
                                             <RoundRectangle CornerRadius="40,40,40,40" />
                                         </Border.StrokeShape>
+
                                         <Label Text="{Binding ResumenDeReto}" 
                                                VerticalOptions="Center">
                                             <Label.GestureRecognizers>

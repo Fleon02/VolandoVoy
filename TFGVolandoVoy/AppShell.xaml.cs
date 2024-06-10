@@ -15,6 +15,7 @@
             Routing.RegisterRoute("InicioSesion", typeof(InicioSesion));
             Routing.RegisterRoute("LocalidadVnt", typeof(LocalidadVnt));
             Routing.RegisterRoute("CerrarSesion", typeof(InicioSesion));
+            Routing.RegisterRoute("VentanaPerfil", typeof(VentanaPerfil));
             Routing.RegisterRoute("RetosVnt", typeof(RetosVnt));
             BindingContext = CurrentUser;
 
@@ -38,6 +39,7 @@
                 this.Resources["IconoInicio"] = "inicio.png";
                 this.Resources["IconoRetos"] = "reto.png";
                 this.Resources["IconoLocalidad"] = "map.png";
+                this.Resources["IconoMisDatos"] = "perfil.png";
                 this.Resources["IconoLogout"] = "logout.png";
             }
             else
@@ -45,6 +47,7 @@
                 this.Resources["IconoInicio"] = "iniciodark.png";
                 this.Resources["IconoRetos"] = "retodark.png";
                 this.Resources["IconoLocalidad"] = "mapdark.png";
+                this.Resources["IconoMisDatos"] = "perfildark.png";
                 this.Resources["IconoLogout"] = "logoutdark.png";
             }
         }
@@ -64,6 +67,9 @@
                     break;
                 case "RetosVnt":
                     page = new RetosVnt();
+                    break;
+                case "VentanaPerfil":
+                    page = new VentanaPerfil();
                     break;
             }
 
