@@ -7,7 +7,7 @@ namespace TFGVolandoVoy
     {
         private readonly Supabase.Client _supabaseClient;
 
-        // Constructor con parámetro
+        
         public LocalidadVnt(Supabase.Client supabaseClient)
         {
             _supabaseClient = supabaseClient;
@@ -15,22 +15,22 @@ namespace TFGVolandoVoy
         }
         private void OnImageSizeChanged(object sender, EventArgs e)
         {
-            // Verificar si la plataforma actual es Windows
+            
             if (DeviceInfo.Platform == DevicePlatform.WinUI)
             {
-                // Cambiar el ancho de la imagen
+                
                 var image = (Image)sender;
-                image.WidthRequest = 350; // Cambia el valor según tus necesidades
-                image.HeightRequest = 75; // Cambia el valor según tus necesidades
+                image.WidthRequest = 350; 
+                image.HeightRequest = 75; 
             }
         }
 
-        // Constructor sin parámetros
+        
         public LocalidadVnt() : this(new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY))
         {
         }
 
-        // Método que se llama cada vez que la página se muestra en pantalla
+        
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -43,22 +43,21 @@ namespace TFGVolandoVoy
             {
                 crearLocalidadBoton.IsVisible = false;
             }
-            // Reiniciar la página
+           
             Logo.Source = "logo.png";
-            //NombreLocalidad.Text = "Localidad : ";
-            //NombreProvincia.Text = "Provincia : ";
+
             CargarLocalidades();
         }
-        // Método para cargar la lista de localidades
+        
         private async void CargarLocalidades()
         {
             try
             {
-                // Obtener la lista de localidades desde la base de datos
+                
                 var localidades = await _supabaseClient.From<Localidad>().Get();
-                // Ordenar las localidades por NombreLocalidad
+                
                 var localidadesOrdenadas = localidades.Models.OrderBy(l => l.NombreLocalidad);
-                // Establecer la lista de localidades como la fuente de datos del ListView
+                
                 LocalidadesListView.ItemsSource = new ObservableCollection<Localidad>(localidadesOrdenadas);
             }
             catch (Exception ex)
@@ -70,22 +69,22 @@ namespace TFGVolandoVoy
         private int count = 0;
         private async void OnLocalidadClicked(object sender, EventArgs e)
         {
-            // Inicializar la variable provincia fuera del bloque try-catch
+            
             Provincia provincia = null;
             try
             {
-                // Obtener la lista de provincias
+               
                 var provincias = await _supabaseClient.From<Provincia>().Get();
 
-                // Crear una lista de nombres de provincias
+                
                 var nombresProvincias = provincias.Models.Select(p => p.NombreProvincia).ToList();
 
-                // Mostrar un diálogo para que el usuario elija la provincia
+                
                 var provinciaSeleccionada = await DisplayActionSheet("Seleccione la provincia", "Cancelar", null, nombresProvincias.ToArray());
 
                 if (provinciaSeleccionada != null && provinciaSeleccionada != "Cancelar")
                 {
-                    // Iterar sobre la lista de provincias y encontrar la que coincide con el nombre seleccionado
+                    
                     foreach (var p in provincias.Models)
                     {
                         if (p.NombreProvincia == provinciaSeleccionada)
@@ -95,68 +94,67 @@ namespace TFGVolandoVoy
                         }
                     }
 
-                    // Solicitar los datos de la localidad al usuario
+                    
                     var nombre = await DisplayPromptAsync("Nombre de la Localidad", "Por favor ingrese el nombre de la localidad:");
-                    var imagen = await PickAndUploadImage();
+                    var imagen = await ElegirImagen();
 
-                    // Verificar que se hayan proporcionado todos los datos
+                    
                     if (!string.IsNullOrEmpty(nombre) && !string.IsNullOrEmpty(imagen))
                     {
-                        // Crear una nueva instancia de Localidad con los datos ingresados
+                        
                         Localidad localidad = new Localidad
                         {
                             NombreLocalidad = nombre,
                             ImagenLocalidad = imagen,
-                            IdProvincia = provincia.IdProvincia // Asignar el ID de la provincia seleccionada
+                            IdProvincia = provincia.IdProvincia 
                         };
 
-                        // Insertar la localidad en la base de datos
+                        
                         await InsertarLocalidad(localidad);
                     }
                     else
                     {
-                        // Mostrar un mensaje de error si algún campo está vacío
+                        
                         await DisplayAlert("Error", "Por favor complete todos los campos obligatorios.", "Aceptar");
                     }
                 }
             }
             catch (Exception ex)
             {
-                // Si ocurre alguna excepción, mostrar un mensaje de error
+                
                 await DisplayAlert("Error", $"Error al obtener las provincias: {ex.Message}", "Aceptar");
             }
 
         }
 
 
-        // Método para seleccionar y subir una imagen desde el dispositivo del usuario
-        private async Task<string> PickAndUploadImage()
+        private async Task<string> ElegirImagen()
         {
-            // Subir imagen desde el dispositivo del usuario
+            
             var mediaFile = await MediaPicker.PickPhotoAsync();
 
             if (mediaFile != null)
             {
-                // Leer el contenido del archivo como un arreglo de bytes
-                byte[] fileBytes = await ReadFileAsBytes(mediaFile);
+                
+                byte[] fileBytes = await LeerArchivo(mediaFile);
 
                 if (fileBytes != null)
                 {
-                    // Subir el archivo al bucket en Supabase
-                    var fileName = $"provincia_{DateTime.Now.Ticks}.png"; // Nombre único para el archivo
+                    
+                    var fileName = $"provincia_{DateTime.Now.Ticks}.png"; 
                     var response = await _supabaseClient.Storage
                         .From("imagenes_Prueba")
                         .Upload(fileBytes, fileName);
 
                     if (response != null)
                     {
-                        // Construir manualmente la URL de la imagen cargada
+                        
                         string imageUrl = $"{ConexionSupabase.SUPABASE_URL}/storage/v1/object/public/imagenes_Prueba/{fileName}";
                         return imageUrl;
                     }
                     else
                     {
-                        // Mostrar un mensaje de error si la carga de la imagen falla
+                        
                         await DisplayAlert("Error", "No se pudo cargar la imagen.", "Aceptar");
                     }
                 }
@@ -166,8 +164,8 @@ namespace TFGVolandoVoy
         }
 
 
-        // Método para leer el contenido del archivo como un arreglo de bytes
-        private async Task<byte[]> ReadFileAsBytes(FileResult file)
+        
+        private async Task<byte[]> LeerArchivo(FileResult file)
         {
             using (var stream = await file.OpenReadAsync())
             {
@@ -179,7 +177,7 @@ namespace TFGVolandoVoy
             }
         }
 
-        // Método para insertar una provincia en la base de datos
+        
         private async Task InsertarLocalidad(Localidad localidad)
         {
             try
@@ -195,29 +193,28 @@ namespace TFGVolandoVoy
 
         private async void MostrarLocalidades(object sender, EventArgs e)
         {
-            // Solicitar el ID de la localidad al usuario
+            
             var localidadId = await DisplayPromptAsync("ID de la localidad", "Por favor ingrese el ID de la localidad:");
 
             if (!string.IsNullOrEmpty(localidadId))
             {
                 try
                 {
-                    // Obtener la localidad desde la base de datos usando el ID proporcionado
+                    
                     var localidad = await GetLocalidadById(localidadId);
                     if (localidad != null)
                     {
-                        // Obtener la provincia asociada a la localidad
+                        
                         var provincia = await GetProvinciaById(localidad.IdProvincia.ToString());
                         if (provincia != null)
                         {
                             Logo.Source = localidad.ImagenLocalidad;
-                            // Construir el mensaje de alerta con los nombres de la localidad y la provincia
+                            
                             var message = $"Nombre de la Localidad: {localidad.NombreLocalidad}\n" +
                                           $"Provincia: {provincia.NombreProvincia}";
-                            // Mostrar el mensaje de alerta
+                            
                             await DisplayAlert("Detalle de la Localidad y Provincia", message, "Aceptar");
-                            //NombreLocalidad.Text = $"Nombre Localidad: {localidad.NombreLocalidad}";
-                            //NombreProvincia.Text = $"Provincia: {provincia.NombreProvincia}";
+
                         }
                         else
                         {
@@ -247,10 +244,10 @@ namespace TFGVolandoVoy
         {
             try
             {
-                // Obtener todas las provincias de la base de datos
+                
                 var provincias = await _supabaseClient.From<Provincia>().Get();
 
-                // Filtrar la lista para encontrar la provincia con el ID específico
+                
                 var provincia = provincias.Models.FirstOrDefault(p => p.IdProvincia == long.Parse(id));
 
                 if (provincia != null)
@@ -264,7 +261,6 @@ namespace TFGVolandoVoy
             }
             catch (Exception ex)
             {
-                // Manejar cualquier error que ocurra durante la consulta
                 throw new Exception($"Error al obtener la provincia con ID {id}: {ex.Message}");
             }
         }
@@ -273,10 +269,10 @@ namespace TFGVolandoVoy
         {
             try
             {
-                // Obtener todas las provincias de la base de datos
+                
                 var localidades = await _supabaseClient.From<Localidad>().Get();
 
-                // Filtrar la lista para encontrar la provincia con el ID específico
+                
                 var localidad = localidades.Models.FirstOrDefault(p => p.IdLocalidad == long.Parse(id));
 
                 if (localidad != null)
@@ -290,7 +286,7 @@ namespace TFGVolandoVoy
             }
             catch (Exception ex)
             {
-                // Manejar cualquier error que ocurra durante la consulta
+                
                 throw new Exception($"Error al obtener la provincia con ID {id}: {ex.Message}");
             }
         }

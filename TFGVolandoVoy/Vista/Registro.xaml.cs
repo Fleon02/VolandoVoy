@@ -18,7 +18,7 @@ public partial class Registro : ContentPage
         Shell.SetFlyoutBehavior(this, FlyoutBehavior.Disabled);
         var temaActual = App.Current.RequestedTheme;
 
-        // Establecer la imagen según el tema
+        
         if (temaActual != AppTheme.Dark)
         {
             cargarImagenBtn.Source = "select_imagedark.png";
@@ -29,7 +29,7 @@ public partial class Registro : ContentPage
         }
     }
 
-    // Constructor sin parámetros
+    
     public Registro() : this(new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY))
     {
     }
@@ -75,17 +75,16 @@ public partial class Registro : ContentPage
         }
 
 
-        // Generate confirmation code
+        
         string codigoConfirmacion = GenerarCodigoConfirmacion();
 
-        // Send confirmation email
         await EnviarEmailConfirmacion(email, codigoConfirmacion);
 
         bool codigoValido = false;
 
         while (!codigoValido)
         {
-            // Prompt user to enter the confirmation code
+            
             string enteredCode = await DisplayPromptAsync("Código de Confirmación", "Ingrese el código de confirmación enviado a su correo electrónico:", "Confirmar", "Cancelar", "Código de confirmación", maxLength: 6, keyboard: Keyboard.Numeric);
 
             if (enteredCode == null)
@@ -140,7 +139,7 @@ public partial class Registro : ContentPage
 
         if (mediaFile != null)
         {
-            byte[] fileBytes = await ReadFileAsBytes(mediaFile);
+            byte[] fileBytes = await LeerArchivos(mediaFile);
 
             if (fileBytes != null)
             {
@@ -163,7 +162,7 @@ public partial class Registro : ContentPage
         return "null";
     }
 
-    private async Task<byte[]> ReadFileAsBytes(FileResult file)
+    private async Task<byte[]> LeerArchivos(FileResult file)
     {
         using (var stream = await file.OpenReadAsync())
         {

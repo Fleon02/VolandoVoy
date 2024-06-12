@@ -79,7 +79,7 @@ namespace TFGVolandoVoy.Vista
             if (selector_ciudades.SelectedIndex != -1)
             {
                 var localidadSeleccionada = (Localidad)selector_ciudades.SelectedItem;
-                // Manejar la localidad seleccionada si es necesario
+                
             }
         }
 
@@ -151,27 +151,27 @@ namespace TFGVolandoVoy.Vista
             {
                 var insertTask = await _supabaseClient.From<Reto>().Insert(nuevoReto);
 
-                // Verificar si la inserción fue exitosa
+                
                 if (insertTask != null)
                 {
-                    // Inserción exitosa
+                    
                     await DisplayAlert("Éxito", "El reto se ha insertado correctamente.", "OK");
 
-                    // Limpiar los campos después de la inserción exitosa
+                    
                     RetoDefinicion.Text = "";
                     ResumenDelReto.Text = "";
                     selector_ciudades.SelectedItem = null;
                 }
                 else
                 {
-                    // Error al insertar el reto
+                    
                     await DisplayAlert("Error", "No se pudo insertar el reto. Por favor, inténtelo de nuevo.", "OK");
                     return;
                 }
             }
             catch (Exception ex)
             {
-                // Manejar el error
+                
                 await DisplayAlert("Error", $"Ocurrió un error: {ex.Message}", "OK");
             }
         }
@@ -190,7 +190,7 @@ namespace TFGVolandoVoy.Vista
 
             if (mediaFile != null)
             {
-                byte[] fileBytes = await ReadFileAsBytes(mediaFile);
+                byte[] fileBytes = await LeerArchivoAbytes(mediaFile);
 
                 if (fileBytes != null)
                 {
@@ -212,7 +212,7 @@ namespace TFGVolandoVoy.Vista
             return "null";
         }
 
-        private async Task<byte[]> ReadFileAsBytes(FileResult file)
+        private async Task<byte[]> LeerArchivoAbytes(FileResult file)
         {
             using (var stream = await file.OpenReadAsync())
             {

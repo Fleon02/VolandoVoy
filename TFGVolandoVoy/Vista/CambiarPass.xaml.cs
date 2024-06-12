@@ -61,7 +61,7 @@ namespace TFGVolandoVoy.Vista
             string subject = "Cambio de Contraseña Confirmado VolandoVoy";
             string body = $"Se ha realizado el cambio de contraseña correctamente";
 
-            // Configurar cliente SMTP de Gmail
+           
             var smtpClient = new SmtpClient("smtp.gmail.com")
             {
                 Port = 587,
@@ -69,12 +69,12 @@ namespace TFGVolandoVoy.Vista
                 EnableSsl = true,
             };
 
-            // Crear mensaje de correo electrónico
+            
             var message = new MailMessage(senderEmail, recipientEmail, subject, body);
 
             try
             {
-                // Enviar correo electrónico
+                
                 smtpClient.Send(message);
             }
             catch (Exception ex)
@@ -83,7 +83,7 @@ namespace TFGVolandoVoy.Vista
             }
             finally
             {
-                // Liberar recursos
+                
                 message.Dispose();
                 smtpClient.Dispose();
             }
@@ -140,7 +140,7 @@ namespace TFGVolandoVoy.Vista
 
             if (txtRepeatPassword.IsPassword == true)
             {
-                // Establecer la imagen según el tema
+                
                 if (temaActual != AppTheme.Dark)
                 {
                     imagenRepeBoton.Source = "visibledark.png";
@@ -152,7 +152,7 @@ namespace TFGVolandoVoy.Vista
             }
             else
             {
-                // Establecer la imagen según el tema
+                
                 if (temaActual != AppTheme.Dark)
                 {
                     imagenRepeBoton.Source = "invisibledark.png";

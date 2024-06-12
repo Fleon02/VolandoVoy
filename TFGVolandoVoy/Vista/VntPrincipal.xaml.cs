@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using TFGVolandoVoy.Modelo;
 using Microsoft.Maui.Controls.Maps;
 using Map = Microsoft.Maui.Controls.Maps.Map;
-using Microsoft.Maui.Maps; // Asegúrate de incluir esta línea
+using Microsoft.Maui.Maps; 
 
 namespace TFGVolandoVoy
 {
@@ -17,11 +17,11 @@ namespace TFGVolandoVoy
 
              
 
-            // Concatenar el mensaje de bienvenida con el nombre de usuario
+            
             string welcomeMessage = "Bienvenid@ " + AppShell.CurrentUser.Username;
             Mensaje.Text = welcomeMessage;
 
-            // Suscribir al evento PropertyChanged del modelo de usuario
+            
             AppShell.CurrentUser.PropertyChanged += OnCurrentUserPropertyChanged;
 
 #if __ANDROID__
@@ -34,13 +34,13 @@ namespace TFGVolandoVoy
 
         }
 
-        // Método que se ejecuta cuando cambia alguna propiedad del modelo de usuario
+        
         private void OnCurrentUserPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             if (e.PropertyName == nameof(AppShell.CurrentUser.Username))
             {
                
-                // Concatenar el mensaje de bienvenida con el nombre de usuario
+                
                 string welcomeMessage = "Bienvenid@ " + AppShell.CurrentUser.Username;
                 Mensaje.Text = welcomeMessage;
             }
@@ -62,7 +62,7 @@ namespace TFGVolandoVoy
 
             Pin mediasetPin = new Pin
             {
-                Label = "Volando Voy - Mediaset", // Nombre del marcador               
+                Label = "Volando Voy - Mediaset",               
                 Location = new Location(40.5124429, -3.6810871)
             };
             mapView.Pins.Add(mediasetPin);
@@ -85,12 +85,12 @@ namespace TFGVolandoVoy
             };
             Pin mediasetPin = new Pin
             {
-                Label = "Volando Voy - Mediaset", // Nombre del marcador               
+                Label = "Volando Voy - Mediaset",              
                 Location = new Location(40.5124429, -3.6810871)
             };
             mapView.Pins.Add(mediasetPin);
 
-            // Configura la ubicación y el nivel de zoom inicial
+            
             mapView.MoveToRegion(MapSpan.FromCenterAndRadius(new Location(40.5124429, -3.6810871), Distance.FromKilometers(1)));
 
             stacklayout.Children.Add(mapView);

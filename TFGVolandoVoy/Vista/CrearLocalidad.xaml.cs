@@ -15,9 +15,9 @@ namespace TFGVolandoVoy;
 
 public partial class CrearLocalidad : ContentPage
 {
-    private const string ApiKey = "AIzaSyBLmtoFc5WL6HX3g5D0AtVbjnd_8uTmAlU";
-    private const string AutocompleteUrl = "https://places.googleapis.com/v1/places:autocomplete";
-    private List<Place> suggestions; // Store suggestions with place name and ID
+    private const string ClaveAPI = "AIzaSyBLmtoFc5WL6HX3g5D0AtVbjnd_8uTmAlU";
+    private const string URLAutocompletar = "https://places.googleapis.com/v1/places:autocomplete";
+    private List<Place> sugerencias; 
 
     private string nombreLocalidad = "";
     private string imgLocalidad = "";
@@ -29,7 +29,7 @@ public partial class CrearLocalidad : ContentPage
 
     private String PlaceID = "";
 
-    private String PhotoName = "";
+    private String NombreFoto = "";
 
     List<LugarInteres> lugaresIntereses;
 
@@ -39,7 +39,7 @@ public partial class CrearLocalidad : ContentPage
 
         Shell.SetFlyoutBehavior(this, FlyoutBehavior.Disabled);
 
-        suggestions = new List<Place>(); // Initialize empty suggestion list
+        sugerencias = new List<Place>(); 
 
         lugaresIntereses = new List<LugarInteres>();
 
@@ -51,9 +51,9 @@ public partial class CrearLocalidad : ContentPage
         string input = e.NewTextValue;
         if (input.Length >= 3)
         {
-            suggestions = await ObtenerSitios(input);
+            sugerencias = await ObtenerSitios(input);
             listBoxPlaces.ItemsSource = null;
-            listBoxPlaces.ItemsSource = suggestions;
+            listBoxPlaces.ItemsSource = sugerencias;
         }
         else
         {
@@ -66,20 +66,20 @@ public partial class CrearLocalidad : ContentPage
         using (var client = new HttpClient())
         {
 
-            List<Place> localityResults = await GetAutocompleteSuggestionsAsync(input, "locality");
+            List<Place> resultadosLocalidad = await ConseguirSugerencias(input, "locality");
 
-            List<Place> areaLevel3Results = await GetAutocompleteSuggestionsAsync(input,"administrative_area_level_3");
+            List<Place> resultadosArea3 = await ConseguirSugerencias(input,"administrative_area_level_3");
 
-            // Combine Results
+            
             List<Place> allResults = new List<Place>();
-            allResults.AddRange(localityResults);
-            allResults.AddRange(areaLevel3Results);
+            allResults.AddRange(resultadosLocalidad);
+            allResults.AddRange(resultadosArea3);
 
             return allResults;
         }
     }
 
-    private async Task<List<Place>> GetAutocompleteSuggestionsAsync(string input, string tipo)
+    private async Task<List<Place>> ConseguirSugerencias(string input, string tipo)
     {
         using (var client = new HttpClient())
         {
@@ -93,9 +93,9 @@ public partial class CrearLocalidad : ContentPage
 
             var jsonContent = JsonConvert.SerializeObject(requestBody);
             var httpContent = new StringContent(jsonContent, Encoding.UTF8, "application/json");
-            client.DefaultRequestHeaders.Add("X-Goog-Api-Key", ApiKey);
+            client.DefaultRequestHeaders.Add("X-Goog-Api-Key", ClaveAPI);
 
-            var response = await client.PostAsync(AutocompleteUrl, httpContent);
+            var response = await client.PostAsync(URLAutocompletar, httpContent);
             if (response.IsSuccessStatusCode)
             {
                 var jsonResponse = await response.Content.ReadAsStringAsync();
@@ -107,14 +107,14 @@ public partial class CrearLocalidad : ContentPage
                 {
                     for (int i = 0; i < suggestionsRaw.Count; i++)
                     {
-                        var placePrediction = suggestionsRaw[i]?.placePrediction;
-                        if (placePrediction != null)
+                        var prediccionLugar = suggestionsRaw[i]?.placePrediction;
+                        if (prediccionLugar != null)
                         {
-                            var placeDescription = placePrediction.text.text?.ToString();
-                            var placeId = placePrediction.placeId?.ToString();
-                            if (!string.IsNullOrEmpty(placeDescription) && !string.IsNullOrEmpty(placeId))
+                            var descripcionLugar = prediccionLugar.text.text?.ToString();
+                            var placeId = prediccionLugar.placeId?.ToString();
+                            if (!string.IsNullOrEmpty(descripcionLugar) && !string.IsNullOrEmpty(placeId))
                             {
-                                places.Add(new Place(placeDescription, placeId));
+                                places.Add(new Place(descripcionLugar, placeId));
                             }
                         }
                     }
@@ -136,13 +136,13 @@ public partial class CrearLocalidad : ContentPage
 
 
 
-            GetAddressDetails();
+            ConseguirDetallesLugar();
         }
     }
 
-    private async void GetAddressDetails()
+    private async void ConseguirDetallesLugar()
     {
-        string url = $"https://places.googleapis.com/v1/places/{PlaceID}?fields=addressComponents,location,photos&key={ApiKey}&languageCode=es";
+        string url = $"https://places.googleapis.com/v1/places/{PlaceID}?fields=addressComponents,location,photos&key={ClaveAPI}&languageCode=es";
 
         using (var client = new HttpClient())
         {
@@ -152,51 +152,51 @@ public partial class CrearLocalidad : ContentPage
                 var json = await response.Content.ReadAsStringAsync();
                 dynamic data = JsonConvert.DeserializeObject(json);
 
-                string locality = "";
+                string localidad = "";
                 string administrativeAreaLevel1 = "";
                 string administrativeAreaLevel2 = "";
-                string country = "";
-                string postalCode = "";
+                string pais = "";
+                string codigoPostal = "";
 
                 double latitude = 0.0;
                 double longitude = 0.0;
 
                 if (data != null)
                 {
-                    var addressComponents = data.addressComponents;
+                    var componentesDireccion = data.addressComponents;
                     if (data.photos != null && data.photos.Count > 0)
                     {
-                        PhotoName = data.photos[0]["name"]?.ToString() ?? "Sin Fotos";
+                        NombreFoto = data.photos[0]["name"]?.ToString() ?? "Sin Fotos";
                     }
 
-                    foreach (var component in addressComponents)
+                    foreach (var component in componentesDireccion)
                     {
-                        var types = component.types as JArray;
+                        var tipos = component.types as JArray;
                         string longText = component.longText?.ToString();
 
-                        if (types != null && longText != null)
+                        if (tipos != null && longText != null)
                         {
-                            foreach (string type in types)
+                            foreach (string type in tipos)
                             {
                                 switch (type)
                                 {
                                     case "locality":
-                                        locality = longText;
+                                        localidad = longText;
                                         nombreLocalidad = longText;
                                         break;
                                     case "administrative_area_level_3":
                                         nombreLocalidad = longText;
-                                        locality = longText;
+                                        localidad = longText;
                                         break;
                                     case "administrative_area_level_2":
                                         administrativeAreaLevel2 = longText;
                                         nombreProvincia = longText;
                                         break;
                                     case "country":
-                                        country = longText;
+                                        pais = longText;
                                         break;
                                     case "postal_code":
-                                        postalCode = longText;
+                                        codigoPostal = longText;
                                         break;
                                 }
                             }
@@ -217,9 +217,9 @@ public partial class CrearLocalidad : ContentPage
                     }
                 }
 
-                string addressDetails = $"Localidad: {locality}\nProvincia: {administrativeAreaLevel2}\nComunidad Autonoma: {administrativeAreaLevel1}\nPaís: {country}\nCódigo Postal: {postalCode}\n\nCoordenadas:\nLatitud: {latitude:F6}\nLongitud: {longitude:F6}";
+                string addressDetails = $"Localidad: {localidad}\nProvincia: {administrativeAreaLevel2}\nComunidad Autonoma: {administrativeAreaLevel1}\nPaís: {pais}\nCódigo Postal: {codigoPostal}\n\nCoordenadas:\nLatitud: {latitude:F6}\nLongitud: {longitude:F6}";
 
-                //await DisplayAlert("Detalles de la dirección", addressDetails, "OK");
+                
 
 
                 if (SLMapa.Children.Count > 0)
@@ -239,7 +239,7 @@ public partial class CrearLocalidad : ContentPage
                 var coordenadas = new Location(latitud, longitud);
                 Pin pinmapa = new Pin
                 {
-                    Label = nombreLocalidad + " (" + nombreProvincia + ")", // Nombre del marcador            
+                    Label = nombreLocalidad + " (" + nombreProvincia + ")",          
                     Location = coordenadas
                 };
                 mapView.Pins.Add(pinmapa);
@@ -253,7 +253,7 @@ public partial class CrearLocalidad : ContentPage
         }
     }
 
-    private async Task ShowNearbyPlacesAsync()
+    private async Task MostrarLugaresInteresAsync()
     {
         string url = "https://places.googleapis.com/v1/places:searchNearby";
         string[] tiposExcluidos = { "subway_station", "train_station", "bank", "supermarket" };
@@ -280,16 +280,16 @@ public partial class CrearLocalidad : ContentPage
 
         using (var client = new HttpClient())
         {
-            client.DefaultRequestHeaders.Add("X-Goog-Api-Key", ApiKey);
+            client.DefaultRequestHeaders.Add("X-Goog-Api-Key", ClaveAPI);
             client.DefaultRequestHeaders.Add("X-Goog-FieldMask", "places.displayName,places.primaryTypeDisplayName,places.id,places.location");
 
-            var response = await client.PostAsync(url, httpContent);
-            if (response.IsSuccessStatusCode)
+            var respuesta = await client.PostAsync(url, httpContent);
+            if (respuesta.IsSuccessStatusCode)
             {
-                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var jsonResponse = await respuesta.Content.ReadAsStringAsync();
                 var data = JsonConvert.DeserializeObject<dynamic>(jsonResponse);
 
-                // Procesar los resultados y mostrar los nombres en un MessageBox
+                
                 var results = data.places;
                 string places = "";
                 string types = "";
@@ -302,7 +302,7 @@ public partial class CrearLocalidad : ContentPage
                     string id = result["id"].ToString();
                     double latitud;
                     double longitud;
-                    // Check if primaryTypeDisplayName is available
+                    
                     if (result["primaryTypeDisplayName"] != null)
                     {
 
@@ -337,26 +337,26 @@ public partial class CrearLocalidad : ContentPage
                     index++;
                 }
 
-                //await DisplayAlert("Top 5 Lugares de Interés Cercanos", places, "OK");
+                
 
-                await GetPlacePhoto();
+                await ConseguirFoto();
 
 
             }
             else
             {
-                await DisplayAlert("Error", "Error en la solicitud: " + response.ReasonPhrase, "OK");
+                await DisplayAlert("Error", "Error en la solicitud: " + respuesta.ReasonPhrase, "OK");
             }
         }
     }
 
 
 
-    private async Task GetPlacePhoto()
+    private async Task ConseguirFoto()
     {
-        string url = $"https://places.googleapis.com/v1/{PhotoName}/media?maxHeightPx=2000&maxWidthPx=2000&key={ApiKey}";
+        string url = $"https://places.googleapis.com/v1/{NombreFoto}/media?maxHeightPx=2000&maxWidthPx=2000&key={ClaveAPI}";
 
-        if (PhotoName == "Sin Fotos" || PhotoName == "")
+        if (NombreFoto == "Sin Fotos" || NombreFoto == "")
         {
             imgLocalidad = "https://clfynwobrskueprtvnmg.supabase.co/storage/v1/object/public/ComunidadAutonoma/placeholder.jpg";
             await insertarLocalidad();
@@ -496,7 +496,7 @@ public partial class CrearLocalidad : ContentPage
             return;
         }
 
-        await ShowNearbyPlacesAsync();
+        await MostrarLugaresInteresAsync();
     }
 
     private bool AreCoordinatesEqual(double coord1, double coord2, double tolerance = 0.00001)

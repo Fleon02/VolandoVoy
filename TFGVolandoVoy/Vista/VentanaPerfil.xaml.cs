@@ -12,7 +12,7 @@ public partial class VentanaPerfil : ContentPage
 
     private Usuario usuarioExistente;
 
-    // Constructor with Supabase client
+    
     public VentanaPerfil(Supabase.Client supabaseClient)
     {
         InitializeComponent();

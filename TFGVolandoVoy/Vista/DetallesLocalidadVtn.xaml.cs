@@ -13,13 +13,13 @@ namespace TFGVolandoVoy
         private readonly Supabase.Client _supabaseClient;
         private bool _mostrarTodosLosComentarios = false;
 
-        // Constructor con parámetro
+        
         public DetallesLocalidadVtn(Supabase.Client supabaseClient)
         {
             _supabaseClient = supabaseClient;
             InitializeComponent();
             Shell.SetFlyoutBehavior(this, FlyoutBehavior.Disabled);
-            // Verificar la plataforma en tiempo de ejecución y ajustar el diseño en consecuencia
+            
             if (Device.RuntimePlatform == Device.WinUI)
             {
                 ImgLoc.HeightRequest = 250;
@@ -27,7 +27,7 @@ namespace TFGVolandoVoy
             }
             else if (Device.RuntimePlatform == Device.Android || Device.RuntimePlatform == Device.iOS)
             {
-                // Cambiar la disposición de las columnas a filas para Android e iOS
+                
                 DetailsGrid.RowDefinitions.Clear();
                 DetailsGrid.ColumnDefinitions.Clear();
                 DetailsGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
@@ -51,7 +51,7 @@ namespace TFGVolandoVoy
             }
         }
 
-        // Constructor sin parámetros
+        
         public DetallesLocalidadVtn(string labelText) : this(new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY))
         {
             NombreLocalidad.Text = labelText;
@@ -59,13 +59,13 @@ namespace TFGVolandoVoy
             CargarComentarios(labelText, false);
         }
 
-        // Método que se llama cada vez que la página se muestra en pantalla
+        
         protected override void OnAppearing()
         {
             base.OnAppearing();
         }
 
-        // Método para cargar la lista de Comentarios
+        
         private async void CargarComentarios(string nombreLocalidad, bool cargarTodos)
         {
             try
@@ -80,13 +80,13 @@ namespace TFGVolandoVoy
                     {
                         if (cargarTodos)
                         {
-                            // Mostrar todos los comentarios
+                            
                             var todosComentarios = comentariosLocalidad.OrderByDescending(c => c.Valoracion).ToList();
                             ComentariosListView.ItemsSource = new ObservableCollection<Comentarios>(todosComentarios);
                         }
                         else
                         {
-                            // Ordenar los comentarios por valoración (de mayor a menor) y mostrar los 3 mejores
+                            
                             var mejoresComentarios = comentariosLocalidad.OrderByDescending(c => c.Valoracion).Take(3).ToList();
                             ComentariosListView.ItemsSource = new ObservableCollection<Comentarios>(mejoresComentarios);
                         }
@@ -118,10 +118,10 @@ namespace TFGVolandoVoy
                         NombreProvincia.Text = $"Provincia: {provincia.NombreProvincia}";
                         ComunidadAutonoma.Text = $"Comunidad Autonoma: {provincia.ComunidadAutonoma}";
                         ComAu.Source = provincia.ImagenProvincia;
-                        // Obtener los lugares de interés para la localidad
+                       
                         var lugaresInteres = await _supabaseClient.From<LugarInteres>().Get();
                         var lugaresInteresL = lugaresInteres.Models.Where(l => l.IdLocalidad == localidad.IdLocalidad).ToList();
-                        // Agregar los lugares de interés al StackLayout
+                        
                         foreach (var lugar in lugaresInteresL)
                         {
                             var lugarLabel = new Label
@@ -133,7 +133,7 @@ namespace TFGVolandoVoy
                             SLLugaresInteres.Children.Add(lugarLabel);
                         }
                         MapaLocalidadAsync(localidad, provincia);
-                        //MostrarLugaresInteres(localidad.Coordenada1, localidad.Coordenada2);
+                       
                     }
                     else
                     {
@@ -186,23 +186,23 @@ namespace TFGVolandoVoy
             var coordenadas = new Location(localidad.Coordenada1, localidad.Coordenada2);
             Pin pinmapa = new Pin
             {
-                Label = localidad.NombreLocalidad + " (" + provincia.NombreProvincia + ")", // Nombre del marcador            
+                Label = localidad.NombreLocalidad + " (" + provincia.NombreProvincia + ")",          
                 Location = coordenadas
             };
             mapView.Pins.Add(pinmapa);
-            // Verificar la plataforma en tiempo de ejecución y ajustar el diseño en consecuencia
+            
             if (Device.RuntimePlatform == Device.WinUI)
             {
-                // Obtener los lugares de interés para la localidad
+                
                 var lugaresInteres = await _supabaseClient.From<LugarInteres>().Get();
                 var lugaresInteresL = lugaresInteres.Models.Where(l => l.IdLocalidad == localidad.IdLocalidad).ToList();
-                // Agregar los lugares de interés al StackLayout
+               
                 foreach (var lugares in lugaresInteresL)
                 {
                     var coordenadaslugar = new Location(lugares.Latitud, lugares.Longitud);
                     Pin pinmapalugar = new Pin
                     {
-                        Label = lugares.Lugar + " (" + lugares.Tipo + ")", // Nombre del marcador            
+                        Label = lugares.Lugar + " (" + lugares.Tipo + ")",             
                         Location = coordenadaslugar
                     };
                     mapView.Pins.Add(pinmapalugar);
@@ -247,7 +247,7 @@ namespace TFGVolandoVoy
                     var jsonResponse = await response.Content.ReadAsStringAsync();
                     var data = JsonConvert.DeserializeObject<dynamic>(jsonResponse);
 
-                    // Procesar los resultados y mostrar los nombres
+                    
                     var results = data.places;
                     string places = "";
                     string types = "";
@@ -255,7 +255,7 @@ namespace TFGVolandoVoy
                     foreach (var result in results)
                     {
                         string name = result["displayName"]["text"].ToString();
-                        // Check if primaryTypeDisplayName is available
+                        
                         if (result["primaryTypeDisplayName"] != null)
                         {
                             types = result["primaryTypeDisplayName"]["text"].ToString();
@@ -268,8 +268,7 @@ namespace TFGVolandoVoy
 
                         index++;
                     }
-                    //await DisplayAlert("Top 5 Lugares de Interés Cercanos", places, "OK");
-                    //LugaresInteres.Text = places;
+
 
                 }
                 else
@@ -316,9 +315,9 @@ namespace TFGVolandoVoy
                     if (resultado != null)
                     {
                         await DisplayAlert("Éxito", "Comentario insertado correctamente", "Aceptar");
-                        ComentarioT.Text = string.Empty; // Limpiar campo de comentario
-                        ValoracionNum.Text = string.Empty; // Restablecer campo de valoración
-                        CargarComentarios(NombreLocalidad.Text, false); // Recargar comentarios mostrando los mejores 3
+                        ComentarioT.Text = string.Empty; 
+                        ValoracionNum.Text = string.Empty; 
+                        CargarComentarios(NombreLocalidad.Text, false); 
                     }
                     else
                     {
@@ -336,19 +335,19 @@ namespace TFGVolandoVoy
             }
         }
 
-        // Método para alternar entre mostrar todos los comentarios y los 3 mejores
+        
         private void CambioComentario(object sender, EventArgs e)
         {
             _mostrarTodosLosComentarios = !_mostrarTodosLosComentarios;
 
             if (_mostrarTodosLosComentarios)
             {
-                CargarComentarios(NombreLocalidad.Text, true); // Mostrar todos los comentarios
+                CargarComentarios(NombreLocalidad.Text, true); 
                 NumComentarios.Text = "Ver Menos Comentarios";
             }
             else
             {
-                CargarComentarios(NombreLocalidad.Text, false); // Mostrar 3 los mejores comentarios
+                CargarComentarios(NombreLocalidad.Text, false); 
                 NumComentarios.Text = "Ver Más Comentarios";
             }
         }

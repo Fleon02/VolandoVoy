@@ -15,7 +15,7 @@ public partial class RetosVnt : ContentPage
 
 
 
-    //Constructor con parámetros
+    
     public RetosVnt(Supabase.Client supabaseClient)
     {
         _supabaseClient = supabaseClient;
@@ -41,7 +41,7 @@ public partial class RetosVnt : ContentPage
 
 
 
-    //Constructor sin parámetros
+    
     public RetosVnt() : this(new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY))
     {
     }

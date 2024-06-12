@@ -23,23 +23,23 @@ public partial class DetallesReto : ContentPage
         Shell.SetFlyoutBehavior(this, FlyoutBehavior.Disabled);
         if (Device.RuntimePlatform != Device.WinUI)
         {
-            // Clear existing row and column definitions
+            
             DetallesRetoGrid.RowDefinitions.Clear();
             DetallesRetoGrid.ColumnDefinitions.Clear();
 
-            // Define row-based layout for Windows
+            
             DetallesRetoGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
             DetallesRetoGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
             DetallesRetoGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
             DetallesRetoGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
 
-            // Set controls to rows
+           
             Grid.SetRow(l_antes, 0);
             Grid.SetRow(ImagenRetoPreviewDetalles, 1);
             Grid.SetRow(l_despues, 2);
             Grid.SetRow(ImagenCompletadoDetalles, 3);
 
-            // Set controls to first column (default, single column layout)
+            
             Grid.SetColumn(l_antes, 0);
             Grid.SetColumn(ImagenRetoPreviewDetalles, 0);
             Grid.SetColumn(l_despues, 0);

@@ -15,7 +15,7 @@ namespace TFGVolandoVoy
     {
         private readonly Supabase.Client _supabaseClient;
 
-        // Constructor con parámetro
+        
         public InicioSesion(Supabase.Client supabaseClient)
         {
             _supabaseClient = supabaseClient;
@@ -33,12 +33,12 @@ namespace TFGVolandoVoy
 #endif
         }
 
-        // Constructor sin parámetros
+        
         public InicioSesion() : this(new Supabase.Client(ConexionSupabase.SUPABASE_URL, ConexionSupabase.SUPABASE_KEY))
         {
         }
 
-        // Resto del código de la clase
+        
         private int count = 0;
 
 
@@ -55,7 +55,7 @@ namespace TFGVolandoVoy
             
             if (PasswordEntry.IsPassword == true)
             {
-                // Establecer la imagen según el tema
+                
                 if (temaActual != AppTheme.Dark)
                 {
                     imagenBoton.Source = "visibledark.png";
@@ -67,7 +67,7 @@ namespace TFGVolandoVoy
             }
             else
             {
-                // Establecer la imagen según el tema
+                
                 if (temaActual != AppTheme.Dark)
                 {
                     imagenBoton.Source = "invisibledark.png";
@@ -81,7 +81,7 @@ namespace TFGVolandoVoy
 
         private async void IniciaSesion(object sender, EventArgs e)
         {
-            // Define el correo electrónico y la contraseña para el registro
+            
             string email = userEntry.Text;
             string password = PasswordEntry.Text;  
 
@@ -126,14 +126,14 @@ namespace TFGVolandoVoy
             }
             catch (Exception ex)
             {
-                // Si ocurre alguna excepción durante el registro, muestra un mensaje de error
+                
                 await DisplayAlert("Error", $"Error al registrar al usuario: {ex.Message}", "Aceptar");
             }
         }
 
         private void OnRegistroTapped(object sender, EventArgs e)
         {
-            // Aquí navegas a la ventana de registro
+            
             Navigation.PushAsync(new Registro());
         }
 
@@ -144,10 +144,10 @@ namespace TFGVolandoVoy
 
         public async void EnviarCorreoRecuPass()
         {
-            //await Navigation.PushAsync(new CambiarPass("email"));
+            
 
             string codigoRecibidoCorreo = "";
-            // Obtener el nombre de usuario
+           
             string email = await DisplayPromptAsync("Por favor, introduce tu email:", "Email");
 
             var usuariosConEmail = await _supabaseClient.From<Usuario>().Get();
@@ -159,26 +159,26 @@ namespace TFGVolandoVoy
                 return;
             }
 
-            // Crear una instancia de Random con una semilla basada en el tiempo actual
+            
             Random random = new Random();
 
-            // Definir los caracteres que pueden estar en el código
+            
             const string caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-            // Crear una cadena para almacenar el código
+            
             string codigo = "";
 
-            // Generar un código aleatorio de 8 caracteres
+            
             for (int i = 0; i < 8; i++)
             {
-                // Obtener un índice aleatorio dentro del rango de caracteres
+                
                 int indice = random.Next(0, caracteres.Length);
 
-                // Concatenar el carácter correspondiente al código
+                
                 codigo += caracteres[indice];
             }
 
-            // Verificar si se proporcionó un nombre de usuario
+            
             if (!string.IsNullOrEmpty(email))
             {
                 string senderEmail = "tfgvolandovoy@gmail.com";
@@ -189,7 +189,7 @@ namespace TFGVolandoVoy
                 string body = $"Has solicitado cambiar la contraseña. Utiliza el siguiente código en la app : " + codigo
                     + "\n Si no has solicitado nada, ignora este correo";
 
-                // Configurar cliente SMTP de Gmail
+               
                 var smtpClient = new SmtpClient("smtp.gmail.com")
                 {
                     Port = 587,
@@ -197,12 +197,12 @@ namespace TFGVolandoVoy
                     EnableSsl = true,
                 };
 
-                // Crear mensaje de correo electrónico
+                
                 var message = new MailMessage(senderEmail, recipientEmail, subject, body);
 
                 try
                 {
-                    // Enviar correo electrónico
+                    
                     smtpClient.Send(message);
                     await DisplayAlert("Éxito", "Correo electrónico enviado correctamente.", "OK");
                     do
@@ -218,7 +218,7 @@ namespace TFGVolandoVoy
                             await Navigation.PushAsync(new CambiarPass(email));
 
                             
-                            break; // Salir del bucle si el código es correcto
+                            break;
                             
                         }
                         else
@@ -235,7 +235,7 @@ namespace TFGVolandoVoy
                 }
                 finally
                 {
-                    // Liberar recursos
+                    
                     message.Dispose();
                     smtpClient.Dispose();
                 }
@@ -246,7 +246,7 @@ namespace TFGVolandoVoy
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            // Limpiar los campos de usuario y contraseña
+            
             PasswordEntry.Text = "";
             userEntry.Text = "";
         }
